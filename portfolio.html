@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-theme="rose-noir">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Bridal Atelier • Lookbook</title>
+    <link rel="icon" type="image/svg+xml" href="Assets/favicon.svg">
+    <meta name="description" content="Curated bridal transformations — editorial lookbook of our most recent brides.">
+    <script src="tailwind.js"></script>
+    <script>
+        if (typeof tailwind === 'undefined') {
+            document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+        }
+    </script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'gift-slate': 'rgba(var(--color-rgb-primary), <alpha-value>)',
+                        'gift-slate-light': 'rgba(var(--color-rgb-light), <alpha-value>)',
+                        'gift-slate-dark': 'rgba(var(--color-rgb-dark), <alpha-value>)',
+                        'gift-slate-bright': 'rgba(var(--color-rgb-bright), <alpha-value>)',
+                        'gift-accent': 'rgba(var(--color-rgb-accent), <alpha-value>)',
+                        'bg-warm': 'var(--color-bg-warm)',
+                        'neutral-dark': 'var(--color-text-dark)',
+                        'neutral-light': '#F5E6E9',
+                        'dark-bg': '#140C0E',
+                        'dark-card': '#201418',
+                        'dark-surface': '#2C1D22',
+                    },
+                    fontFamily: {
+                        'sans': ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        'serif': ['Cormorant Garamond', 'serif'],
+                        'display': ['Cormorant Garamond', 'Outfit', 'serif'],
+                        'premium': ['Cormorant Garamond', 'Outfit', 'serif'],
+                        'alt': ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    animation: {
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'fade-in': 'fadeIn 0.3s ease-out',
+                        'pulse-glow': 'pulseGlow 3s infinite',
+                    },
+                    keyframes: {
+                        slideUp: { '0%': { transform: 'translateY(30px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        pulseGlow: { '0%, 100%': { opacity: '0.6' }, '50%': { opacity: '1' } }
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+        if (localStorage.getItem('dir') === 'rtl') { document.documentElement.dir = 'rtl'; document.documentElement.lang = 'ar'; }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root, [data-theme="rose-noir"], [data-theme="gold-obsidian"] {
+            --color-primary: #C2707E; --color-primary-light: #DE9DA9; --color-primary-dark: #8F3B4A;
+            --color-primary-bright: #F5C6CE; --color-accent: #E2A676; --color-bg-warm: #FCF8F8;
+            --color-text-dark: #1E1014;
+            --color-rgb-primary: 194, 112, 126; --color-rgb-light: 222, 157, 169;
+            --color-rgb-dark: 143, 59, 74; --color-rgb-bright: 245, 198, 206; --color-rgb-accent: 226, 166, 118;
+        }
+        [data-theme="royal-sapphire"] { --color-primary:#2563EB;--color-primary-light:#60A5FA;--color-primary-dark:#1E40AF;--color-primary-bright:#93C5FD;--color-accent:#F59E0B;--color-bg-warm:#F8FAFC;--color-text-dark:#0F172A;--color-rgb-primary:37,99,235;--color-rgb-light:96,165,250;--color-rgb-dark:30,64,175;--color-rgb-bright:147,197,253;--color-rgb-accent:245,158,11; }
+        [data-theme="emerald-gold"] { --color-primary:#059669;--color-primary-light:#34D399;--color-primary-dark:#047857;--color-primary-bright:#6EE7B7;--color-accent:#D4AF37;--color-bg-warm:#F4FBF7;--color-text-dark:#064E3B;--color-rgb-primary:5,150,105;--color-rgb-light:52,211,153;--color-rgb-dark:4,120,87;--color-rgb-bright:110,231,183;--color-rgb-accent:212,175,55; }
+        [data-theme="rose-copper"] { --color-primary:#BE185D;--color-primary-light:#F472B6;--color-primary-dark:#831843;--color-primary-bright:#FBCFE8;--color-accent:#E07A5F;--color-bg-warm:#FDF2F8;--color-text-dark:#500724;--color-rgb-primary:190,24,93;--color-rgb-light:244,114,182;--color-rgb-dark:131,24,67;--color-rgb-bright:251,207,232;--color-rgb-accent:224,122,95; }
+
+        body { font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; background-color:var(--color-bg-warm); color:var(--color-text-dark); transition:background-color .4s ease, color .4s ease; }
+        .dark body { background-color:#140C0E; color:#EDE7E3; }
+        h1,h2,h3,h4,h5,h6 { font-family:'Outfit','Plus Jakarta Sans',sans-serif; font-weight:700; letter-spacing:-.025em; }
+        .gold-gradient-text,.rose-gradient-text { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 50%, var(--color-primary-dark) 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+
+        ::-webkit-scrollbar{width:8px;height:8px}
+        ::-webkit-scrollbar-track{background:var(--color-bg-warm)}
+        .dark ::-webkit-scrollbar-track{background:#140C0E}
+        ::-webkit-scrollbar-thumb{background:rgba(var(--color-rgb-primary),.35);border-radius:9999px;border:2px solid transparent;background-clip:padding-box}
+        ::-webkit-scrollbar-thumb:hover{background:var(--color-primary)}
+        .dark ::-webkit-scrollbar-thumb{background:rgba(var(--color-rgb-bright),.35)}
+        .dark ::-webkit-scrollbar-thumb:hover{background:var(--color-primary-bright)}
+        *{scrollbar-width:thin;scrollbar-color:rgba(var(--color-rgb-primary),.4) transparent}
+
+        .dark .text-gift-slate{color:var(--color-primary-bright)!important}
+        .dark .bg-gift-slate{background-color:var(--color-primary-bright)!important}
+        .dark .border-gift-slate{border-color:var(--color-primary-bright)!important}
+        .dark .from-gift-slate{--tw-gradient-from:var(--color-primary-bright)!important}
+        .dark .badge{background:rgba(18, 12, 14, 0.85)!important;color:#FFFFFF!important;border:1px solid rgba(255, 255, 255, 0.35)!important}
+        .dark .dropdown-item:hover{color:var(--color-primary-bright)!important}
+        .dark .nav-item:hover{color:var(--color-primary-bright)!important}
+        .dark .nav-item::after{background:var(--color-primary-bright)!important}
+        .dark .dropdown-item i{color:var(--color-primary-bright)!important}
+        .dark .premium-line{background:linear-gradient(90deg,var(--color-primary-bright),rgba(var(--color-rgb-bright),.1))}
+
+        .nav-item{position:relative;padding:.5rem 0;font-weight:600;font-size:.85rem;letter-spacing:.02em;color:var(--color-text-dark);transition:color .3s ease;font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;white-space:nowrap}
+        .dark .nav-item{color:#EDE7E3}
+        .nav-item:hover{color:var(--color-primary)}
+        .dark .nav-item:hover{color:var(--color-primary-bright)}
+        .nav-item::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--color-primary),var(--color-primary-light));transition:width .3s ease}
+        .dark .nav-item::after{background:linear-gradient(90deg,var(--color-primary-bright),var(--color-primary-light))}
+        .nav-item:hover::after, .nav-item.active::after{width:100%}
+        .nav-item.active{color:var(--color-primary)!important;font-weight:700}
+        .dark .nav-item.active{color:var(--color-primary-bright)!important}
+        .mobile-menu-item.active{color:var(--color-primary)!important;font-weight:700}
+        .dark .mobile-menu-item.active{color:var(--color-primary-bright)!important}
+
+        .dropdown{position:relative}
+        .dropdown-menu{position:absolute;top:100%;left:0;min-width:230px;background:rgba(255,255,255,.98);border-radius:16px;padding:.85rem 0;box-shadow:0 25px 50px -12px rgba(0,0,0,.18);opacity:0;visibility:hidden;transform:translateY(12px);transition:all .3s cubic-bezier(.16,1,.3,1);z-index:1000;border:1px solid rgba(var(--color-rgb-primary),.2);backdrop-filter:blur(12px)}
+        .dark .dropdown-menu{background:rgba(30,25,24,.98);border-color:rgba(var(--color-rgb-bright),.25);box-shadow:0 25px 50px -12px rgba(0,0,0,.6)}
+        .dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+        .dropdown-menu::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px}
+        [dir="rtl"] .dropdown-menu{left:auto;right:0}
+        .dropdown-item{display:flex;align-items:center;padding:.8rem 1.6rem;color:var(--color-text-dark);transition:all .2s ease;white-space:nowrap;font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;font-weight:500}
+        .dark .dropdown-item{color:#EDE7E3}
+        .dropdown-item:hover{background:rgba(var(--color-rgb-primary),.1);color:var(--color-primary);padding-left:1.85rem}
+        .dark .dropdown-item:hover{background:rgba(var(--color-rgb-bright),.15);color:var(--color-primary-bright)}
+        [dir="rtl"] .dropdown-item:hover{padding-left:1.6rem;padding-right:1.85rem}
+        .dropdown-item i{margin-right:.85rem;width:20px;text-align:center;color:var(--color-primary)}
+        [dir="rtl"] .dropdown-item i{margin-right:0;margin-left:.85rem}
+        .dark .dropdown-item i{color:var(--color-primary-bright)}
+        [dir="rtl"] .desktop-toggle-group{margin-left:0;margin-right:1.25rem}
+
+        .toggle-btn{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(var(--color-rgb-primary),.12);color:var(--color-primary);transition:all .3s ease;border:1px solid rgba(var(--color-rgb-primary),.2);cursor:pointer}
+        .dark .toggle-btn{background:rgba(var(--color-rgb-bright),.12);color:var(--color-primary-bright);border-color:rgba(var(--color-rgb-bright),.25)}
+        .toggle-btn:hover{background:var(--color-primary);color:#fff;transform:scale(1.08)}
+        .dark .toggle-btn:hover{background:var(--color-primary-bright);color:#140C0E;transform:scale(1.08)}
+        .toggle-btn.active{background:var(--color-primary);color:#fff}
+        .dark .toggle-btn.active{background:var(--color-primary-bright);color:#140C0E}
+        @media (max-width:1279px){.desktop-toggle-group{display:none!important}}
+
+        .mobile-menu{background:#fff;max-height:0;overflow:hidden;transition:max-height .5s ease}
+        .mobile-menu:not(.open){border:none!important;border-width:0!important;margin-top:0!important;padding:0!important;box-shadow:none!important;pointer-events:none!important}
+        .dark .mobile-menu{background:#140C0E;border-color:rgba(var(--color-rgb-bright),.2)}
+        .mobile-menu.open{max-height:85vh;overflow-y:auto}
+        .mobile-menu-item{display:block;padding:1.1rem 1.75rem;font-weight:600;color:var(--color-text-dark);border-bottom:1px solid rgba(var(--color-rgb-primary),.1);transition:all .2s ease;font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;letter-spacing:.03em;font-size:.9rem}
+        .dark .mobile-menu-item{color:#EDE7E3;border-bottom-color:rgba(var(--color-rgb-bright),.15)}
+        .mobile-menu-item:hover{background-color:rgba(var(--color-rgb-primary),.06);color:var(--color-primary)}
+        .dark .mobile-menu-item:hover{background-color:rgba(var(--color-rgb-bright),.12);color:var(--color-primary-bright)}
+        .mobile-dropdown-content{max-height:0;overflow:hidden;transition:max-height .3s ease;background:rgba(var(--color-rgb-primary),.04)}
+        .dark .mobile-dropdown-content{background:rgba(30,25,24,.8)}
+        .mobile-dropdown-content.show{max-height:300px}
+        .mobile-dropdown-item{display:block;padding:.85rem 2.75rem;font-size:.92rem;color:var(--color-text-dark);transition:all .2s ease;border-bottom:1px solid rgba(var(--color-rgb-primary),.08);font-family:'Plus Jakarta Sans',sans-serif}
+        .dark .mobile-dropdown-item{color:#D6CEC8;border-bottom-color:rgba(var(--color-rgb-bright),.1)}
+        .mobile-dropdown-item:hover{color:var(--color-primary);background-color:rgba(var(--color-rgb-primary),.1)}
+        .dark .mobile-dropdown-item:hover{background-color:rgba(var(--color-rgb-bright),.15);color:var(--color-primary-bright)}
+
+        .desktop-nav-container{display:flex;align-items:center;gap:2rem}
+
+        .badge{background:rgba(18, 12, 14, 0.75)!important;color:#FFFFFF!important;padding:.35rem 1.1rem;border-radius:50px;font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(255, 255, 255, 0.3)!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 4px 15px rgba(0,0,0,0.4);display:inline-flex;align-items:center;gap:.35rem;text-shadow:0 1px 2px rgba(0,0,0,0.5)}
+        .dark .badge{background:rgba(18, 12, 14, 0.85)!important;color:#FFFFFF!important;border:1px solid rgba(255, 255, 255, 0.35)!important;box-shadow:0 4px 15px rgba(0,0,0,0.6)}
+
+        footer{background:#fff;color:var(--color-text-dark);border-top:1px solid rgba(var(--color-rgb-primary),.18)}
+        .dark footer{background:#140C0E;color:#EDE7E3;border-color:rgba(var(--color-rgb-bright),.2)}
+        footer a:hover{color:var(--color-primary)}
+        .dark footer a:hover{color:var(--color-primary-bright)}
+        .social-icon{width:44px;height:44px;border-radius:50%;background:rgba(var(--color-rgb-primary),.1);color:var(--color-primary);display:inline-flex;align-items:center;justify-content:center;transition:all .3s;border:1px solid rgba(var(--color-rgb-primary),.2)}
+        .dark .social-icon{background:rgba(var(--color-rgb-bright),.12);color:var(--color-primary-bright);border-color:rgba(var(--color-rgb-bright),.25)}
+        .social-icon:hover{background:var(--color-primary);color:#fff;transform:translateY(-3px) scale(1.05)}
+        .dark .social-icon:hover{background:var(--color-primary-bright);color:#140C0E}
+
+        .premium-line{width:90px;height:3px;background:linear-gradient(90deg,var(--color-primary),var(--color-primary-light),transparent);margin:24px 0;border-radius:2px}
+        .dark .premium-line{background:linear-gradient(90deg,var(--color-primary-bright),var(--color-primary-light),transparent)}
+
+        .double-bezel-outer{position:relative;border-radius:2rem;padding:.375rem;background:linear-gradient(180deg,rgba(var(--color-rgb-primary),.25) 0%,rgba(var(--color-rgb-primary),.05) 100%);border:1px solid rgba(var(--color-rgb-primary),.2);box-shadow:0 20px 40px -15px rgba(0,0,0,.08);transition:all .5s cubic-bezier(.16,1,.3,1)}
+        .dark .double-bezel-outer{background:linear-gradient(180deg,rgba(var(--color-rgb-bright),.2) 0%,rgba(255,255,255,.02) 100%);border-color:rgba(var(--color-rgb-bright),.2);box-shadow:0 25px 50px -15px rgba(0,0,0,.7)}
+        .double-bezel-outer:hover{transform:translateY(-6px);border-color:rgba(var(--color-rgb-primary),.45);box-shadow:0 30px 60px -15px rgba(var(--color-rgb-primary),.25)}
+        .dark .double-bezel-outer:hover{border-color:rgba(var(--color-rgb-bright),.45);box-shadow:0 30px 60px -15px rgba(0,0,0,.9)}
+        .double-bezel-inner{border-radius:calc(2rem - .375rem);background:#FFF;height:100%;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;box-shadow:inset 0 1px 1px rgba(255,255,255,.8)}
+        .dark .double-bezel-inner{background:#1F1418;box-shadow:inset 0 1px 1px rgba(255,255,255,.08)}
+
+        .btn-nested{display:inline-flex;align-items:center;gap:.85rem;padding:.65rem .75rem .65rem 1.75rem;border-radius:9999px;font-weight:700;font-size:.9rem;letter-spacing:.05em;text-transform:uppercase;font-family:'Plus Jakarta Sans',sans-serif;transition:all .3s cubic-bezier(.16,1,.3,1);background:linear-gradient(135deg,var(--color-primary-light) 0%,var(--color-primary) 100%);color:#FFF!important;box-shadow:0 10px 25px -5px rgba(var(--color-rgb-primary),.35)}
+        .dark .btn-nested{background:linear-gradient(135deg,var(--color-primary-bright) 0%,var(--color-primary) 100%);color:#140C0E!important;box-shadow:0 10px 25px -5px rgba(var(--color-rgb-bright),.3)}
+        .btn-nested .icon-circle{width:2.25rem;height:2.25rem;border-radius:9999px;background:rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;transition:transform .3s cubic-bezier(.16,1,.3,1)}
+        .dark .btn-nested .icon-circle{background:rgba(20,12,14,.25)}
+        .btn-nested:hover{transform:translateY(-2px);box-shadow:0 18px 35px -8px rgba(var(--color-rgb-primary),.5)}
+        .dark .btn-nested:hover{box-shadow:0 18px 35px -8px rgba(var(--color-rgb-bright),.45)}
+        .btn-nested:hover .icon-circle{transform:translateX(3px) rotate(45deg)}
+        .btn-nested:active{transform:scale(.98)}
+
+        .btn-frosted{display:inline-flex;align-items:center;gap:.65rem;padding:.85rem 1.75rem;border-radius:9999px;font-weight:600;font-size:.88rem;letter-spacing:.05em;text-transform:uppercase;font-family:'Plus Jakarta Sans',sans-serif;border:1px solid rgba(var(--color-rgb-primary),.3);color:var(--color-text-dark);background:rgba(255,255,255,.6);backdrop-filter:blur(10px);transition:all .3s ease}
+        .dark .btn-frosted{border-color:rgba(var(--color-rgb-bright),.3);color:#EDE7E3;background:rgba(25,20,18,.6)}
+        .btn-frosted:hover{background:rgba(var(--color-rgb-primary),.12);border-color:var(--color-primary);transform:translateY(-2px)}
+        .dark .btn-frosted:hover{background:rgba(var(--color-rgb-bright),.15);border-color:var(--color-primary-bright)}
+
+        @keyframes shimmerPulse{0%,100%{opacity:.85;transform:scale(1)}50%{opacity:1;transform:scale(1.02)}}
+        .eyebrow-pill{animation:shimmerPulse 4s ease-in-out infinite}
+
+        /* Portfolio Category Tabs */
+        .portfolio-tab {
+            background: rgba(var(--color-rgb-primary), .08);
+            color: var(--color-text-dark);
+            border: 1px solid rgba(var(--color-rgb-primary), .2);
+            transition: all .3s cubic-bezier(.16, 1, .3, 1);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+        }
+        .dark .portfolio-tab {
+            background: rgba(var(--color-rgb-bright), .08);
+            color: #EDE7E3;
+            border-color: rgba(var(--color-rgb-bright), .2);
+        }
+        .portfolio-tab:hover, .portfolio-tab.active {
+            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+            color: #FFF !important;
+            border-color: transparent;
+            box-shadow: 0 4px 15px -3px rgba(var(--color-rgb-primary), .4);
+        }
+        .dark .portfolio-tab:hover, .dark .portfolio-tab.active {
+            background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%);
+            color: #140C0E !important;
+            box-shadow: 0 4px 15px -3px rgba(var(--color-rgb-bright), .35);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+
+<body class="bg-bg-warm dark:bg-dark-bg text-neutral-dark dark:text-gray-200 transition-colors duration-400">
+
+    <!-- ========== HEADER (COPIED FROM REFERENCE) ========== -->
+    <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 pt-3 sm:pt-4 transition-all duration-300 pointer-events-none">
+        <nav class="max-w-7xl mx-auto pointer-events-auto bg-white/85 dark:bg-[#180F12]/90 backdrop-blur-xl rounded-full px-5 sm:px-7 py-2.5 sm:py-3 border border-gift-slate/25 dark:border-gift-slate-bright/25 shadow-[0_20px_45px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_45px_-15px_rgba(0,0,0,0.7)] flex items-center justify-between transition-colors duration-400">
+            <a href="index.html" class="flex items-center gap-3 group shrink-0" dir="ltr">
+                <div class="w-10 h-10 bg-gradient-to-br from-gift-slate-light to-gift-slate rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md group-hover:rotate-6 transition duration-300">
+                    <i class="fas fa-gem text-white dark:text-dark-bg text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-lg md:text-2xl font-serif font-bold tracking-wide text-neutral-dark dark:text-white">
+                        Bridal <span class="gold-gradient-text">Atelier</span>
+                    </span>
+                </div>
+            </a>
+
+            <div class="hidden xl:flex items-center">
+                <div class="desktop-nav-container">
+                    <div class="flex items-center gap-4 xl:gap-6">
+                        <div class="dropdown">
+                            <button class="nav-item flex items-center gap-1.5">Home <i class="fas fa-chevron-down text-[9px] opacity-70"></i></button>
+                            <div class="dropdown-menu">
+                                <a href="index.html" class="dropdown-item">Home 1</a>
+                                <a href="home2.html" class="dropdown-item">Home 2</a>
+                            </div>
+                        </div>
+                        <a href="about.html" class="nav-item">About Studio</a>
+                        <a href="services.html" class="nav-item">Services</a>
+                        <a href="portfolio.html" class="nav-item active" style="color: var(--color-primary); font-weight: 700;">Portfolio</a>
+                        <a href="contact.html" class="nav-item">Contact</a>
+                        <div class="dropdown">
+                            <button class="nav-item flex items-center gap-1.5">Dashboard <i class="fas fa-chevron-down text-[9px] opacity-70"></i></button>
+                            <div class="dropdown-menu">
+                                <a href="admin.html" class="dropdown-item">Studio Admin</a>
+                                <a href="client.html" class="dropdown-item">Bride Portal</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 ml-2">
+                        <a href="login.html" class="btn-nested !py-2 !px-4 !text-xs group"><span>Sign In</span><span class="icon-circle !w-6 !h-6"><i class="fas fa-arrow-right text-[10px]"></i></span></a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 ml-4 desktop-toggle-group">
+                    <button id="theme-toggle" class="toggle-btn !w-9 !h-9" title="Toggle Dark/Light Mode"><i class="fas fa-moon text-sm"></i><i class="fas fa-sun text-sm hidden"></i></button>
+                    <button id="rtl-toggle" class="toggle-btn !w-9 !h-9 font-serif font-bold text-xs" title="Toggle RTL/LTR">⇄</button>
+                </div>
+            </div>
+
+            <button id="mobile-toggle" class="xl:hidden text-neutral-dark dark:text-gray-300 p-2 focus:outline-none hover:text-gift-slate transition-colors" aria-label="Toggle Navigation Menu"><i class="fas fa-bars text-xl"></i></button>
+        </nav>
+
+        <div id="mobile-menu" class="mobile-menu xl:hidden max-w-7xl mx-auto mt-2 rounded-3xl border border-gift-slate/20 dark:border-gift-slate-bright/25 shadow-2xl overflow-hidden pointer-events-auto">
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-btn flex items-center justify-between w-full mobile-menu-item"><span>Home</span> <i class="fas fa-chevron-down text-xs"></i></button>
+                <div class="mobile-dropdown-content">
+                    <a href="index.html" class="mobile-dropdown-item">Home 1</a>
+                    <a href="home2.html" class="mobile-dropdown-item">Home 2</a>
+                </div>
+            </div>
+            <a href="about.html" class="mobile-menu-item">About Studio</a>
+            <a href="services.html" class="mobile-menu-item">Services</a>
+            <a href="portfolio.html" class="mobile-menu-item" style="color: var(--color-primary); font-weight: 700;">Portfolio</a>
+            <a href="contact.html" class="mobile-menu-item">Contact</a>
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-btn flex items-center justify-between w-full mobile-menu-item"><span>Portals</span> <i class="fas fa-chevron-down text-xs"></i></button>
+                <div class="mobile-dropdown-content">
+                    <a href="admin.html" class="mobile-dropdown-item">Studio Admin</a>
+                    <a href="client.html" class="mobile-dropdown-item">Bride Portal</a>
+                </div>
+            </div>
+            <div class="p-5 flex flex-col gap-3">
+                <a href="login.html" class="btn-nested justify-center !py-3 w-full text-center"><span>Client Portal Login</span><span class="icon-circle !w-7 !h-7"><i class="fas fa-arrow-right text-xs"></i></span></a>
+            </div>
+            <div class="flex justify-center gap-3 p-4 border-t border-gray-100 dark:border-gray-800">
+                <button id="theme-toggle-mobile" class="toggle-btn"><i class="fas fa-moon"></i><i class="fas fa-sun hidden"></i></button>
+                <button id="rtl-toggle-mobile" class="toggle-btn">⇄</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="min-h-[58vh] lg:min-h-[64vh] flex items-center justify-center pt-36 sm:pt-40 lg:pt-48 pb-20 sm:pb-24 lg:pb-28 bg-bg-warm dark:bg-dark-bg transition-colors duration-400 relative overflow-hidden">
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gift-slate/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl text-center mx-auto">
+                <div class="eyebrow-pill inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/10 border border-gift-slate/25 dark:border-gift-slate-bright/25 mb-6 backdrop-blur-md">
+                    <i class="fas fa-images text-gift-slate dark:text-gift-slate-bright text-xs"></i>
+                    <span class="text-[11px] font-bold font-sans dark:text-gift-slate-bright tracking-[0.22em] uppercase">Lookbook • Real Brides • 2024–2026</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-neutral-dark dark:text-white leading-[1.1] mb-6">
+                    Transformations that <span class="gold-gradient-text italic font-serif">Moved Us.</span>
+                </h1>
+                <div class="premium-line mx-auto !my-4"></div>
+                <p class="text-base sm:text-lg text-neutral-dark/85 dark:text-gray-300 font-sans font-light leading-relaxed max-w-2xl mx-auto">
+                    A curated collection of our most beloved brides — each look built around her, her venue, her gown, and the light she stood in.
+                </p>
+
+                <!-- Hero Action Buttons -->
+                <div class="flex flex-wrap gap-4 mt-8 justify-center items-center">
+                    <a href="contact.html" class="btn-nested group">
+                        <span>Book Your Transformation</span>
+                        <span class="icon-circle">
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </span>
+                    </a>
+                    <a href="services.html" class="btn-frosted group">
+                        <i class="fas fa-sparkles text-gift-slate dark:text-gift-slate-bright group-hover:scale-110 transition-transform"></i>
+                        <span>Explore Services & Pricing</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <!-- ========== SECTION 01: CLASSIC BALLROOM ========== -->
+    <section id="classic" class="py-16 sm:py-24 bg-white dark:bg-dark-card transition-colors duration-400 border-b border-neutral-light/50 dark:border-gray-800/60 scroll-mt-32">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright text-xs font-bold uppercase tracking-widest font-sans mb-3">
+                        <i class="fas fa-crown text-[10px]"></i> Section 01 • Grand Ballrooms & Cathedrals
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-dark dark:text-white leading-tight">
+                        Classic Glamour & <span class="gold-gradient-text italic font-serif">Haute Bridal</span>
+                    </h2>
+                    <p class="text-sm sm:text-base opacity-80 font-sans leading-relaxed mt-3">
+                        Porcelain airbrush complexion, sculpted symmetry, and regal cathedral veils engineered for grand chandeliers and historic Fifth Avenue estates.
+                    </p>
+                </div>
+                <div class="flex-shrink-0">
+                    <span class="badge text-xs font-sans font-semibold">3 Signature Commissions</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+                <!-- Card 1 -->
+                <div class="double-bezel-outer group h-full flex flex-col">
+                    <div class="double-bezel-inner h-full flex flex-col justify-between">
+                        <div class="relative h-72 sm:h-80 w-full overflow-hidden flex-shrink-0">
+                            <img src="Assets/p1.jpg" alt="Plaza Ballroom Bride" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" style="object-position: center top;">
+                            <span class="absolute top-3.5 left-3.5 badge text-[10px] font-sans">Classic Glam</span>
+                            <span class="absolute top-3.5 right-3.5 text-[10px] font-sans font-semibold px-2.5 py-1 rounded-full bg-black/45 text-white/95 backdrop-blur-md">Cathedral Veil</span>
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-widest font-sans text-gift-slate dark:text-gift-slate-bright font-bold block mb-1.5">Look 01 • Timeless Grace</span>
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-neutral-dark dark:text-white mb-2 leading-tight">The Plaza Ballroom Bride</h3>
+                                <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed mb-4 min-h-[2.5rem]">Airbrushed porcelain skin, low French chignon, cathedral lace veil, and gentle contouring suited for crystal ballroom lighting.</p>
+                            </div>
+                            <div class="pt-4 border-t border-gift-slate/15 dark:border-gray-800/80 flex items-center justify-between mt-auto">
+                                <span class="text-[11px] uppercase tracking-wider font-sans font-medium opacity-75 flex items-center gap-1.5">
+                                    <i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright"></i> Fifth Avenue, NYC
+                                </span>
+                                <a href="contact.html" class="text-xs font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright hover:underline flex items-center gap-1">Inquire ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="double-bezel-outer group h-full flex flex-col">
+                    <div class="double-bezel-inner h-full flex flex-col justify-between">
+                        <div class="relative h-72 sm:h-80 w-full overflow-hidden flex-shrink-0">
+                            <img src="Assets/p2.jpg" alt="Metropolitan Cathedral Bride" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-3.5 left-3.5 badge text-[10px] font-sans">Haute Couture</span>
+                            <span class="absolute top-3.5 right-3.5 text-[10px] font-sans font-semibold px-2.5 py-1 rounded-full bg-black/45 text-white/95 backdrop-blur-md">Royal Tiara</span>
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-widest font-sans text-gift-slate dark:text-gift-slate-bright font-bold block mb-1.5">Look 02 • Regal Radiance</span>
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-neutral-dark dark:text-white mb-2 leading-tight">Metropolitan Cathedral Bride</h3>
+                                <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed mb-4 min-h-[2.5rem]">Crystal tiara pinning, velvet rose lips, feathered micro-lashes, and candlelight-responsive radiance formulated with Chanel cosmetics.</p>
+                            </div>
+                            <div class="pt-4 border-t border-gift-slate/15 dark:border-gray-800/80 flex items-center justify-between mt-auto">
+                                <span class="text-[11px] uppercase tracking-wider font-sans font-medium opacity-75 flex items-center gap-1.5">
+                                    <i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright"></i> Manhattan, NY
+                                </span>
+                                <a href="contact.html" class="text-xs font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright hover:underline flex items-center gap-1">Inquire ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="double-bezel-outer group h-full flex flex-col">
+                    <div class="double-bezel-inner h-full flex flex-col justify-between">
+                        <div class="relative h-72 sm:h-80 w-full overflow-hidden flex-shrink-0">
+                            <img src="Assets/bride4.png" alt="St. Regis Grand Salon Bride" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-3.5 left-3.5 badge text-[10px] font-sans">Royal Romance</span>
+                            <span class="absolute top-3.5 right-3.5 text-[10px] font-sans font-semibold px-2.5 py-1 rounded-full bg-black/45 text-white/95 backdrop-blur-md">Chandelier Gala</span>
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-widest font-sans text-gift-slate dark:text-gift-slate-bright font-bold block mb-1.5">Look 03 • Grand Salon</span>
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-neutral-dark dark:text-white mb-2 leading-tight">St. Regis Grand Salon Bride</h3>
+                                <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed mb-4 min-h-[2.5rem]">Hand-embroidered lace veil integration, sculpted cheekbones, and flawless 18-hour sweatproof setting for a midnight departure.</p>
+                            </div>
+                            <div class="pt-4 border-t border-gift-slate/15 dark:border-gray-800/80 flex items-center justify-between mt-auto">
+                                <span class="text-[11px] uppercase tracking-wider font-sans font-medium opacity-75 flex items-center gap-1.5">
+                                    <i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright"></i> Newport, RI
+                                </span>
+                                <a href="contact.html" class="text-xs font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright hover:underline flex items-center gap-1">Inquire ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 02: MODERN MINIMALIST & CITY HALL ========== -->
+    <section id="minimal" class="py-16 sm:py-24 bg-bg-warm dark:bg-dark-bg transition-colors duration-400 scroll-mt-32">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright text-xs font-bold uppercase tracking-widest font-sans mb-3">
+                        <i class="fas fa-cube text-[10px]"></i> Section 02 • Clean Lines & Architectural Silks
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-dark dark:text-white leading-tight">
+                        Modern Minimalist & <span class="gold-gradient-text italic font-serif">City Hall</span>
+                    </h2>
+                    <p class="text-sm sm:text-base opacity-80 font-sans leading-relaxed mt-3">
+                        Sculptural simplicity, dewy glass skin, defined brows, and sleek architectural chignons crafted for chic lofts and intimate city ceremonies.
+                    </p>
+                </div>
+                <div class="flex-shrink-0">
+                    <span class="badge text-xs font-sans font-semibold">3 Signature Commissions</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+                <!-- Card 1 -->
+                <div class="double-bezel-outer group h-full flex flex-col">
+                    <div class="double-bezel-inner h-full flex flex-col justify-between">
+                        <div class="relative h-72 sm:h-80 w-full overflow-hidden flex-shrink-0">
+                            <img src="Assets/bride3.png" alt="City Hall Minimalist Bride" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-3.5 left-3.5 badge text-[10px] font-sans">Minimal Chic</span>
+                            <span class="absolute top-3.5 right-3.5 text-[10px] font-sans font-semibold px-2.5 py-1 rounded-full bg-black/45 text-white/95 backdrop-blur-md">Glass Skin</span>
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-widest font-sans text-gift-slate dark:text-gift-slate-bright font-bold block mb-1.5">Look 04 • Downtown Clean</span>
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-neutral-dark dark:text-white mb-2 leading-tight">City Hall Minimalist</h3>
+                                <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed mb-4 min-h-[2.5rem]">Glass skin finish, velvet rose-nude lip, high-gloss chignon, and subtle champagne eyeshadow reflecting natural sunlight.</p>
+                            </div>
+                            <div class="pt-4 border-t border-gift-slate/15 dark:border-gray-800/80 flex items-center justify-between mt-auto">
+                                <span class="text-[11px] uppercase tracking-wider font-sans font-medium opacity-75 flex items-center gap-1.5">
+                                    <i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright"></i> Chicago, IL
+                                </span>
+                                <a href="contact.html" class="text-xs font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright hover:underline flex items-center gap-1">Inquire ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="double-bezel-outer group h-full flex flex-col">
+                    <div class="double-bezel-inner h-full flex flex-col justify-between">
+                        <div class="relative h-72 sm:h-80 w-full overflow-hidden flex-shrink-0">
+                            <img src="Assets/bride5.png" alt="SoHo Architectural Loft Bride" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-3.5 left-3.5 badge text-[10px] font-sans">Editorial Modern</span>
+                            <span class="absolute top-3.5 right-3.5 text-[10px] font-sans font-semibold px-2.5 py-1 rounded-full bg-black/45 text-white/95 backdrop-blur-md">Silk Slip</span>
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-widest font-sans text-gift-slate dark:text-gift-slate-bright font-bold block mb-1.5">Look 05 • Sculptural Silk</span>
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-neutral-dark dark:text-white mb-2 leading-tight">SoHo Architectural Loft</h3>
+                                <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed mb-4 min-h-[2.5rem]">Fresh luminous glow, sleek center-part bun, minimalist satin slip gown styling, and natural soft loft studio lighting.</p>
+                            </div>
+                            <div class="pt-4 border-t border-gift-slate/15 dark:border-gray-800/80 flex items-center justify-between mt-auto">
+                                <span class="text-[11px] uppercase tracking-wider font-sans font-medium opacity-75 flex items-center gap-1.5">
+                                    <i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright"></i> SoHo, NYC
+                                </span>
+                                <a href="contact.html" class="text-xs font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright hover:underline flex items-center gap-1">Inquire ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="double-bezel-outer group h-full flex flex-col">
+                    <div class="double-bezel-inner h-full flex flex-col justify-between">
+                        <div class="relative h-72 sm:h-80 w-full overflow-hidden flex-shrink-0">
+                            <img src="Assets/bride7.png" alt="Tribeca Gallery Bride" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-3.5 left-3.5 badge text-[10px] font-sans">Clean Sculptural</span>
+                            <span class="absolute top-3.5 right-3.5 text-[10px] font-sans font-semibold px-2.5 py-1 rounded-full bg-black/45 text-white/95 backdrop-blur-md">Modern Arch</span>
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-widest font-sans text-gift-slate dark:text-gift-slate-bright font-bold block mb-1.5">Look 06 • Pure Contemporary</span>
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-neutral-dark dark:text-white mb-2 leading-tight">Tribeca Gallery Bride</h3>
+                                <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed mb-4 min-h-[2.5rem]">Feathered brow lamination, dewy cheek highlights, minimalist white silk gown, and modern arched window daylight.</p>
+                            </div>
+                            <div class="pt-4 border-t border-gift-slate/15 dark:border-gray-800/80 flex items-center justify-between mt-auto">
+                                <span class="text-[11px] uppercase tracking-wider font-sans font-medium opacity-75 flex items-center gap-1.5">
+                                    <i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright"></i> Tribeca, NYC
+                                </span>
+                                <a href="contact.html" class="text-xs font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright hover:underline flex items-center gap-1">Inquire ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 03: ROMANTIC GARDEN & DESTINATION ========== -->
+    <section id="destination" class="py-16 sm:py-24 bg-white dark:bg-dark-card transition-colors duration-400 border-y border-neutral-light/50 dark:border-gray-800/60 scroll-mt-32">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright text-xs font-bold uppercase tracking-widest font-sans mb-3">
+                        <i class="fas fa-sun text-[10px]"></i> Section 03 • Golden Hour & Ocean Breezes
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-dark dark:text-white leading-tight">
+                        Romantic Garden & <span class="gold-gradient-text italic font-serif">Coastal Destination</span>
+                    </h2>
+                    <p class="text-sm sm:text-base opacity-80 font-sans leading-relaxed mt-3">
+                        Effortless sun-kissed radiance, wind-resistant textured waves, and soft rose-bronze tones engineered for oceanfront breezes and golden hour light.
+                    </p>
+                </div>
+                <div class="flex-shrink-0">
+                    <span class="badge text-xs font-sans font-semibold">3 Signature Commissions</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+                <!-- Card 1 -->
+                <div class="double-bezel-outer group h-full flex flex-col">
+                    <div class="double-bezel-inner h-full flex flex-col justify-between">
+                        <div class="relative h-72 sm:h-80 w-full overflow-hidden flex-shrink-0">
+                            <img src="Assets/bride2.png" alt="Malibu Sunlit Romance Bride" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" style="object-position: center 33%;">
+                            <span class="absolute top-3.5 left-3.5 badge text-[10px] font-sans">Boho Romance</span>
+                            <span class="absolute top-3.5 right-3.5 text-[10px] font-sans font-semibold px-2.5 py-1 rounded-full bg-black/45 text-white/95 backdrop-blur-md">Golden Glow</span>
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-widest font-sans text-gift-slate dark:text-gift-slate-bright font-bold block mb-1.5">Look 07 • Pacific Sunset</span>
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-neutral-dark dark:text-white mb-2 leading-tight">Malibu Sunlit Romance</h3>
+                                <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed mb-4 min-h-[2.5rem]">Luminous finish, mermaid waves, eucalyptus floral crown, and sweat-resistant hydrating primer for Pacific coast breezes.</p>
+                            </div>
+                            <div class="pt-4 border-t border-gift-slate/15 dark:border-gray-800/80 flex items-center justify-between mt-auto">
+                                <span class="text-[11px] uppercase tracking-wider font-sans font-medium opacity-75 flex items-center gap-1.5">
+                                    <i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright"></i> Malibu, CA
+                                </span>
+                                <a href="contact.html" class="text-xs font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright hover:underline flex items-center gap-1">Inquire ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="double-bezel-outer group h-full flex flex-col">
+                    <div class="double-bezel-inner h-full flex flex-col justify-between">
+                        <div class="relative h-72 sm:h-80 w-full overflow-hidden flex-shrink-0">
+                            <img src="Assets/p4.jpg" alt="Napa Valley Vineyard Glow" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" style="object-position: center top;">
+                            <span class="absolute top-3.5 left-3.5 badge text-[10px] font-sans">Garden Rose</span>
+                            <span class="absolute top-3.5 right-3.5 text-[10px] font-sans font-semibold px-2.5 py-1 rounded-full bg-black/45 text-white/95 backdrop-blur-md">Soft Glam</span>
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-widest font-sans text-gift-slate dark:text-gift-slate-bright font-bold block mb-1.5">Look 08 • Vineyard Estate</span>
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-neutral-dark dark:text-white mb-2 leading-tight">Napa Valley Vineyard Glow</h3>
+                                <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed mb-4 min-h-[2.5rem]">Soft rose petal cheeks, dewy skin finish, half-up textured twist, and warm nude lipstick blending with open-air vineyards.</p>
+                            </div>
+                            <div class="pt-4 border-t border-gift-slate/15 dark:border-gray-800/80 flex items-center justify-between mt-auto">
+                                <span class="text-[11px] uppercase tracking-wider font-sans font-medium opacity-75 flex items-center gap-1.5">
+                                    <i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright"></i> Napa Valley, CA
+                                </span>
+                                <a href="contact.html" class="text-xs font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright hover:underline flex items-center gap-1">Inquire ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="double-bezel-outer group h-full flex flex-col">
+                    <div class="double-bezel-inner h-full flex flex-col justify-between">
+                        <div class="relative h-72 sm:h-80 w-full overflow-hidden flex-shrink-0">
+                            <img src="Assets/bride6.png" alt="Amalfi Coast Cliffside Bride" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-3.5 left-3.5 badge text-[10px] font-sans">Mediterranean</span>
+                            <span class="absolute top-3.5 right-3.5 text-[10px] font-sans font-semibold px-2.5 py-1 rounded-full bg-black/45 text-white/95 backdrop-blur-md">Cliffside Villa</span>
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-widest font-sans text-gift-slate dark:text-gift-slate-bright font-bold block mb-1.5">Look 09 • Italian Riviera</span>
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-neutral-dark dark:text-white mb-2 leading-tight">Amalfi Coast Cliffside</h3>
+                                <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed mb-4 min-h-[2.5rem]">Sun-kissed bronze, sea-salt textured loose waves, light lace gown, and golden-hour radiance overlooking the Tyrrhenian sea.</p>
+                            </div>
+                            <div class="pt-4 border-t border-gift-slate/15 dark:border-gray-800/80 flex items-center justify-between mt-auto">
+                                <span class="text-[11px] uppercase tracking-wider font-sans font-medium opacity-75 flex items-center gap-1.5">
+                                    <i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright"></i> Amalfi, Italy
+                                </span>
+                                <a href="contact.html" class="text-xs font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright hover:underline flex items-center gap-1">Inquire ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 04: HAUTE HAIR & VEIL ARTISTRY ========== -->
+    <section id="hair-veil" class="py-16 sm:py-24 bg-bg-warm dark:bg-dark-bg transition-colors duration-400 scroll-mt-32">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright text-xs font-bold uppercase tracking-widest font-sans mb-3">
+                        <i class="fas fa-feather-alt text-[10px]"></i> Section 04 • Architectural Waves & Sculpted Updos
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-dark dark:text-white leading-tight">
+                        Haute Hair & <span class="gold-gradient-text italic font-serif">Intricate Veil Artistry</span>
+                    </h2>
+                    <p class="text-sm sm:text-base opacity-80 font-sans leading-relaxed mt-3">
+                        Signature red-carpet gloss waves, hand-pinned French chignons, and delicate tiara and heirloom veil engineering guaranteed to endure through dancing and hugs.
+                    </p>
+                </div>
+                <div class="flex-shrink-0">
+                    <span class="badge text-xs font-sans font-semibold">3 Signature Commissions</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+                <!-- Card 1 -->
+                <div class="double-bezel-outer group h-full flex flex-col">
+                    <div class="double-bezel-inner h-full flex flex-col justify-between">
+                        <div class="relative h-72 sm:h-80 w-full overflow-hidden flex-shrink-0">
+                            <img src="Assets/hair.png" alt="Hollywood Red Carpet Waves" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-3.5 left-3.5 badge text-[10px] font-sans">Red Carpet</span>
+                            <span class="absolute top-3.5 right-3.5 text-[10px] font-sans font-semibold px-2.5 py-1 rounded-full bg-black/45 text-white/95 backdrop-blur-md">Gloss Waves</span>
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-widest font-sans text-gift-slate dark:text-gift-slate-bright font-bold block mb-1.5">Look 10 • Signature Wave</span>
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-neutral-dark dark:text-white mb-2 leading-tight">Hollywood Red Carpet Waves</h3>
+                                <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed mb-4 min-h-[2.5rem]">Deep side-part sculpted gloss waves, satin finish, heat-protected Oribe structure, and high-definition bridal glow.</p>
+                            </div>
+                            <div class="pt-4 border-t border-gift-slate/15 dark:border-gray-800/80 flex items-center justify-between mt-auto">
+                                <span class="text-[11px] uppercase tracking-wider font-sans font-medium opacity-75 flex items-center gap-1.5">
+                                    <i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright"></i> Beverly Hills, CA
+                                </span>
+                                <a href="contact.html" class="text-xs font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright hover:underline flex items-center gap-1">Inquire ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="double-bezel-outer group h-full flex flex-col">
+                    <div class="double-bezel-inner h-full flex flex-col justify-between">
+                        <div class="relative h-72 sm:h-80 w-full overflow-hidden flex-shrink-0">
+                            <img src="Assets/hair2.png" alt="Parisian Textured Low Chignon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-3.5 left-3.5 badge text-[10px] font-sans">Couture Updo</span>
+                            <span class="absolute top-3.5 right-3.5 text-[10px] font-sans font-semibold px-2.5 py-1 rounded-full bg-black/45 text-white/95 backdrop-blur-md">Pearl Pins</span>
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-widest font-sans text-gift-slate dark:text-gift-slate-bright font-bold block mb-1.5">Look 11 • French Atelier</span>
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-neutral-dark dark:text-white mb-2 leading-tight">Parisian Textured Low Chignon</h3>
+                                <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed mb-4 min-h-[2.5rem]">Textured low bridal chignon bun adorned with genuine freshwater pearls, silk veil pinning, and delicate romantic tendrils.</p>
+                            </div>
+                            <div class="pt-4 border-t border-gift-slate/15 dark:border-gray-800/80 flex items-center justify-between mt-auto">
+                                <span class="text-[11px] uppercase tracking-wider font-sans font-medium opacity-75 flex items-center gap-1.5">
+                                    <i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright"></i> Paris Atelier, FR
+                                </span>
+                                <a href="contact.html" class="text-xs font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright hover:underline flex items-center gap-1">Inquire ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="double-bezel-outer group h-full flex flex-col">
+                    <div class="double-bezel-inner h-full flex flex-col justify-between">
+                        <div class="relative h-72 sm:h-80 w-full overflow-hidden flex-shrink-0">
+                            <img src="Assets/hair3.png" alt="Cascading Floral Half-Up Crown" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-3.5 left-3.5 badge text-[10px] font-sans">Floral Half-Up</span>
+                            <span class="absolute top-3.5 right-3.5 text-[10px] font-sans font-semibold px-2.5 py-1 rounded-full bg-black/45 text-white/95 backdrop-blur-md">Jasmine Vine</span>
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-widest font-sans text-gift-slate dark:text-gift-slate-bright font-bold block mb-1.5">Look 12 • Romantic Crown</span>
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-neutral-dark dark:text-white mb-2 leading-tight">Cascading Floral Half-Up Crown</h3>
+                                <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed mb-4 min-h-[2.5rem]">Voluminous cascaded waves woven with delicate white floral pins and crystal vine, framing an open-back wedding dress.</p>
+                            </div>
+                            <div class="pt-4 border-t border-gift-slate/15 dark:border-gray-800/80 flex items-center justify-between mt-auto">
+                                <span class="text-[11px] uppercase tracking-wider font-sans font-medium opacity-75 flex items-center gap-1.5">
+                                    <i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright"></i> Cotswolds, UK
+                                </span>
+                                <a href="contact.html" class="text-xs font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright hover:underline flex items-center gap-1">Inquire ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 05: BRIDAL PARTY & CELEBRATIONS ========== -->
+    <section id="entourage" class="py-16 sm:py-24 bg-white dark:bg-dark-card transition-colors duration-400 border-y border-neutral-light/50 dark:border-gray-800/60 scroll-mt-32">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright text-xs font-bold uppercase tracking-widest font-sans mb-3">
+                        <i class="fas fa-users text-[10px]"></i> Section 05 • Full Entourage & Weekend Events
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-dark dark:text-white leading-tight">
+                        Bridal Party & <span class="gold-gradient-text italic font-serif">Pre-Wedding Celebrations</span>
+                    </h2>
+                    <p class="text-sm sm:text-base opacity-80 font-sans leading-relaxed mt-3">
+                        Harmonious, elevated styling for bridesmaids, mothers of the bride, rehearsal dinner soirées, and morning suite champagne preparations.
+                    </p>
+                </div>
+                <div class="flex-shrink-0">
+                    <span class="badge text-xs font-sans font-semibold">3 Signature Commissions</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+                <!-- Card 1 -->
+                <div class="double-bezel-outer group h-full flex flex-col">
+                    <div class="double-bezel-inner h-full flex flex-col justify-between">
+                        <div class="relative h-72 sm:h-80 w-full overflow-hidden flex-shrink-0">
+                            <img src="Assets/p5.jpg" alt="The Full Entourage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" style="object-position: center top;">
+                            <span class="absolute top-3.5 left-3.5 badge text-[10px] font-sans">Entourage</span>
+                            <span class="absolute top-3.5 right-3.5 text-[10px] font-sans font-semibold px-2.5 py-1 rounded-full bg-black/45 text-white/95 backdrop-blur-md">9 Bridesmaids</span>
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-widest font-sans text-gift-slate dark:text-gift-slate-bright font-bold block mb-1.5">Look 13 • Bridal Court</span>
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-neutral-dark dark:text-white mb-2 leading-tight">The Full Entourage</h3>
+                                <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed mb-4 min-h-[2.5rem]">Coordinated soft glam for 9 bridesmaids, custom contour palettes, and unified hair concepts complementing the bride's gown.</p>
+                            </div>
+                            <div class="pt-4 border-t border-gift-slate/15 dark:border-gray-800/80 flex items-center justify-between mt-auto">
+                                <span class="text-[11px] uppercase tracking-wider font-sans font-medium opacity-75 flex items-center gap-1.5">
+                                    <i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright"></i> Lake Como, Italy
+                                </span>
+                                <a href="contact.html" class="text-xs font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright hover:underline flex items-center gap-1">Inquire ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="double-bezel-outer group h-full flex flex-col">
+                    <div class="double-bezel-inner h-full flex flex-col justify-between">
+                        <div class="relative h-72 sm:h-80 w-full overflow-hidden flex-shrink-0">
+                            <img src="Assets/addons.png" alt="Rehearsal Dinner Glow" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" style="object-position: center 10%;">
+                            <span class="absolute top-3.5 left-3.5 badge text-[10px] font-sans">Rehearsal</span>
+                            <span class="absolute top-3.5 right-3.5 text-[10px] font-sans font-semibold px-2.5 py-1 rounded-full bg-black/45 text-white/95 backdrop-blur-md">Night Before</span>
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-widest font-sans text-gift-slate dark:text-gift-slate-bright font-bold block mb-1.5">Look 14 • Welcome Soirée</span>
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-neutral-dark dark:text-white mb-2 leading-tight">Rehearsal Dinner Glow</h3>
+                                <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed mb-4 min-h-[2.5rem]">Soft bronzed glam, loose relaxed waves, and nude satin lip for candlelit rehearsal dinners and welcome cocktail parties.</p>
+                            </div>
+                            <div class="pt-4 border-t border-gift-slate/15 dark:border-gray-800/80 flex items-center justify-between mt-auto">
+                                <span class="text-[11px] uppercase tracking-wider font-sans font-medium opacity-75 flex items-center gap-1.5">
+                                    <i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright"></i> Aspen, CO
+                                </span>
+                                <a href="contact.html" class="text-xs font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright hover:underline flex items-center gap-1">Inquire ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="double-bezel-outer group h-full flex flex-col">
+                    <div class="double-bezel-inner h-full flex flex-col justify-between">
+                        <div class="relative h-72 sm:h-80 w-full overflow-hidden flex-shrink-0">
+                            <img src="Assets/party2.png" alt="Bridal Suite Morning Prep" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <span class="absolute top-3.5 left-3.5 badge text-[10px] font-sans">Morning Prep</span>
+                            <span class="absolute top-3.5 right-3.5 text-[10px] font-sans font-semibold px-2.5 py-1 rounded-full bg-black/45 text-white/95 backdrop-blur-md">Bridal Suite</span>
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-widest font-sans text-gift-slate dark:text-gift-slate-bright font-bold block mb-1.5">Look 15 • Suite Experience</span>
+                                <h3 class="font-serif font-bold text-xl sm:text-2xl text-neutral-dark dark:text-white mb-2 leading-tight">Bridal Suite Morning Prep</h3>
+                                <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed mb-4 min-h-[2.5rem]">Silk champagne robes, relaxed morning timeline, full vanity mirror setup, and final touch-ups before stepping into the gown.</p>
+                            </div>
+                            <div class="pt-4 border-t border-gift-slate/15 dark:border-gray-800/80 flex items-center justify-between mt-auto">
+                                <span class="text-[11px] uppercase tracking-wider font-sans font-medium opacity-75 flex items-center gap-1.5">
+                                    <i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright"></i> Palm Beach, FL
+                                </span>
+                                <a href="contact.html" class="text-xs font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright hover:underline flex items-center gap-1">Inquire ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LOOKBOOK COMMISSION CTA ========== -->
+    <section class="py-20 sm:py-28 bg-bg-warm dark:bg-dark-bg transition-colors duration-400 relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto double-bezel-outer text-center p-8 sm:p-14">
+                <div class="double-bezel-inner !p-8 sm:!p-12 items-center text-center">
+                    <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">Private Commission</span>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold text-neutral-dark dark:text-white mt-4 mb-5">
+                        Ready to Design Your <span class="gold-gradient-text italic font-serif">Wedding Look?</span>
+                    </h2>
+                    <p class="text-base sm:text-lg opacity-85 font-sans leading-relaxed max-w-2xl mx-auto mb-8">
+                        Every commission includes an in-depth 2-hour Fifth Avenue trial session, custom skin preparation, and dedicated day-of concierge styling.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center gap-4">
+                        <a href="contact.html" class="btn-nested group"><span>Commission Your Look</span><span class="icon-circle"><i class="fas fa-arrow-right text-xs"></i></span></a>
+                        <a href="services.html" class="btn-frosted"><span>View Services Menu</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER (COPIED FROM REFERENCE) ========== -->
+    <footer class="py-20 bg-white dark:bg-[#140C0E] transition-colors duration-400">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="text-center md:text-start">
+                    <!-- Brand Lockup in Footer -->
+                    <a href="index.html" class="flex items-center justify-center md:justify-start gap-3 mb-5 group shrink-0" dir="ltr">
+                        <div class="w-10 h-10 bg-gradient-to-br from-gift-slate-light to-gift-slate rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md group-hover:rotate-6 transition duration-300">
+                            <i class="fas fa-gem text-white dark:text-dark-bg text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="text-lg md:text-2xl font-serif font-bold tracking-wide text-neutral-dark dark:text-white">
+                                Bridal <span class="gold-gradient-text">Atelier</span>
+                            </span>
+                        </div>
+                    </a>
+                    <p class="text-sm opacity-80 mb-6 leading-relaxed font-sans">Luxury bridal makeup & hairstyling studio. Making you the most radiant, unforgettable version of yourself.</p>
+                    <div class="flex justify-center md:justify-start gap-4">
+                        <a href="#" class="social-icon text-sm" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon text-sm" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon text-sm" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="text-center md:text-start">
+                    <h3 class="text-neutral-dark dark:text-white text-lg font-serif font-bold mb-6">Quick Navigation</h3>
+                    <ul class="space-y-3.5 text-sm font-sans">
+                        <li><a href="index.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Home Atelier</a></li>
+                        <li><a href="about.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Services</a></li>
+                        <li><a href="portfolio.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Lookbook</a></li>
+                        <li><a href="contact.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Contact & Booking</a></li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-start">
+                    <h3 class="text-neutral-dark dark:text-white text-lg font-serif font-bold mb-6">Couture Services</h3>
+                    <ul class="space-y-3.5 text-sm font-sans">
+                        <li><a href="services.html#makeup" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">HD Airbrush Makeup</a></li>
+                        <li><a href="services.html#hair" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Bridal Hairstyling</a></li>
+                        <li><a href="services.html#party" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Bridal Entourage Glam</a></li>
+                        <li><a href="services.html#addons" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">On-Location Concierge</a></li>
+                        <li><a href="services.html#trials" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Private Trial Sessions</a></li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-start">
+                    <h3 class="text-neutral-dark dark:text-white text-lg font-serif font-bold mb-6">Studio Location</h3>
+                    <ul class="space-y-3 text-sm mb-6 font-sans">
+                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright w-4"></i><span dir="ltr">5th Ave Luxury Tower, NYC 10001</span></li>
+                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fas fa-phone text-gift-slate dark:text-gift-slate-bright w-4"></i><span dir="ltr">+1 (800) 555-0199</span></li>
+                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fas fa-envelope text-gift-slate dark:text-gift-slate-bright w-4"></i><span dir="ltr">hello@bridalatelier.com</span></li>
+                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fas fa-clock text-gift-slate dark:text-gift-slate-bright w-4"></i><span dir="ltr">Mon-Fri: 9AM - 6PM EST</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gift-slate/15 dark:border-gift-slate-bright/15 mt-14 pt-8 text-center">
+                <p class="text-sm opacity-90 font-sans" dir="ltr">© 2026 Bridal Atelier & Wedding Styling Studio. All rights reserved.</p>
+                <p class="text-xs opacity-75 mt-2 font-serif italic text-gift-slate dark:text-gift-slate-bright">Bridal Beauty • Timeless Elegance • Your Dream Day</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.documentElement.setAttribute('data-theme', 'rose-noir');
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = themeToggle?.querySelector('.fa-moon');
+            const themeIconSun = themeToggle?.querySelector('.fa-sun');
+            const mobileThemeToggle = document.getElementById('theme-toggle-mobile');
+            const mobileThemeIcon = mobileThemeToggle?.querySelector('.fa-moon');
+            const mobileThemeIconSun = mobileThemeToggle?.querySelector('.fa-sun');
+            function setTheme(isDark) {
+                if (isDark) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+                [themeIcon, mobileThemeIcon].forEach(i => i && i.classList.toggle('hidden', isDark));
+                [themeIconSun, mobileThemeIconSun].forEach(i => i && i.classList.toggle('hidden', !isDark));
+                [themeToggle, mobileThemeToggle].forEach(t => t && t.classList.toggle('active', isDark));
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            }
+            function toggleTheme() {
+                setTheme(!document.documentElement.classList.contains('dark'));
+            }
+            themeToggle?.addEventListener('click', toggleTheme);
+            mobileThemeToggle?.addEventListener('click', toggleTheme);
+            setTheme(localStorage.getItem('theme') === 'dark');
+
+            const rtlToggle = document.getElementById('rtl-toggle');
+            const mobileRtlToggle = document.getElementById('rtl-toggle-mobile');
+            function setRTL(isRTL) {
+                document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
+                document.documentElement.lang = isRTL ? 'ar' : 'en';
+                [rtlToggle, mobileRtlToggle].forEach(t => t && t.classList.toggle('active', isRTL));
+                localStorage.setItem('dir', isRTL ? 'rtl' : 'ltr');
+            }
+            function toggleRTL() {
+                setRTL(document.documentElement.dir !== 'rtl');
+            }
+            rtlToggle?.addEventListener('click', toggleRTL);
+            mobileRtlToggle?.addEventListener('click', toggleRTL);
+            setRTL(localStorage.getItem('dir') === 'rtl');
+
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileToggleIcon = document.querySelector('#mobile-toggle i');
+            mobileToggle?.addEventListener('click', () => {
+                const opening = !mobileMenu.classList.contains('open');
+                mobileMenu.classList.toggle('open', opening);
+                mobileToggleIcon.classList.toggle('fa-bars', !opening);
+                mobileToggleIcon.classList.toggle('fa-times', opening);
+                document.body.style.overflow = opening ? 'hidden' : '';
+                if (!opening) document.querySelectorAll('.mobile-dropdown-content').forEach(c => c.classList.remove('show'));
+            });
+            document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const content = btn.closest('.mobile-dropdown').querySelector('.mobile-dropdown-content');
+                    const icon = btn.querySelector('.fa-chevron-down');
+                    const opening = !content.classList.contains('show');
+                    content.classList.toggle('show', opening);
+                    icon.style.transform = opening ? 'rotate(180deg)' : 'rotate(0deg)';
+                    if (opening) document.querySelectorAll('.mobile-dropdown-content').forEach(o => {
+                        if (o !== content) { o.classList.remove('show'); const oi = o.parentElement.querySelector('.fa-chevron-down'); if (oi) oi.style.transform = 'rotate(0deg)'; }
+                    });
+                });
+            });
+
+            // Portfolio Collection Tabs Interactivity
+            const portfolioTabs = document.querySelectorAll('.portfolio-tab');
+            const sectionIds = ['classic', 'minimal', 'destination', 'hair-veil', 'entourage'];
+            const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+            portfolioTabs.forEach(tab => {
+                tab.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#all') {
+                        e.preventDefault();
+                        const firstSec = document.getElementById('classic');
+                        if (firstSec) {
+                            window.scrollTo({ top: firstSec.offsetTop - 130, behavior: 'smooth' });
+                        }
+                    } else if (href.startsWith('#')) {
+                        const targetId = href.substring(1);
+                        const targetSec = document.getElementById(targetId);
+                        if (targetSec) {
+                            e.preventDefault();
+                            window.scrollTo({ top: targetSec.offsetTop - 130, behavior: 'smooth' });
+                        }
+                    }
+                    portfolioTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            window.addEventListener('scroll', () => {
+                const scrollPos = window.scrollY + 180;
+                let currentId = '';
+                sections.forEach(sec => {
+                    if (sec.offsetTop <= scrollPos) {
+                        currentId = sec.getAttribute('id');
+                    }
+                });
+                if (currentId) {
+                    portfolioTabs.forEach(t => {
+                        const href = t.getAttribute('href');
+                        t.classList.toggle('active', href === '#' + currentId);
+                    });
+                }
+            }, { passive: true });
+        });
+    </script>
+</body>
+</html>

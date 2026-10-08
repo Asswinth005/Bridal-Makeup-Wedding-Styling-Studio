@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-theme="rose-noir">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridal Atelier | Home 2</title>
+    <link rel="icon" type="image/svg+xml" href="Assets/favicon.svg">
+    <meta name="description"
+        content="Editorial bridal beauty — a curated lookbook of transformations, process, and private atelier services.">
+    <!-- Tailwind CSS with Local & CDN Fallback -->
+    <script src="tailwind.js"></script>
+    <script>
+        if (typeof tailwind === 'undefined') {
+            document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+        }
+    </script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'gift-slate': 'rgba(var(--color-rgb-primary), <alpha-value>)',
+                        'gift-slate-light': 'rgba(var(--color-rgb-light), <alpha-value>)',
+                        'gift-slate-dark': 'rgba(var(--color-rgb-dark), <alpha-value>)',
+                        'gift-slate-bright': 'rgba(var(--color-rgb-bright), <alpha-value>)',
+                        'gift-accent': 'rgba(var(--color-rgb-accent), <alpha-value>)',
+                        'bg-warm': 'var(--color-bg-warm)',
+                        'neutral-dark': 'var(--color-text-dark)',
+                        'neutral-light': '#F5E6E9',
+                        'dark-bg': '#140C0E',
+                        'dark-card': '#201418',
+                        'dark-surface': '#2C1D22',
+                    },
+                    fontFamily: {
+                        'sans': ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        'serif': ['Cormorant Garamond', 'serif'],
+                        'display': ['Cormorant Garamond', 'Outfit', 'serif'],
+                        'premium': ['Cormorant Garamond', 'Outfit', 'serif'],
+                        'alt': ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    animation: {
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'fade-in': 'fadeIn 0.3s ease-out',
+                        'pulse-glow': 'pulseGlow 3s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { opacity: '0.6' },
+                            '50%': { opacity: '1' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        // Prevent theme flash on reload
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+        if (localStorage.getItem('dir') === 'rtl') {
+            document.documentElement.dir = 'rtl';
+            document.documentElement.lang = 'ar';
+        }
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Studio Stylesheet (Self-Contained in HTML) -->
+    <style>
+        :root,
+        [data-theme="rose-noir"],
+        [data-theme="gold-obsidian"] {
+            --color-primary: #C2707E;
+            --color-primary-light: #DE9DA9;
+            --color-primary-dark: #8F3B4A;
+            --color-primary-bright: #F5C6CE;
+            --color-accent: #E2A676;
+            --color-bg-warm: #FCF8F8;
+            --color-text-dark: #1E1014;
+            --color-rgb-primary: 194, 112, 126;
+            --color-rgb-light: 222, 157, 169;
+            --color-rgb-dark: 143, 59, 74;
+            --color-rgb-bright: 245, 198, 206;
+            --color-rgb-accent: 226, 166, 118;
+        }
+
+        [data-theme="royal-sapphire"] {
+            --color-primary: #2563EB;
+            --color-primary-light: #60A5FA;
+            --color-primary-dark: #1E40AF;
+            --color-primary-bright: #93C5FD;
+            --color-accent: #F59E0B;
+            --color-bg-warm: #F8FAFC;
+            --color-text-dark: #0F172A;
+            --color-rgb-primary: 37, 99, 235;
+            --color-rgb-light: 96, 165, 250;
+            --color-rgb-dark: 30, 64, 175;
+            --color-rgb-bright: 147, 197, 253;
+            --color-rgb-accent: 245, 158, 11;
+        }
+
+        [data-theme="emerald-gold"] {
+            --color-primary: #059669;
+            --color-primary-light: #34D399;
+            --color-primary-dark: #047857;
+            --color-primary-bright: #6EE7B7;
+            --color-accent: #D4AF37;
+            --color-bg-warm: #F4FBF7;
+            --color-text-dark: #064E3B;
+            --color-rgb-primary: 5, 150, 105;
+            --color-rgb-light: 52, 211, 153;
+            --color-rgb-dark: 4, 120, 87;
+            --color-rgb-bright: 110, 231, 183;
+            --color-rgb-accent: 212, 175, 55;
+        }
+
+        [data-theme="rose-copper"] {
+            --color-primary: #BE185D;
+            --color-primary-light: #F472B6;
+            --color-primary-dark: #831843;
+            --color-primary-bright: #FBCFE8;
+            --color-accent: #E07A5F;
+            --color-bg-warm: #FDF2F8;
+            --color-text-dark: #500724;
+            --color-rgb-primary: 190, 24, 93;
+            --color-rgb-light: 244, 114, 182;
+            --color-rgb-dark: 131, 24, 67;
+            --color-rgb-bright: 251, 207, 232;
+            --color-rgb-accent: 224, 122, 95;
+        }
+
+        /* Base styles */
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--color-bg-warm);
+            color: var(--color-text-dark);
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        .dark body {
+            background-color: #140C0E;
+            color: #EDE7E3;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        .gold-gradient-text,
+        .rose-gradient-text,
+        .atelier-gradient-text {
+            background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 50%, var(--color-primary-dark) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Luxury Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--color-bg-warm);
+        }
+
+        .dark ::-webkit-scrollbar-track {
+            background: #140C0E;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(var(--color-rgb-primary), 0.35);
+            border-radius: 9999px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--color-primary);
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: rgba(var(--color-rgb-bright), 0.35);
+        }
+
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: var(--color-primary-bright);
+        }
+
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(var(--color-rgb-primary), 0.4) transparent;
+        }
+
+        /* Dark mode overrides */
+        .dark .text-gift-slate {
+            color: var(--color-primary-bright) !important;
+        }
+
+        .dark .bg-gift-slate {
+            background-color: var(--color-primary-bright) !important;
+        }
+
+        .dark .border-gift-slate {
+            border-color: var(--color-primary-bright) !important;
+        }
+
+        .dark .from-gift-slate {
+            --tw-gradient-from: var(--color-primary-bright) !important;
+        }
+
+        .cta-luxury-banner {
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-dark) 100%) !important;
+        }
+
+        .dark .cta-luxury-banner {
+            background: linear-gradient(135deg, #140C0E 0%, #201418 50%, #140C0E 100%) !important;
+        }
+
+        .dark .service-icon {
+            background: rgba(var(--color-rgb-bright), 0.12) !important;
+            color: var(--color-primary-bright) !important;
+            border: 1px solid rgba(var(--color-rgb-bright), 0.25);
+        }
+
+        .dark .badge {
+            background: rgba(18, 12, 14, 0.85) !important;
+            color: #FFFFFF !important;
+            border: 1px solid rgba(255, 255, 255, 0.35) !important;
+        }
+
+        .dark .dropdown-item:hover {
+            color: var(--color-primary-bright) !important;
+        }
+
+        .dark .auth-btn.login:hover {
+            border-color: transparent !important;
+            color: #140C0E !important;
+        }
+
+        .dark .nav-item:hover {
+            color: var(--color-primary-bright) !important;
+        }
+
+        .dark .nav-item::after {
+            background: var(--color-primary-bright) !important;
+        }
+
+        .dark .dropdown-item i {
+            color: var(--color-primary-bright) !important;
+        }
+
+        .dark .premium-line {
+            background: linear-gradient(90deg, var(--color-primary-bright), rgba(var(--color-rgb-bright), 0.1));
+        }
+
+        .dark .hover\:text-gift-slate:hover {
+            color: var(--color-primary-bright) !important;
+        }
+
+        /* Premium Navigation */
+        .nav-item {
+            position: relative;
+            padding: 0.5rem 0;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.02em;
+            color: var(--color-text-dark);
+            transition: color 0.3s ease;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .dark .nav-item {
+            color: #EDE7E3;
+        }
+
+        .nav-item:hover {
+            color: var(--color-primary);
+        }
+
+        .dark .nav-item:hover {
+            color: var(--color-primary-bright);
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+            transition: width 0.3s ease;
+        }
+
+        .dark .nav-item::after {
+            background: linear-gradient(90deg, var(--color-primary-bright), var(--color-primary-light));
+        }
+
+        [dir="rtl"] .nav-item::after {
+            left: auto;
+            right: 0;
+        }
+
+        .nav-item:hover::after,
+        .nav-item.active::after {
+            width: 100%;
+        }
+
+        .nav-item.active {
+            color: var(--color-primary) !important;
+            font-weight: 700;
+        }
+
+        .dark .nav-item.active {
+            color: var(--color-primary-bright) !important;
+        }
+
+        .mobile-menu-item.active {
+            color: var(--color-primary) !important;
+            font-weight: 700;
+        }
+
+        .dark .mobile-menu-item.active {
+            color: var(--color-primary-bright) !important;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 230px;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 16px;
+            padding: 0.85rem 0;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.18);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 1000;
+            border: 1px solid rgba(var(--color-rgb-primary), 0.2);
+            backdrop-filter: blur(12px);
+        }
+
+        .dark .dropdown-menu {
+            background: rgba(30, 25, 24, 0.98);
+            border-color: rgba(var(--color-rgb-bright), 0.25);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: 0;
+            right: 0;
+            height: 12px;
+        }
+
+        [dir="rtl"] .dropdown-menu {
+            left: auto;
+            right: 0;
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 1.6rem;
+            color: var(--color-text-dark);
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .dark .dropdown-item {
+            color: #EDE7E3;
+        }
+
+        .dropdown-item:hover {
+            background: rgba(var(--color-rgb-primary), 0.1);
+            color: var(--color-primary);
+            padding-left: 1.85rem;
+        }
+
+        .dark .dropdown-item:hover {
+            background: rgba(var(--color-rgb-bright), 0.15);
+            color: var(--color-primary-bright);
+        }
+
+        [dir="rtl"] .dropdown-item:hover {
+            padding-left: 1.6rem;
+            padding-right: 1.85rem;
+        }
+
+        .dropdown-item i {
+            margin-right: 0.85rem;
+            width: 20px;
+            text-align: center;
+            color: var(--color-primary);
+        }
+
+        [dir="rtl"] .dropdown-item i {
+            margin-right: 0;
+            margin-left: 0.85rem;
+        }
+
+        .dark .dropdown-item i {
+            color: var(--color-primary-bright);
+        }
+
+        [dir="rtl"] .desktop-toggle-group {
+            margin-left: 0;
+            margin-right: 1.25rem;
+        }
+
+        .auth-btn {
+            padding: 0.6rem 1.75rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.88rem;
+            letter-spacing: 0.04em;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .auth-btn.login {
+            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+            color: #ffffff !important;
+            box-shadow: 0 4px 15px rgba(var(--color-rgb-primary), 0.35);
+            border: none;
+        }
+
+        .dark .auth-btn.login {
+            background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%);
+            color: #140C0E !important;
+            box-shadow: 0 4px 15px rgba(var(--color-rgb-bright), 0.3);
+            border: none;
+        }
+
+        .auth-btn.login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(var(--color-rgb-primary), 0.45);
+            color: #ffffff !important;
+        }
+
+        .dark .auth-btn.login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(var(--color-rgb-bright), 0.45);
+            color: #140C0E !important;
+        }
+
+        .auth-btn.signup {
+            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(var(--color-rgb-primary), 0.3);
+        }
+
+        .dark .auth-btn.signup {
+            background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%);
+            color: #140C0E;
+        }
+
+        .auth-btn.signup:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(var(--color-rgb-primary), 0.4);
+        }
+
+        .dark .auth-btn.signup:hover {
+            box-shadow: 0 10px 25px -5px rgba(var(--color-rgb-bright), 0.4);
+        }
+
+        .toggle-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(var(--color-rgb-primary), 0.12);
+            color: var(--color-primary);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(var(--color-rgb-primary), 0.2);
+            cursor: pointer;
+        }
+
+        .dark .toggle-btn {
+            background: rgba(var(--color-rgb-bright), 0.12);
+            color: var(--color-primary-bright);
+            border-color: rgba(var(--color-rgb-bright), 0.25);
+        }
+
+        .toggle-btn:hover {
+            background: var(--color-primary);
+            color: white;
+            transform: scale(1.08);
+        }
+
+        .dark .toggle-btn:hover {
+            background: var(--color-primary-bright);
+            color: #140C0E;
+            transform: scale(1.08);
+        }
+
+        .toggle-btn.active {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .dark .toggle-btn.active {
+            background: var(--color-primary-bright);
+            color: #140C0E;
+        }
+
+        @media (max-width: 1279px) {
+            .desktop-toggle-group {
+                display: none !important;
+            }
+        }
+
+        .mobile-menu {
+            background: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .mobile-menu:not(.open) {
+            border: none !important;
+            border-width: 0 !important;
+            margin-top: 0 !important;
+            padding: 0 !important;
+            box-shadow: none !important;
+            pointer-events: none !important;
+        }
+
+        .dark .mobile-menu {
+            background: #140C0E;
+            border-color: rgba(var(--color-rgb-bright), 0.2);
+        }
+
+        .mobile-menu.open {
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        .mobile-menu-item {
+            display: block;
+            padding: 1.1rem 1.75rem;
+            font-weight: 600;
+            color: var(--color-text-dark);
+            border-bottom: 1px solid rgba(var(--color-rgb-primary), 0.1);
+            transition: all 0.2s ease;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            font-size: 0.9rem;
+        }
+
+        .dark .mobile-menu-item {
+            color: #EDE7E3;
+            border-bottom-color: rgba(var(--color-rgb-bright), 0.15);
+        }
+
+        .mobile-menu-item:hover {
+            background-color: rgba(var(--color-rgb-primary), 0.06);
+            color: var(--color-primary);
+        }
+
+        .dark .mobile-menu-item:hover {
+            background-color: rgba(var(--color-rgb-bright), 0.12);
+            color: var(--color-primary-bright);
+        }
+
+        .mobile-dropdown-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: rgba(var(--color-rgb-primary), 0.04);
+        }
+
+        .dark .mobile-dropdown-content {
+            background: rgba(30, 25, 24, 0.8);
+        }
+
+        .mobile-dropdown-content.show {
+            max-height: 300px;
+        }
+
+        .mobile-dropdown-item {
+            display: block;
+            padding: 0.85rem 2.75rem;
+            font-size: 0.92rem;
+            color: var(--color-text-dark);
+            transition: all 0.2s ease;
+            border-bottom: 1px solid rgba(var(--color-rgb-primary), 0.08);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .dark .mobile-dropdown-item {
+            color: #D6CEC8;
+            border-bottom-color: rgba(var(--color-rgb-bright), 0.1);
+        }
+
+        .mobile-dropdown-item:hover {
+            color: var(--color-primary);
+            background-color: rgba(var(--color-rgb-primary), 0.1);
+        }
+
+        .dark .mobile-dropdown-item:hover {
+            background-color: rgba(var(--color-rgb-bright), 0.15);
+            color: var(--color-primary-bright);
+        }
+
+        .mobile-auth-btn {
+            display: inline-block;
+            padding: 0.85rem 1.75rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-align: center;
+            margin: 0.25rem;
+            border: 1px solid transparent;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .mobile-auth-btn.login {
+            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+            color: #ffffff !important;
+            box-shadow: 0 4px 15px rgba(var(--color-rgb-primary), 0.3);
+            border: none;
+        }
+
+        .dark .mobile-auth-btn.login {
+            background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%);
+            color: #140C0E !important;
+            border: none;
+        }
+
+        .mobile-auth-btn.login:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+        }
+
+        .dark .mobile-auth-btn.login:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+            color: #140C0E !important;
+        }
+
+        .mobile-auth-btn.signup {
+            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+            color: white;
+        }
+
+        .dark .mobile-auth-btn.signup {
+            background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%);
+            color: #140C0E;
+        }
+
+        .mobile-auth-btn.signup:hover {
+            opacity: 0.95;
+        }
+
+        .desktop-nav-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        /* Ultra Luxury Hero & Cards */
+        .hero-image {
+            border-radius: 28px;
+            box-shadow: 0 30px 60px -15px rgba(var(--color-rgb-primary), 0.3);
+            border: 1px solid rgba(var(--color-rgb-primary), 0.2);
+        }
+
+        .dark .hero-image {
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8);
+            border-color: rgba(var(--color-rgb-bright), 0.25);
+        }
+
+        .service-icon {
+            width: 84px;
+            height: 84px;
+            background: rgba(var(--color-rgb-primary), 0.12);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            font-size: 2.2rem;
+            color: var(--color-primary);
+            border: 1px solid rgba(var(--color-rgb-primary), 0.25);
+            box-shadow: 0 10px 20px -5px rgba(var(--color-rgb-primary), 0.15);
+        }
+
+        .dark .service-icon {
+            background: rgba(var(--color-rgb-bright), 0.12);
+            color: var(--color-primary-bright);
+            border-color: rgba(var(--color-rgb-bright), 0.3);
+        }
+
+        .gift-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px -10px rgba(var(--color-rgb-primary), 0.12);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid rgba(var(--color-rgb-primary), 0.18);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .gift-card .p-4,
+        .gift-card .p-5 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        .dark .gift-card {
+            background: #201418;
+            border-color: rgba(var(--color-rgb-bright), 0.2);
+            box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .gift-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 50px -15px rgba(var(--color-rgb-primary), 0.3);
+            border-color: rgba(var(--color-rgb-primary), 0.4);
+        }
+
+        .dark .gift-card:hover {
+            border-color: rgba(var(--color-rgb-bright), 0.5);
+            box-shadow: 0 30px 50px -15px rgba(0, 0, 0, 0.8);
+        }
+
+        .badge {
+            background: rgba(18, 12, 14, 0.75) !important;
+            color: #FFFFFF !important;
+            padding: 0.35rem 1.1rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.82rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .dark .badge {
+            background: rgba(18, 12, 14, 0.85) !important;
+            color: #FFFFFF !important;
+            border: 1px solid rgba(255, 255, 255, 0.35) !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        footer {
+            background: white;
+            color: var(--color-text-dark);
+            border-top: 1px solid rgba(var(--color-rgb-primary), 0.18);
+        }
+
+        .dark footer {
+            background: #140C0E;
+            color: #EDE7E3;
+            border-color: rgba(var(--color-rgb-bright), 0.2);
+        }
+
+        footer a:hover {
+            color: var(--color-primary);
+        }
+
+        .dark footer a:hover {
+            color: var(--color-primary-bright);
+        }
+
+        .social-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(var(--color-rgb-primary), 0.1);
+            color: var(--color-primary);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            border: 1px solid rgba(var(--color-rgb-primary), 0.2);
+        }
+
+        .dark .social-icon {
+            background: rgba(var(--color-rgb-bright), 0.12);
+            color: var(--color-primary-bright);
+            border-color: rgba(var(--color-rgb-bright), 0.25);
+        }
+
+        .social-icon:hover {
+            background: var(--color-primary);
+            color: white;
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .dark .social-icon:hover {
+            background: var(--color-primary-bright);
+            color: #140C0E;
+        }
+
+        .btn-gift {
+            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 0.9rem 2.25rem;
+            border-radius: 50px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+            font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+            box-shadow: 0 10px 25px -5px rgba(var(--color-rgb-primary), 0.35);
+        }
+
+        .dark .btn-gift {
+            background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%);
+            color: #140C0E;
+            box-shadow: 0 10px 25px -5px rgba(var(--color-rgb-bright), 0.35);
+        }
+
+        .btn-gift:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 35px -8px rgba(var(--color-rgb-primary), 0.5);
+        }
+
+        .dark .btn-gift:hover {
+            box-shadow: 0 18px 35px -8px rgba(var(--color-rgb-bright), 0.5);
+        }
+
+        .premium-line {
+            width: 90px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light), transparent);
+            margin: 24px 0;
+            border-radius: 2px;
+        }
+
+        .dark .premium-line {
+            background: linear-gradient(90deg, var(--color-primary-bright), var(--color-primary-light), transparent);
+        }
+
+        .client-logo {
+            filter: grayscale(1) opacity(0.5);
+            transition: all 0.3s ease;
+            max-height: 55px;
+        }
+
+        .client-logo:hover {
+            filter: grayscale(0) opacity(1);
+            transform: scale(1.05);
+        }
+
+        .dark .client-logo {
+            filter: grayscale(1) brightness(1.8) opacity(0.6);
+        }
+
+        .dark .client-logo:hover {
+            filter: grayscale(0) brightness(1) opacity(1);
+        }
+
+        /* Horizontal scroll utilities */
+        .scrollbar-thin::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .scrollbar-thin::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .scrollbar-thin::-webkit-scrollbar-thumb {
+            background: rgba(var(--color-rgb-primary), 0.4);
+            border-radius: 10px;
+        }
+
+        .dark .scrollbar-thin::-webkit-scrollbar-thumb {
+            background: rgba(var(--color-rgb-bright), 0.4);
+        }
+
+        /* High-End Agency Design Components */
+        .double-bezel-outer {
+            position: relative;
+            border-radius: 2rem;
+            padding: 0.375rem;
+            background: linear-gradient(180deg, rgba(var(--color-rgb-primary), 0.25) 0%, rgba(var(--color-rgb-primary), 0.05) 100%);
+            border: 1px solid rgba(var(--color-rgb-primary), 0.2);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .dark .double-bezel-outer {
+            background: linear-gradient(180deg, rgba(var(--color-rgb-bright), 0.2) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border-color: rgba(var(--color-rgb-bright), 0.2);
+            box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.7);
+        }
+
+        .double-bezel-outer:hover {
+            transform: translateY(-6px);
+            border-color: rgba(var(--color-rgb-primary), 0.45);
+            box-shadow: 0 30px 60px -15px rgba(var(--color-rgb-primary), 0.25);
+        }
+
+        .dark .double-bezel-outer:hover {
+            border-color: rgba(var(--color-rgb-bright), 0.45);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9);
+        }
+
+        .double-bezel-inner {
+            border-radius: calc(2rem - 0.375rem);
+            background: #FFFFFF;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8);
+        }
+
+        .dark .double-bezel-inner {
+            background: #1F1418;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.08);
+        }
+
+        /* Button-in-Button Architecture */
+        .btn-nested {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.85rem;
+            padding: 0.65rem 0.75rem 0.65rem 1.75rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+            color: #FFFFFF !important;
+            box-shadow: 0 10px 25px -5px rgba(var(--color-rgb-primary), 0.35);
+        }
+
+        .dark .btn-nested {
+            background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%);
+            color: #140C0E !important;
+            box-shadow: 0 10px 25px -5px rgba(var(--color-rgb-bright), 0.3);
+        }
+
+        .btn-nested .icon-circle {
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .dark .btn-nested .icon-circle {
+            background: rgba(20, 12, 14, 0.25);
+        }
+
+        .btn-nested:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 35px -8px rgba(var(--color-rgb-primary), 0.5);
+        }
+
+        .dark .btn-nested:hover {
+            box-shadow: 0 18px 35px -8px rgba(var(--color-rgb-bright), 0.45);
+        }
+
+        .btn-nested:hover .icon-circle {
+            transform: translateX(3px) rotate(45deg);
+        }
+
+        .btn-nested:active {
+            transform: scale(0.98);
+        }
+
+        /* Frosted Pill Button */
+        .btn-frosted {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            padding: 0.85rem 1.75rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.88rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            border: 1px solid rgba(var(--color-rgb-primary), 0.3);
+            color: var(--color-text-dark);
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .dark .btn-frosted {
+            border-color: rgba(var(--color-rgb-bright), 0.3);
+            color: #EDE7E3;
+            background: rgba(25, 20, 18, 0.6);
+        }
+
+        .btn-frosted:hover {
+            background: rgba(var(--color-rgb-primary), 0.12);
+            border-color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+
+        .dark .btn-frosted:hover {
+            background: rgba(var(--color-rgb-bright), 0.15);
+            border-color: var(--color-primary-bright);
+        }
+
+        @keyframes shimmerPulse {
+            0%, 100% { opacity: 0.85; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.02); }
+        }
+
+        .eyebrow-pill {
+            animation: shimmerPulse 4s ease-in-out infinite;
+        }
+
+        /* Home2 Specific Components */
+        .editorial-mask {
+            -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+        }
+
+        .horizontal-scroll-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.5rem;
+            padding-bottom: 1rem;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .horizontal-scroll-container::-webkit-scrollbar {
+            height: 5px;
+        }
+
+        .horizontal-scroll-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .horizontal-scroll-container::-webkit-scrollbar-thumb {
+            background: rgba(var(--color-rgb-primary), 0.35);
+            border-radius: 10px;
+        }
+
+        .dark .horizontal-scroll-container::-webkit-scrollbar-thumb {
+            background: rgba(var(--color-rgb-bright), 0.35);
+        }
+
+        .horizontal-scroll-item {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            width: 320px;
+        }
+
+        @media (min-width: 768px) {
+            .horizontal-scroll-item {
+                width: 380px;
+            }
+        }
+
+        .timeline-node {
+            position: relative;
+            padding-left: 2.5rem;
+            padding-bottom: 2.5rem;
+        }
+
+        .timeline-node::before {
+            content: '';
+            position: absolute;
+            left: 0.6rem;
+            top: 0.5rem;
+            bottom: 0;
+            width: 1px;
+            background: rgba(var(--color-rgb-primary), 0.25);
+        }
+
+        .dark .timeline-node::before {
+            background: rgba(var(--color-rgb-bright), 0.25);
+        }
+
+        .timeline-node:last-child::before {
+            display: none;
+        }
+
+        .timeline-node::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.35rem;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 50%;
+            background: var(--color-bg-warm);
+            border: 2px solid var(--color-primary);
+            transition: all 0.3s ease;
+        }
+
+        .dark .timeline-node::after {
+            background: #140C0E;
+            border-color: var(--color-primary-bright);
+        }
+
+        .timeline-node:hover::after {
+            background: var(--color-primary);
+            transform: scale(1.1);
+        }
+
+        .dark .timeline-node:hover::after {
+            background: var(--color-primary-bright);
+        }
+
+        .magazine-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .magazine-grid {
+                grid-template-columns: 1.2fr 0.8fr;
+                grid-template-rows: auto auto;
+            }
+            .magazine-grid > :first-child {
+                grid-row: span 2;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-bg-warm dark:bg-dark-bg text-neutral-dark dark:text-gray-200 transition-colors duration-400">
+
+    <!-- ========== HEADER (COPIED FROM REFERENCE) ========== -->
+    <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 pt-3 sm:pt-4 transition-all duration-300 pointer-events-none">
+        <nav
+            class="max-w-7xl mx-auto pointer-events-auto bg-white/85 dark:bg-[#180F12]/90 backdrop-blur-xl rounded-full px-5 sm:px-7 py-2.5 sm:py-3 border border-gift-slate/25 dark:border-gift-slate-bright/25 shadow-[0_20px_45px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_45px_-15px_rgba(0,0,0,0.7)] flex items-center justify-between transition-colors duration-400">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3 group shrink-0" dir="ltr">
+                <div class="w-10 h-10 bg-gradient-to-br from-gift-slate-light to-gift-slate rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md group-hover:rotate-6 transition duration-300">
+                    <i class="fas fa-gem text-white dark:text-dark-bg text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-lg md:text-2xl font-serif font-bold tracking-wide text-neutral-dark dark:text-white">
+                        Bridal <span class="gold-gradient-text">Atelier</span>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden xl:flex items-center">
+                <div class="desktop-nav-container">
+                    <div class="flex items-center gap-4 xl:gap-6">
+                        <!-- Home Dropdown -->
+                        <div class="dropdown">
+                            <button class="nav-item active flex items-center gap-1.5"
+                                style="color: var(--color-primary); font-weight: 700;">
+                                Home <i class="fas fa-chevron-down text-[9px] opacity-70"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="index.html" class="dropdown-item">Home 1</a>
+                                <a href="home2.html" class="dropdown-item"
+                                    style="background: rgba(var(--color-rgb-primary),0.12); color: var(--color-primary); border-left: 3px solid var(--color-primary); font-weight: 700;">
+                                    Home 2
+                                </a>
+                            </div>
+                        </div>
+                        <a href="about.html" class="nav-item">About Studio</a>
+                        <a href="services.html" class="nav-item">Services</a>
+                        <a href="portfolio.html" class="nav-item">Portfolio</a>
+                        <a href="contact.html" class="nav-item">Contact</a>
+                        <div class="dropdown">
+                            <button class="nav-item flex items-center gap-1.5">
+                                Dashboard <i class="fas fa-chevron-down text-[9px] opacity-70"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="admin.html" class="dropdown-item">Studio Admin</a>
+                                <a href="client.html" class="dropdown-item">Bride Portal</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 ml-2">
+                        <a href="login.html" class="btn-nested !py-2 !px-4 !text-xs group">
+                            <span>Sign In</span>
+                            <span class="icon-circle !w-6 !h-6">
+                                <i class="fas fa-arrow-right text-[10px]"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 ml-4 desktop-toggle-group">
+                    <button id="theme-toggle" class="toggle-btn !w-9 !h-9" title="Toggle Dark/Light Mode">
+                        <i class="fas fa-moon text-sm"></i>
+                        <i class="fas fa-sun text-sm hidden"></i>
+                    </button>
+                    <button id="rtl-toggle" class="toggle-btn !w-9 !h-9 font-serif font-bold text-xs" title="Toggle RTL/LTR">⇄</button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-toggle"
+                class="xl:hidden text-neutral-dark dark:text-gray-300 p-2 focus:outline-none hover:text-gift-slate transition-colors"
+                aria-label="Toggle Navigation Menu">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu Floating Card -->
+        <div id="mobile-menu" class="mobile-menu xl:hidden max-w-7xl mx-auto mt-2 rounded-3xl border border-gift-slate/20 dark:border-gift-slate-bright/25 shadow-2xl overflow-hidden pointer-events-auto">
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-btn flex items-center justify-between w-full mobile-menu-item active"
+                    style="color: var(--color-primary); font-weight: 700;">
+                    <span>Home</span> <i class="fas fa-chevron-down text-xs"></i>
+                </button>
+                <div class="mobile-dropdown-content">
+                    <a href="index.html" class="mobile-dropdown-item">Home 1</a>
+                    <a href="home2.html" class="mobile-dropdown-item"
+                        style="background: rgba(var(--color-rgb-primary),0.1); color: var(--color-primary); border-left: 3px solid var(--color-primary); font-weight: 700;">Home 2</a>
+                </div>
+            </div>
+            <a href="about.html" class="mobile-menu-item">About Studio</a>
+            <a href="services.html" class="mobile-menu-item">Services</a>
+            <a href="portfolio.html" class="mobile-menu-item">Portfolio</a>
+            <a href="contact.html" class="mobile-menu-item">Contact</a>
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-btn flex items-center justify-between w-full mobile-menu-item">
+                    <span>Portals</span> <i class="fas fa-chevron-down text-xs"></i>
+                </button>
+                <div class="mobile-dropdown-content">
+                    <a href="admin.html" class="mobile-dropdown-item">Studio Admin</a>
+                    <a href="client.html" class="mobile-dropdown-item">Bride Portal</a>
+                </div>
+            </div>
+            <div class="p-5 flex flex-col gap-3">
+                <a href="login.html" class="btn-nested justify-center !py-3 w-full text-center">
+                    <span>Client Portal Login</span>
+                    <span class="icon-circle !w-7 !h-7"><i class="fas fa-arrow-right text-xs"></i></span>
+                </a>
+            </div>
+            <div class="flex justify-center gap-3 p-4 border-t border-gray-100 dark:border-gray-800">
+                <button id="theme-toggle-mobile" class="toggle-btn"><i class="fas fa-moon"></i><i class="fas fa-sun hidden"></i></button>
+                <button id="rtl-toggle-mobile" class="toggle-btn">⇄</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== SECTION 1: FULL-BLEED EDITORIAL HERO ========== -->
+    <section class="relative min-h-[90vh] lg:min-h-[95vh] flex items-center justify-center pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-40 lg:pb-24 overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="Assets/p2.jpg" alt="Bridal editorial hero"
+                class="w-full h-full object-cover object-top">
+            <div class="absolute inset-0 bg-[#140C0E]/40"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#140C0E]/95 via-[#140C0E]/50 to-[#140C0E]/30"></div>
+        </div>
+
+        <!-- Ambient Glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gift-slate/20 rounded-full blur-3xl pointer-events-none z-0"></div>
+
+        <div class="container mx-auto px-6 relative z-10 w-full text-center">
+            <div class="max-w-3xl mx-auto flex flex-col items-center">
+                <div class="eyebrow-pill inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6">
+                    <i class="fas fa-sparkles text-gift-slate-bright text-xs"></i>
+                    <span class="text-[11px] font-bold font-sans text-white tracking-[0.22em] uppercase">The Editorial Edit • 2026</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white leading-[1.08] tracking-tight mb-6">
+                    A Study in <br class="hidden sm:inline">
+                    <span class="italic font-serif text-gift-slate-bright">Bridal Radiance.</span>
+                </h1>
+
+                <p class="text-base sm:text-lg lg:text-xl text-white/85 max-w-2xl mx-auto mb-10 font-sans font-light leading-relaxed">
+                    An intimate look at our most recent bridal transformations — light, texture, and the quiet confidence of a bride who feels entirely herself.
+                </p>
+
+                <div class="flex flex-wrap gap-4 items-center justify-center">
+                    <a href="portfolio.html" class="btn-nested group !bg-white/15 !backdrop-blur-md !border !border-white/25 hover:!bg-white/25">
+                        <span>View The Lookbook</span>
+                        <span class="icon-circle !bg-white/20">
+                            <i class="fas fa-arrow-right text-xs text-white"></i>
+                        </span>
+                    </a>
+                    <a href="contact.html" class="btn-frosted !bg-white/10 !border-white/25 !text-white hover:!bg-white/20">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Reserve a Trial</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 2: HORIZONTAL SCROLL LOOKBOOK ========== -->
+    <section class="py-16 sm:py-24 bg-white dark:bg-dark-card transition-colors duration-400 border-y border-neutral-light/50 dark:border-gray-800/60">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between items-end mb-10 sm:mb-14">
+                <div>
+                    <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">Curated Transformations</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-neutral-dark dark:text-white mt-3">
+                        The <span class="gold-gradient-text italic font-serif">Lookbook</span> Scroll
+                    </h2>
+                </div>
+                <p class="hidden md:block text-sm opacity-70 font-sans max-w-xs">Drag horizontally to explore each bride's journey →</p>
+            </div>
+
+            <div class="horizontal-scroll-container scrollbar-thin editorial-mask">
+                <!-- Scroll Item 1 -->
+                <div class="horizontal-scroll-item double-bezel-outer group">
+                    <div class="double-bezel-inner">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="Assets/ho2.jpg" alt="Classic Ballroom Bride"
+                                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 badge text-[10px] font-sans">Classic</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-lg text-neutral-dark dark:text-white mb-1">The Plaza Ballroom</h3>
+                            <p class="text-xs opacity-75 font-sans">Airbrushed porcelain skin, sculptural low bun, cathedral veil.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scroll Item 2 -->
+                <div class="horizontal-scroll-item double-bezel-outer group">
+                    <div class="double-bezel-inner">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="Assets/bride2.png" alt="Coastal Boho Bride"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                style="object-position: center 33%;">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 badge text-[10px] font-sans">Boho</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-lg text-neutral-dark dark:text-white mb-1">Malibu Sunlit Romance</h3>
+                            <p class="text-xs opacity-75 font-sans">Luminous finish, textured mermaid waves, eucalyptus crown.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scroll Item 3 -->
+                <div class="horizontal-scroll-item double-bezel-outer group">
+                    <div class="double-bezel-inner">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="Assets/bride3.png" alt="Modern Minimal Bride"
+                                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 badge text-[10px] font-sans">Minimal</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-lg text-neutral-dark dark:text-white mb-1">City Hall Minimalist</h3>
+                            <p class="text-xs opacity-75 font-sans">Glass skin, velvet lip, architectural high-gloss chignon.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scroll Item 4 -->
+                <div class="horizontal-scroll-item double-bezel-outer group">
+                    <div class="double-bezel-inner">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="Assets/hair.png" alt="Hollywood Waves Bride"
+                                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 badge text-[10px] font-sans">Glamour</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-lg text-neutral-dark dark:text-white mb-1">Hollywood Red Carpet</h3>
+                            <p class="text-xs opacity-75 font-sans">Deep side-part waves, smokey bronze eye, satin skin.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scroll Item 5 -->
+                <div class="horizontal-scroll-item double-bezel-outer group">
+                    <div class="double-bezel-inner">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="Assets/ho1.jpg" alt="Soft Romantic Bride"
+                                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <span class="absolute top-3 left-3 badge text-[10px] font-sans">Romantic</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-lg text-neutral-dark dark:text-white mb-1">Garden Rose Bride</h3>
+                            <p class="text-xs opacity-75 font-sans">Soft rose tones, dewy skin, romantic half-up twist.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="portfolio.html" class="btn-nested group">
+                    <span>Explore Full Portfolio</span>
+                    <span class="icon-circle">
+                        <i class="fas fa-arrow-right text-xs"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 3: ASYMMETRICAL MAGAZINE FEATURE ========== -->
+    <section class="py-16 sm:py-24 lg:py-28 bg-bg-warm dark:bg-dark-bg transition-colors duration-400">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-12 sm:mb-16">
+                    <span class="eyebrow-pill inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/10 border border-gift-slate/25 dark:border-gift-slate-bright/25 mb-4 backdrop-blur-md">
+                        <i class="fas fa-feather-alt text-gift-slate dark:text-gift-slate-bright text-xs"></i>
+                        <span class="text-[10px] sm:text-[11px] font-bold font-sans tracking-[0.25em] uppercase text-gift-slate dark:text-gift-slate-bright">THE ARTISTRY EDIT</span>
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-neutral-dark dark:text-white mt-1 leading-tight">
+                        A Study in <span class="gold-gradient-text italic font-serif">Light & Texture</span>
+                    </h2>
+                    <div class="premium-line mx-auto !my-4"></div>
+                </div>
+
+                <!-- Magazine Grid -->
+                <div class="magazine-grid">
+                    <!-- Large Feature Image -->
+                    <div class="double-bezel-outer group h-full">
+                        <div class="double-bezel-inner h-full">
+                            <div class="relative h-full min-h-[400px] overflow-hidden">
+                                <img src="Assets/bride7.png" alt="Featured bridal transformation"
+                                    class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-6 left-6 right-6 text-white">
+                                    <span class="text-[10px] uppercase tracking-widest font-sans text-gift-slate-bright block mb-1">Featured Editorial</span>
+                                    <h3 class="text-2xl sm:text-3xl font-serif font-bold">The Light Between</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text Block 1 -->
+                    <div class="double-bezel-outer group">
+                        <div class="double-bezel-inner p-6 sm:p-8 h-full flex flex-col justify-center">
+                            <span class="text-[10px] uppercase tracking-widest font-sans text-gift-slate dark:text-gift-slate-bright font-bold mb-3">Process</span>
+                            <h3 class="font-serif font-bold text-xl sm:text-2xl text-neutral-dark dark:text-white mb-3">The Private Trial</h3>
+                            <p class="text-sm opacity-80 font-sans leading-relaxed">
+                                Two hours. Three look variations. Natural light, studio flash, and candlelight testing. We refine until you feel unmistakably yourself.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Text Block 2 -->
+                    <div class="double-bezel-outer group">
+                        <div class="double-bezel-inner p-6 sm:p-8 h-full flex flex-col justify-center">
+                            <span class="text-[10px] uppercase tracking-widest font-sans text-gift-slate dark:text-gift-slate-bright font-bold mb-3">Philosophy</span>
+                            <h3 class="font-serif font-bold text-xl sm:text-2xl text-neutral-dark dark:text-white mb-3">Skin First, Art Second</h3>
+                            <p class="text-sm opacity-80 font-sans leading-relaxed">
+                                Every look begins with skin-barrier priming and hydration. We build color in whisper-thin layers so your skin breathes and glows — never masked.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 4: PROCESS TIMELINE ========== -->
+    <section class="py-16 sm:py-24 lg:py-28 bg-white dark:bg-dark-card transition-colors duration-400 border-y border-neutral-light/50 dark:border-gray-800/60 relative overflow-hidden">
+        <!-- Ambient Glow -->
+        <div class="absolute top-1/2 left-0 w-[500px] h-[500px] bg-gift-slate/10 rounded-full blur-3xl pointer-events-none -z-0"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-14 sm:mb-20">
+                    <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">The Atelier Journey</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-neutral-dark dark:text-white mt-3">
+                        Four Steps to <span class="gold-gradient-text italic font-serif">Your Moment</span>
+                    </h2>
+                    <div class="premium-line mx-auto !my-4"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-x-16 gap-y-2">
+                    <!-- Timeline Column 1 -->
+                    <div>
+                        <div class="timeline-node">
+                            <span class="text-[10px] uppercase tracking-widest font-sans font-bold text-gift-slate dark:text-gift-slate-bright">Step 01</span>
+                            <h3 class="font-serif font-bold text-xl text-neutral-dark dark:text-white mt-1 mb-2">Consultation & Vision</h3>
+                            <p class="text-sm opacity-80 font-sans leading-relaxed">We begin with a conversation — your venue, your gown, your vision. A curated mood board follows within 48 hours.</p>
+                        </div>
+                        <div class="timeline-node">
+                            <span class="text-[10px] uppercase tracking-widest font-sans font-bold text-gift-slate dark:text-gift-slate-bright">Step 02</span>
+                            <h3 class="font-serif font-bold text-xl text-neutral-dark dark:text-white mt-1 mb-2">Private Trial Session</h3>
+                            <p class="text-sm opacity-80 font-sans leading-relaxed">A two-hour private studio session. We test makeup, hair, and veil placement under multiple light conditions.</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Column 2 -->
+                    <div>
+                        <div class="timeline-node">
+                            <span class="text-[10px] uppercase tracking-widest font-sans font-bold text-gift-slate dark:text-gift-slate-bright">Step 03</span>
+                            <h3 class="font-serif font-bold text-xl text-neutral-dark dark:text-white mt-1 mb-2">Final Look Lock</h3>
+                            <p class="text-sm opacity-80 font-sans leading-relaxed">We document every product, brush, and technique. Your look is photographed and archived for flawless event-day replication.</p>
+                        </div>
+                        <div class="timeline-node">
+                            <span class="text-[10px] uppercase tracking-widest font-sans font-bold text-gift-slate dark:text-gift-slate-bright">Step 04</span>
+                            <h3 class="font-serif font-bold text-xl text-neutral-dark dark:text-white mt-1 mb-2">Event Day Concierge</h3>
+                            <p class="text-sm opacity-80 font-sans leading-relaxed">We arrive at your suite with a full illuminated station. You relax. We create. Touch-ups included through the reception.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-14">
+                    <a href="contact.html" class="btn-nested group">
+                        <span>Begin Your Journey</span>
+                        <span class="icon-circle">
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 5: QUOTE + STATS ========== -->
+    <section class="py-16 sm:py-24 lg:py-28 bg-bg-warm dark:bg-dark-bg transition-colors duration-400">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <i class="fas fa-quote-left text-5xl text-gift-slate/20 dark:text-gift-slate-bright/20 mb-6"></i>
+                <blockquote class="text-2xl sm:text-3xl lg:text-4xl font-serif font-medium italic text-neutral-dark dark:text-white leading-relaxed mb-8">
+                    “They didn't just do my makeup. They understood the woman I wanted to see in the mirror — and they gave her back to me.”
+                </blockquote>
+                <div class="flex items-center justify-center gap-4 mb-16">
+                    <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-gift-slate/30 dark:border-gift-slate-bright/40 shadow-md shrink-0">
+                        <img src="Assets/bride6.png" alt="Elena L. - Bride, Lake Como" class="w-full h-full object-cover" style="object-position: center 35%;">
+                    </div>
+                    <div class="text-left">
+                        <div class="font-serif font-bold text-lg text-neutral-dark dark:text-white">Elena L.</div>
+                        <div class="text-xs opacity-75 font-sans">Bride, Lake Como</div>
+                    </div>
+                </div>
+
+                <!-- Stats Row -->
+                <div class="grid grid-cols-3 gap-6 sm:gap-10 max-w-2xl mx-auto border-t border-gift-slate/15 dark:border-gift-slate-bright/15 pt-10">
+                    <div>
+                        <span class="block text-3xl sm:text-4xl font-serif font-bold text-gift-slate dark:text-gift-slate-bright">500+</span>
+                        <span class="text-[10px] uppercase tracking-widest font-sans font-bold opacity-70">Brides Styled</span>
+                    </div>
+                    <div>
+                        <span class="block text-3xl sm:text-4xl font-serif font-bold text-gift-slate dark:text-gift-slate-bright">18h</span>
+                        <span class="text-[10px] uppercase tracking-widest font-sans font-bold opacity-70">Longevity</span>
+                    </div>
+                    <div>
+                        <span class="block text-3xl sm:text-4xl font-serif font-bold text-gift-slate dark:text-gift-slate-bright">100%</span>
+                        <span class="text-[10px] uppercase tracking-widest font-sans font-bold opacity-70">5-Star Love</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 6: CTA ========== -->
+    <section class="cta-luxury-banner py-20 sm:py-24 text-white transition-colors duration-400 relative overflow-hidden border-b border-gift-slate/20">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-white/15 border border-white/25 text-white font-bold text-xs tracking-[0.25em] font-sans uppercase mb-4 backdrop-blur-md">Private Commissions Open</span>
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold mb-6 text-white leading-tight">Let's Create Your <span class="italic text-gift-slate-bright">Signature Look.</span></h2>
+                <p class="text-lg sm:text-xl text-white/90 max-w-xl mx-auto mb-10 font-sans font-light leading-relaxed">Limited wedding dates available for 2026. Reserve your trial session today and step into your most radiant self.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="contact.html" class="bg-white text-neutral-dark hover:bg-neutral-100 dark:bg-gift-slate-bright dark:text-dark-bg px-8 py-4 rounded-full font-bold text-xs font-sans uppercase tracking-widest hover:shadow-2xl hover:-translate-y-0.5 transition duration-300 flex items-center justify-center gap-2">
+                        <i class="fas fa-calendar-check"></i> Book Trial Session
+                    </a>
+                    <a href="portfolio.html" class="border-2 border-white/80 hover:border-white hover:bg-white/15 text-white dark:border-gift-slate-bright/70 dark:text-gift-slate-bright dark:hover:bg-gift-slate-bright/15 px-8 py-4 rounded-full font-bold text-xs font-sans uppercase tracking-widest hover:-translate-y-0.5 transition duration-300 flex items-center justify-center gap-2 backdrop-blur-sm">
+                        <i class="fas fa-book-open"></i> Download Lookbook
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER (COPIED FROM REFERENCE) ========== -->
+    <footer class="py-20 bg-white dark:bg-[#140C0E] transition-colors duration-400">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="text-center md:text-start">
+                    <!-- Brand Lockup in Footer -->
+                    <a href="index.html" class="flex items-center justify-center md:justify-start gap-3 mb-5 group shrink-0" dir="ltr">
+                        <div class="w-10 h-10 bg-gradient-to-br from-gift-slate-light to-gift-slate rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md group-hover:rotate-6 transition duration-300">
+                            <i class="fas fa-gem text-white dark:text-dark-bg text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="text-lg md:text-2xl font-serif font-bold tracking-wide text-neutral-dark dark:text-white">
+                                Bridal <span class="gold-gradient-text">Atelier</span>
+                            </span>
+                        </div>
+                    </a>
+                    <p class="text-sm opacity-80 mb-6 leading-relaxed font-sans">Luxury bridal makeup & hairstyling studio. Making you the most radiant, unforgettable version of yourself.</p>
+                    <div class="flex justify-center md:justify-start gap-4">
+                        <a href="#" class="social-icon text-sm" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon text-sm" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon text-sm" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="text-center md:text-start">
+                    <h3 class="text-neutral-dark dark:text-white text-lg font-serif font-bold mb-6">Quick Navigation</h3>
+                    <ul class="space-y-3.5 text-sm font-sans">
+                        <li><a href="index.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Home Atelier</a></li>
+                        <li><a href="about.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Services</a></li>
+                        <li><a href="portfolio.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Lookbook</a></li>
+                        <li><a href="contact.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Contact & Booking</a></li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-start">
+                    <h3 class="text-neutral-dark dark:text-white text-lg font-serif font-bold mb-6">Couture Services</h3>
+                    <ul class="space-y-3.5 text-sm font-sans">
+                        <li><a href="services.html#makeup" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">HD Airbrush Makeup</a></li>
+                        <li><a href="services.html#hair" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Bridal Hairstyling</a></li>
+                        <li><a href="services.html#party" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Bridal Entourage Glam</a></li>
+                        <li><a href="services.html#addons" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">On-Location Concierge</a></li>
+                        <li><a href="services.html#trials" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Private Trial Sessions</a></li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-start">
+                    <h3 class="text-neutral-dark dark:text-white text-lg font-serif font-bold mb-6">Studio Location</h3>
+                    <ul class="space-y-3 text-sm mb-6 font-sans">
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright w-4"></i>
+                            <span dir="ltr">5th Ave Luxury Tower, NYC 10001</span>
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i class="fas fa-phone text-gift-slate dark:text-gift-slate-bright w-4"></i>
+                            <span dir="ltr">+1 (800) 555-0199</span>
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i class="fas fa-envelope text-gift-slate dark:text-gift-slate-bright w-4"></i>
+                            <span dir="ltr">hello@bridalatelier.com</span>
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <i class="fas fa-clock text-gift-slate dark:text-gift-slate-bright w-4"></i>
+                            <span dir="ltr">Mon-Fri: 9AM - 6PM EST</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gift-slate/15 dark:border-gift-slate-bright/15 mt-14 pt-8 text-center">
+                <p class="text-sm opacity-90 font-sans" dir="ltr">© 2026 Bridal Atelier & Wedding Styling Studio. All rights reserved.</p>
+                <p class="text-xs opacity-75 mt-2 font-serif italic text-gift-slate dark:text-gift-slate-bright">Bridal Beauty • Timeless Elegance • Your Dream Day</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Default Theme Initialization
+            document.documentElement.setAttribute('data-theme', 'rose-noir');
+
+            // Dark / Light Theme Toggle Logic
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = themeToggle?.querySelector('.fa-moon');
+            const themeIconSun = themeToggle?.querySelector('.fa-sun');
+            const mobileThemeToggle = document.getElementById('theme-toggle-mobile');
+            const mobileThemeIcon = mobileThemeToggle?.querySelector('.fa-moon');
+            const mobileThemeIconSun = mobileThemeToggle?.querySelector('.fa-sun');
+
+            function setTheme(isDark) {
+                if (isDark) {
+                    document.documentElement.classList.add('dark');
+                    if (themeIcon) themeIcon.classList.add('hidden');
+                    if (themeIconSun) themeIconSun.classList.remove('hidden');
+                    if (themeToggle) themeToggle.classList.add('active');
+                    if (mobileThemeIcon) mobileThemeIcon.classList.add('hidden');
+                    if (mobileThemeIconSun) mobileThemeIconSun.classList.remove('hidden');
+                    if (mobileThemeToggle) mobileThemeToggle.classList.add('active');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    if (themeIcon) themeIcon.classList.remove('hidden');
+                    if (themeIconSun) themeIconSun.classList.add('hidden');
+                    if (themeToggle) themeToggle.classList.remove('active');
+                    if (mobileThemeIcon) mobileThemeIcon.classList.remove('hidden');
+                    if (mobileThemeIconSun) mobileThemeIconSun.classList.add('hidden');
+                    if (mobileThemeToggle) mobileThemeToggle.classList.remove('active');
+                    localStorage.setItem('theme', 'light');
+                }
+            }
+
+            function toggleTheme() {
+                setTheme(!document.documentElement.classList.contains('dark'));
+            }
+
+            if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+            if (mobileThemeToggle) mobileThemeToggle.addEventListener('click', toggleTheme);
+
+            setTheme(localStorage.getItem('theme') === 'dark');
+
+            // RTL / LTR Direction Toggle Logic
+            const rtlToggle = document.getElementById('rtl-toggle');
+            const mobileRtlToggle = document.getElementById('rtl-toggle-mobile');
+
+            function toggleRTL() {
+                if (document.documentElement.dir === 'rtl') {
+                    document.documentElement.dir = 'ltr';
+                    document.documentElement.lang = 'en';
+                    if (rtlToggle) { rtlToggle.textContent = '⇄'; rtlToggle.classList.remove('active'); }
+                    if (mobileRtlToggle) { mobileRtlToggle.textContent = '⇄'; mobileRtlToggle.classList.remove('active'); }
+                    localStorage.setItem('dir', 'ltr');
+                } else {
+                    document.documentElement.dir = 'rtl';
+                    document.documentElement.lang = 'ar';
+                    if (rtlToggle) { rtlToggle.textContent = '⇄'; rtlToggle.classList.add('active'); }
+                    if (mobileRtlToggle) { mobileRtlToggle.textContent = '⇄'; mobileRtlToggle.classList.add('active'); }
+                    localStorage.setItem('dir', 'rtl');
+                }
+            }
+
+            if (rtlToggle) rtlToggle.addEventListener('click', toggleRTL);
+            if (mobileRtlToggle) mobileRtlToggle.addEventListener('click', toggleRTL);
+
+            if (localStorage.getItem('dir') === 'rtl') {
+                document.documentElement.dir = 'rtl';
+                document.documentElement.lang = 'ar';
+                if (rtlToggle) { rtlToggle.textContent = '⇄'; rtlToggle.classList.add('active'); }
+                if (mobileRtlToggle) { mobileRtlToggle.textContent = '⇄'; mobileRtlToggle.classList.add('active'); }
+            }
+
+            // Mobile Menu Toggle Logic
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileToggleIcon = document.querySelector('#mobile-toggle i');
+
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', () => {
+                    const isOpening = !mobileMenu.classList.contains('open');
+                    if (isOpening) {
+                        mobileMenu.classList.add('open');
+                        mobileToggleIcon.classList.remove('fa-bars');
+                        mobileToggleIcon.classList.add('fa-times');
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        mobileMenu.classList.remove('open');
+                        mobileToggleIcon.classList.remove('fa-times');
+                        mobileToggleIcon.classList.add('fa-bars');
+                        document.body.style.overflow = '';
+                        document.querySelectorAll('.mobile-dropdown-content').forEach(c => c.classList.remove('show'));
+                    }
+                });
+            }
+
+            document.querySelectorAll('.mobile-dropdown-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const dropdown = e.target.closest('.mobile-dropdown');
+                    const content = dropdown.querySelector('.mobile-dropdown-content');
+                    const icon = dropdown.querySelector('.fa-chevron-down');
+                    const isOpening = !content.classList.contains('show');
+                    content.classList.toggle('show');
+                    icon.style.transform = content.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0deg)';
+                    if (isOpening) {
+                        document.querySelectorAll('.mobile-dropdown-content').forEach(other => {
+                            if (other !== content) {
+                                other.classList.remove('show');
+                                const otherIcon = other.parentElement.querySelector('.fa-chevron-down');
+                                if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
