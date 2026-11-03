@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Bridal Atelier • Luxury Makeup & Wedding Styling</title>
+    <title>Services & Couture Packages | Bridal Atelier • Luxury Makeup & Wedding Styling</title>
     <link rel="icon" type="image/svg+xml" href="Assets/favicon.svg">
     <meta name="description" content="Bridal makeup, hairstyling, party glam and on-location concierge services.">
     <script src="tailwind.js"></script>
@@ -84,7 +84,10 @@
         body { font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; background-color:var(--color-bg-warm); color:var(--color-text-dark); transition:background-color .4s ease, color .4s ease; }
         .dark body { background-color:#140C0E; color:#EDE7E3; }
         h1,h2,h3,h4,h5,h6 { font-family:'Outfit','Plus Jakarta Sans',sans-serif; font-weight:700; letter-spacing:-.025em; }
-        .gold-gradient-text,.rose-gradient-text,.atelier-gradient-text { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 50%, var(--color-primary-dark) 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+        .gold-gradient-text,.rose-gradient-text,.atelier-gradient-text { background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 55%, var(--color-primary-dark) 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+        .dark .gold-gradient-text,.dark .rose-gradient-text,.dark .atelier-gradient-text { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 50%, var(--color-accent) 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+        .text-gift-slate { color: var(--color-primary-dark) !important; }
+        .dark .text-gift-slate { color: var(--color-primary-bright) !important; }
 
         ::-webkit-scrollbar{width:8px;height:8px}
         ::-webkit-scrollbar-track{background:var(--color-bg-warm)}
@@ -295,148 +298,510 @@
     </header>
 
     <!-- ========== PAGE HERO ========== -->
-    <section class="min-h-[58vh] lg:min-h-[64vh] flex items-center justify-center pt-36 sm:pt-40 lg:pt-48 pb-20 sm:pb-24 lg:pb-28 bg-bg-warm dark:bg-dark-bg transition-colors duration-400 relative overflow-hidden">
+    <section class="min-h-[58vh] lg:min-h-[64vh] flex items-center justify-center pt-36 sm:pt-40 lg:pt-48 pb-16 sm:pb-20 bg-bg-warm dark:bg-dark-bg transition-colors duration-400 relative overflow-hidden">
         <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gift-slate/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-3xl text-center mx-auto">
+        <div class="absolute bottom-0 left-0 w-[450px] h-[450px] bg-gift-slate-bright/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full text-center">
+            <div class="max-w-3xl mx-auto">
                 <div class="eyebrow-pill inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/10 border border-gift-slate/25 dark:border-gift-slate-bright/25 mb-6 backdrop-blur-md">
-                    <i class="fas fa-sparkles text-gift-slate dark:text-gift-slate-bright text-xs"></i>
-                    <span class="text-[11px] font-bold font-sans dark:text-gift-slate-bright tracking-[0.22em] uppercase">Couture Services Menu • 2026</span>
+                    <i class="fas fa-wand-magic-sparkles text-gift-slate dark:text-gift-slate-bright text-xs"></i>
+                    <span class="text-[11px] font-bold font-sans dark:text-gift-slate-bright tracking-[0.22em] uppercase">The Couture Repertoire • 2026 Collection</span>
                 </div>
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-neutral-dark dark:text-white leading-[1.1] mb-6">
-                    Services & <span class="gold-gradient-text italic font-serif">Signature Packages</span>
+                    Bespoke Services & <span class="gold-gradient-text italic font-serif">Bridal Packages</span>
                 </h1>
                 <div class="premium-line mx-auto !my-4"></div>
-                <p class="text-base sm:text-lg text-neutral-dark/85 dark:text-gray-300 font-sans font-light leading-relaxed max-w-2xl mx-auto">
-                    Every look is a private commission — built around your skin, your venue, your gown, and the light you'll be standing in.
+                <p class="text-base sm:text-lg text-neutral-dark/85 dark:text-gray-300 font-sans font-light leading-relaxed max-w-2xl mx-auto mb-8">
+                    Every look is a private commission — tailored to your skin, venue lighting, bridal gown anatomy, and the quiet radiance you wish to embody.
                 </p>
 
                 <!-- Hero Action Buttons -->
-                <div class="flex flex-wrap gap-4 mt-8 justify-center items-center">
+                <div class="flex flex-wrap gap-4 justify-center items-center">
                     <a href="contact.html" class="btn-nested group">
                         <span>Reserve Private Trial</span>
                         <span class="icon-circle">
                             <i class="fas fa-arrow-right text-xs"></i>
                         </span>
                     </a>
-                    <a href="portfolio.html" class="btn-frosted group">
-                        <i class="fas fa-images text-gift-slate dark:text-gift-slate-bright group-hover:scale-110 transition-transform"></i>
-                        <span>Explore Lookbook</span>
+                    <a href="#packages" class="btn-frosted group">
+                        <i class="fas fa-gem text-gift-slate dark:text-gift-slate-bright group-hover:scale-110 transition-transform"></i>
+                        <span>Explore Wedding Packages</span>
                     </a>
                 </div>
             </div>
+
+            <!-- Quick Navigation Anchor Filter Bar -->
+            <div class="mt-12 sm:mt-16 flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
+                <a href="#makeup" class="px-4 py-2 rounded-full text-xs font-bold font-sans tracking-wider uppercase transition-all bg-white dark:bg-dark-card border border-gift-slate/20 hover:border-gift-slate text-neutral-dark dark:text-gray-200 hover:text-gift-slate shadow-sm">
+                    <i class="fas fa-paint-brush mr-1.5 text-gift-slate"></i> Bridal Makeup
+                </a>
+                <a href="#hair" class="px-4 py-2 rounded-full text-xs font-bold font-sans tracking-wider uppercase transition-all bg-white dark:bg-dark-card border border-gift-slate/20 hover:border-gift-slate text-neutral-dark dark:text-gray-200 hover:text-gift-slate shadow-sm">
+                    <i class="fas fa-wand-magic-sparkles mr-1.5 text-gift-slate"></i> Hairstyling
+                </a>
+                <a href="#trials" class="px-4 py-2 rounded-full text-xs font-bold font-sans tracking-wider uppercase transition-all bg-white dark:bg-dark-card border border-gift-slate/20 hover:border-gift-slate text-neutral-dark dark:text-gray-200 hover:text-gift-slate shadow-sm">
+                    <i class="fas fa-star mr-1.5 text-gift-slate"></i> Pre-Wedding Trials
+                </a>
+                <a href="#packages" class="px-4 py-2 rounded-full text-xs font-bold font-sans tracking-wider uppercase transition-all bg-gift-slate/15 dark:bg-gift-slate-bright/15 border border-gift-slate/30 text-gift-slate dark:text-gift-slate-bright font-semibold shadow-sm">
+                    <i class="fas fa-crown mr-1.5"></i> Packages
+                </a>
+                <a href="#party" class="px-4 py-2 rounded-full text-xs font-bold font-sans tracking-wider uppercase transition-all bg-white dark:bg-dark-card border border-gift-slate/20 hover:border-gift-slate text-neutral-dark dark:text-gray-200 hover:text-gift-slate shadow-sm">
+                    <i class="fas fa-users mr-1.5 text-gift-slate"></i> Bridal Party
+                </a>
+                <a href="#addons" class="px-4 py-2 rounded-full text-xs font-bold font-sans tracking-wider uppercase transition-all bg-white dark:bg-dark-card border border-gift-slate/20 hover:border-gift-slate text-neutral-dark dark:text-gray-200 hover:text-gift-slate shadow-sm">
+                    <i class="fas fa-plus mr-1.5 text-gift-slate"></i> Add-Ons
+                </a>
+                <a href="#faq" class="px-4 py-2 rounded-full text-xs font-bold font-sans tracking-wider uppercase transition-all bg-white dark:bg-dark-card border border-gift-slate/20 hover:border-gift-slate text-neutral-dark dark:text-gray-200 hover:text-gift-slate shadow-sm">
+                    <i class="fas fa-circle-question mr-1.5 text-gift-slate"></i> FAQ
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- ========== SERVICE 1: BRIDAL MAKEUP (Asymmetrical) ========== -->
-    <section id="makeup" class="py-16 sm:py-24 bg-white dark:bg-dark-card transition-colors duration-400 border-y border-neutral-light/50 dark:border-gray-800/60">
-        <div class="container mx-auto px-6">
-            <div class="service-row max-w-6xl mx-auto items-center">
-                <div class="double-bezel-outer group h-full flex flex-col">
-                    <div class="double-bezel-inner h-full flex flex-col justify-between">
-                        <div class="relative h-80 lg:h-full min-h-[420px] w-full overflow-hidden flex-1">
-                            <img src="Assets/a1.jpg" alt="Bridal Makeup" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+    <!-- ========== SERVICE 1: BRIDAL MAKEUP ARTISTRY ========== -->
+    <section id="makeup" class="py-16 sm:py-24 bg-white dark:bg-dark-card transition-colors duration-400 border-y border-neutral-light/50 dark:border-gray-800/60 scroll-mt-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+                <!-- Visual Showcase (5 Cols) -->
+                <div class="lg:col-span-5">
+                    <div class="double-bezel-outer group">
+                        <div class="double-bezel-inner">
+                            <div class="relative h-96 sm:h-[480px] w-full overflow-hidden">
+                                <img src="Assets/a1.jpg" alt="Bridal Couture Makeup" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                                <div class="absolute top-4 left-4">
+                                    <span class="badge text-[10px] font-sans">✦ Haute Couture Airbrush</span>
+                                </div>
+                                <div class="absolute bottom-5 left-5 right-5 text-white">
+                                    <span class="text-[10px] uppercase tracking-widest text-gift-slate-bright font-sans block mb-1">Dior & Chanel Formulation</span>
+                                    <h3 class="text-2xl font-serif font-bold">Porcelain Airbrush & Soft Glam</h3>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">Service 01</span>
-                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-dark dark:text-white mt-3 mb-4">Bridal Couture Makeup</h2>
-                    <p class="text-base opacity-85 font-sans leading-relaxed mb-6">
-                        High-definition, airbrush, or soft radiant glam — matched to your skin tone, gown, and venue lighting. Formulated with Dior, Tom Ford, Charlotte Tilbury and Chanel couture cosmetics only.
+
+                <!-- Detailed Breakdown (7 Cols) -->
+                <div class="lg:col-span-7">
+                    <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">Service 01 • Haute Artistry</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-neutral-dark dark:text-white mt-2 mb-4 leading-tight">
+                        Bridal Couture <span class="gold-gradient-text italic font-serif">Makeup Artistry</span>
+                    </h2>
+                    <p class="text-base text-neutral-dark/85 dark:text-gray-300 font-sans leading-relaxed mb-6 font-light">
+                        Engineered specifically for historic ballroom chandeliers, direct photography flashes, and emotional moments. We formulate exclusively with luxury couture lines including Dior Backstage, Tom Ford, Chanel, and Charlotte Tilbury to create an unmasked, second-skin complexion that breathes and glows for up to 18 hours.
                     </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-1"></i><span class="text-sm opacity-85 font-sans"><strong>Private 2-hr studio trial</strong> — test 3 look variations under natural, flash, and candlelight.</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-1"></i><span class="text-sm opacity-85 font-sans"><strong>18-hour longevity</strong> — sweat-resistant, tear-proof, humidity-sealed finishes.</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-1"></i><span class="text-sm opacity-85 font-sans"><strong>Mink lash application</strong> and full skin-barrier priming included.</span></li>
+
+                    <!-- Key Spec Pills -->
+                    <div class="grid grid-cols-3 gap-3 mb-8 text-center text-xs font-sans">
+                        <div class="p-3 rounded-2xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15">
+                            <i class="fas fa-shield-halved text-gift-slate dark:text-gift-slate-bright text-sm mb-1 block"></i>
+                            <span class="font-bold text-neutral-dark dark:text-white block">18-Hour Hold</span>
+                            <span class="text-[10px] opacity-75">Tear & Humidity Proof</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15">
+                            <i class="fas fa-feather text-gift-slate dark:text-gift-slate-bright text-sm mb-1 block"></i>
+                            <span class="font-bold text-neutral-dark dark:text-white block">HD Airbrush</span>
+                            <span class="text-[10px] opacity-75">Micro-Fine Seamless Finish</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15">
+                            <i class="fas fa-eye text-gift-slate dark:text-gift-slate-bright text-sm mb-1 block"></i>
+                            <span class="font-bold text-neutral-dark dark:text-white block">Mink Lash Map</span>
+                            <span class="text-[10px] opacity-75">Anatomically Tailored</span>
+                        </div>
+                    </div>
+
+                    <!-- What's Included Detailed Checklist -->
+                    <h3 class="text-xs uppercase tracking-widest font-sans font-bold text-gift-slate dark:text-gift-slate-bright mb-3">
+                        What Every Bridal Makeup Service Includes:
+                    </h3>
+                    <ul class="space-y-3 mb-8 text-xs sm:text-sm font-sans">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i>
+                            <span><strong>Lymphatic Skin-Barrier Preparation:</strong> Cryo-ice facial sculpting, botanical misting, and customized peptide barrier priming.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i>
+                            <span><strong>Custom Undertone Matching & Airbrush Base:</strong> Micro-pigment application that photographs seamlessly without white flash flashback.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i>
+                            <span><strong>Individual Lash Cluster Mapping:</strong> Hand-placed faux mink clusters tailored to your eye shape (almond, hooded, or deep-set).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i>
+                            <span><strong>Decollete & Shoulder Radiance:</strong> Seamless soft-champagne shimmer blending across the chest, collarbones, and shoulders.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i>
+                            <span><strong>Deluxe Day-Of Touch-Up Kit:</strong> Matched full-size bridal lip color, blotting papers, translucent powder puff, and applicators.</span>
+                        </li>
                     </ul>
-                    <div class="flex items-center gap-4 flex-wrap">
-                        <span class="text-2xl font-serif font-bold text-gift-slate dark:text-gift-slate-bright">From $350</span>
-                        <a href="contact.html" class="btn-nested group"><span>Reserve Trial</span><span class="icon-circle"><i class="fas fa-arrow-right text-xs"></i></span></a>
+
+                    <div class="flex items-center gap-6 flex-wrap pt-4 border-t border-gift-slate/15 dark:border-gray-800">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-widest text-neutral-dark/70 dark:text-gray-400 font-sans block">Investment</span>
+                            <span class="text-3xl font-serif font-bold text-gift-slate dark:text-gift-slate-bright">From $350</span>
+                        </div>
+                        <a href="contact.html?service=makeup" class="btn-nested group">
+                            <span>Book Bridal Makeup</span>
+                            <span class="icon-circle"><i class="fas fa-arrow-right text-xs"></i></span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== SERVICE 2: HAIRSTYLING (Reverse Asymmetrical) ========== -->
-    <section id="hair" class="py-16 sm:py-24 bg-bg-warm dark:bg-dark-bg transition-colors duration-400">
-        <div class="container mx-auto px-6">
-            <div class="service-row max-w-6xl mx-auto items-center" style="direction:ltr">
-                <div class="lg:order-2 double-bezel-outer group h-full flex flex-col">
-                    <div class="double-bezel-inner h-full flex flex-col justify-between">
-                        <div class="relative h-80 lg:h-full min-h-[420px] w-full overflow-hidden flex-1">
-                            <img src="Assets/hair.png" alt="Bridal Hairstyling" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+    <!-- ========== SERVICE 2: BRIDAL HAIRSTYLING ========== -->
+    <section id="hair" class="py-16 sm:py-24 bg-bg-warm dark:bg-dark-bg transition-colors duration-400 scroll-mt-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+                <!-- Detailed Breakdown (7 Cols - First on Desktop) -->
+                <div class="lg:col-span-7 order-2 lg:order-1">
+                    <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">Service 02 • Sculptural Styling</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-neutral-dark dark:text-white mt-2 mb-4 leading-tight">
+                        Haute Bridal <span class="gold-gradient-text italic font-serif">Hairstyling Architecture</span>
+                    </h2>
+                    <p class="text-base text-neutral-dark/85 dark:text-gray-300 font-sans leading-relaxed mb-6 font-light">
+                        From sculpted red-carpet Hollywood gloss waves and French romantic chignons to sleek architectural ballerina buns. We construct each hairstyle with internal structural padding, thermal bonding oils, and humidity-defying shields so your crown remains immaculate through windy outdoor ceremonies, endless hugs, and midnight dancing.
+                    </p>
+
+                    <!-- Key Spec Pills -->
+                    <div class="grid grid-cols-3 gap-3 mb-8 text-center text-xs font-sans">
+                        <div class="p-3 rounded-2xl bg-white dark:bg-dark-card border border-gift-slate/15">
+                            <i class="fas fa-crown text-gift-slate dark:text-gift-slate-bright text-sm mb-1 block"></i>
+                            <span class="font-bold text-neutral-dark dark:text-white block">Veil Anchoring</span>
+                            <span class="text-[10px] opacity-75">Heavy Cathedral Secure</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-white dark:bg-dark-card border border-gift-slate/15">
+                            <i class="fas fa-droplet text-gift-slate dark:text-gift-slate-bright text-sm mb-1 block"></i>
+                            <span class="font-bold text-neutral-dark dark:text-white block">Oribe & Olaplex</span>
+                            <span class="text-[10px] opacity-75">Anti-Frizz Thermal Shield</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-white dark:bg-dark-card border border-gift-slate/15">
+                            <i class="fas fa-repeat text-gift-slate dark:text-gift-slate-bright text-sm mb-1 block"></i>
+                            <span class="font-bold text-neutral-dark dark:text-white block">Quick Transition</span>
+                            <span class="text-[10px] opacity-75">Veil Removal Ready</span>
                         </div>
                     </div>
-                </div>
-                <div class="lg:order-1">
-                    <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">Service 02</span>
-                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-dark dark:text-white mt-3 mb-4">Bridal Hairstyling</h2>
-                    <p class="text-base opacity-85 font-sans leading-relaxed mb-6">
-                        Hollywood waves, romantic textured updos, or sleek architectural chignons — engineered to endure the ceremony, the wind, and the last dance of the night.
-                    </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-1"></i><span class="text-sm opacity-85 font-sans"><strong>Hair trial session</strong> with padding, extensions, and veil placement.</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-1"></i><span class="text-sm opacity-85 font-sans"><strong>Tiara & veil pinning</strong> secured to hold through photography, wind, and hugs.</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-1"></i><span class="text-sm opacity-85 font-sans"><strong>Heat-protected styling</strong> with luxury Oribe and Olaplex product lines.</span></li>
+
+                    <!-- What's Included Detailed Checklist -->
+                    <h3 class="text-xs uppercase tracking-widest font-sans font-bold text-gift-slate dark:text-gift-slate-bright mb-3">
+                        What Every Bridal Hairstyling Service Includes:
+                    </h3>
+                    <ul class="space-y-3 mb-8 text-xs sm:text-sm font-sans">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i>
+                            <span><strong>Thermal Blowout & Volume Framing:</strong> Deep structural root-lift utilizing Oribe Dry Texturizing and Olaplex No. 7 bonding oil.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i>
+                            <span><strong>Extension Integration & Blending:</strong> Seamless placement, styling, and blending of your clip-in hair extensions.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i>
+                            <span><strong>Heirloom Cathedral Veil & Tiara Placement:</strong> Dual-reinforced anchor pinning ensuring your veil stays locked without pulling on your scalp.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i>
+                            <span><strong>Reception Look Preparedness:</strong> Pinned with swift veil-release architecture so your maid of honor can detach your veil in 10 seconds.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i>
+                            <span><strong>Emergency Styling Kit:</strong> Color-matched matte bobby pins, mini travel hairspray, and a mulberry silk tie for post-reception comfort.</span>
+                        </li>
                     </ul>
-                    <div class="flex items-center gap-4 flex-wrap">
-                        <span class="text-2xl font-serif font-bold text-gift-slate dark:text-gift-slate-bright">From $250</span>
-                        <a href="contact.html" class="btn-nested group"><span>Reserve Trial</span><span class="icon-circle"><i class="fas fa-arrow-right text-xs"></i></span></a>
+
+                    <div class="flex items-center gap-6 flex-wrap pt-4 border-t border-gift-slate/15 dark:border-gray-800">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-widest text-neutral-dark/70 dark:text-gray-400 font-sans block">Investment</span>
+                            <span class="text-3xl font-serif font-bold text-gift-slate dark:text-gift-slate-bright">From $250</span>
+                        </div>
+                        <a href="contact.html?service=hair" class="btn-nested group">
+                            <span>Book Bridal Hair</span>
+                            <span class="icon-circle"><i class="fas fa-arrow-right text-xs"></i></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Visual Showcase (5 Cols - Second on Desktop) -->
+                <div class="lg:col-span-5 order-1 lg:order-2">
+                    <div class="double-bezel-outer group">
+                        <div class="double-bezel-inner">
+                            <div class="relative h-96 sm:h-[480px] w-full overflow-hidden">
+                                <img src="Assets/hair.png" alt="Bridal Hairstyling Architecture" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                                <div class="absolute top-4 left-4">
+                                    <span class="badge text-[10px] font-sans">✦ Hollywood Waves & Chignons</span>
+                                </div>
+                                <div class="absolute bottom-5 left-5 right-5 text-white">
+                                    <span class="text-[10px] uppercase tracking-widest text-gift-slate-bright font-sans block mb-1">Architectural Hold</span>
+                                    <h3 class="text-2xl font-serif font-bold">The Sculptural Bridal Crown</h3>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== SERVICE 3 & 4: SIDE-BY-SIDE CARDS ========== -->
-    <section class="py-16 sm:py-24 bg-white dark:bg-dark-card transition-colors duration-400 border-y border-neutral-light/50 dark:border-gray-800/60">
-        <div class="container mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">Extended Atelier Services</span>
-                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-dark dark:text-white mt-3">
-                    Entourage & <span class="gold-gradient-text italic font-serif">Concierge</span>
+    <!-- ========== SERVICE 3: PRE-WEDDING TRIALS & DIAGNOSTICS ========== -->
+    <section id="trials" class="py-16 sm:py-24 bg-white dark:bg-dark-card transition-colors duration-400 border-y border-neutral-light/50 dark:border-gray-800/60 scroll-mt-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
+                <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">Service 03 • The Sanctuary Trial</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-neutral-dark dark:text-white mt-3 leading-tight">
+                    The Pre-Wedding <span class="gold-gradient-text italic font-serif">Trial & Diagnostic</span>
                 </h2>
+                <div class="premium-line mx-auto !my-4"></div>
+                <p class="text-base sm:text-lg text-neutral-dark/85 dark:text-gray-300 font-sans font-light leading-relaxed">
+                    A private 2.5-hour immersion hosted in our serene Fifth Avenue studio. We test, refine, and stress-test your complete look under three lighting conditions so wedding morning is pure champagne and calmness.
+                </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                <!-- Service 3: Bridal Party -->
-                <div id="party" class="double-bezel-outer group">
-                    <div class="double-bezel-inner">
-                        <div class="relative h-64 overflow-hidden">
-                            <img src="Assets/s1.jpg" alt="Bridal Party Styling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                            <span class="absolute top-3 left-3 badge text-[10px] font-sans">Service 03</span>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-serif font-bold text-neutral-dark dark:text-white mb-2">Bridal Party Glam</h3>
-                            <p class="text-sm opacity-80 font-sans leading-relaxed mb-4">
-                                Coordinated, elevated styling for bridesmaids and family that harmonizes beautifully with the bride — never competing, always complementing.
-                            </p>
-                            <div class="flex items-center justify-between pt-4 border-t border-gift-slate/15 dark:border-gray-800">
-                                <span class="text-sm font-bold font-serif text-gift-slate dark:text-gift-slate-bright">From $150 / person</span>
-                                <a href="contact.html" class="text-xs font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright hover:underline">Inquire ↗</a>
+            <!-- 4-Step Trial Protocol Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
+                <div class="p-6 rounded-3xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15 hover:border-gift-slate/40 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-gift-slate/15 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright flex items-center justify-center font-serif font-bold text-lg mb-4">01</div>
+                        <h3 class="font-serif font-bold text-xl text-neutral-dark dark:text-white mb-2">Moodboard & Gown Anatomy</h3>
+                        <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed">
+                            We analyze your gown's neckline (sweetheart, halter, backless), fabric weight, jewelry, veil type, and venue climate to design harmonious styling.
+                        </p>
+                    </div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-gift-slate dark:text-gift-slate-bright mt-4 block">30 Min Consultation</span>
+                </div>
+
+                <div class="p-6 rounded-3xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15 hover:border-gift-slate/40 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-gift-slate/15 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright flex items-center justify-center font-serif font-bold text-lg mb-4">02</div>
+                        <h3 class="font-serif font-bold text-xl text-neutral-dark dark:text-white mb-2">Two-Look Transformation</h3>
+                        <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed">
+                            We style both your primary ceremony look and test a secondary reception variation (such as transitioning an updo into brushed waves, or switching to an evening berry lip).
+                        </p>
+                    </div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-gift-slate dark:text-gift-slate-bright mt-4 block">Side-by-Side Comparison</span>
+                </div>
+
+                <div class="p-6 rounded-3xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15 hover:border-gift-slate/40 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-gift-slate/15 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright flex items-center justify-center font-serif font-bold text-lg mb-4">03</div>
+                        <h3 class="font-serif font-bold text-xl text-neutral-dark dark:text-white mb-2">3-Way Lighting Calibration</h3>
+                        <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed">
+                            Your makeup is verified under 5500K natural daylight, 3200K indoor ballroom warm light, and direct professional camera flash to guarantee zero flashback.
+                        </p>
+                    </div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-gift-slate dark:text-gift-slate-bright mt-4 block">Zero Flashback Guarantee</span>
+                </div>
+
+                <div class="p-6 rounded-3xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15 hover:border-gift-slate/40 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-gift-slate/15 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright flex items-center justify-center font-serif font-bold text-lg mb-4">04</div>
+                        <h3 class="font-serif font-bold text-xl text-neutral-dark dark:text-white mb-2">Archival Face Chart & Plan</h3>
+                        <p class="text-xs sm:text-sm opacity-80 font-sans leading-relaxed">
+                            Every foundation blend, lash coordinate, and hair pinning angle is documented on an archival face chart. You receive a personalized 60-day skin prep regimen.
+                        </p>
+                    </div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-gift-slate dark:text-gift-slate-bright mt-4 block">Digital Dossier Provided</span>
+                </div>
+            </div>
+
+            <!-- What to Bring & Pricing Box -->
+            <div class="p-8 sm:p-10 rounded-3xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/20 max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="font-serif font-bold text-2xl text-neutral-dark dark:text-white mb-3">What to Bring to Your Trial</h3>
+                        <ul class="space-y-2.5 text-xs sm:text-sm font-sans opacity-85">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-gift-slate dark:text-gift-slate-bright text-xs"></i> A white or ivory button-down shirt mimicking your neckline</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-gift-slate dark:text-gift-slate-bright text-xs"></i> Your veil, hairpiece, tiara, or jewelry if already purchased</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-gift-slate dark:text-gift-slate-bright text-xs"></i> 3-5 inspiring reference photos and a photo of your gown</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-gift-slate dark:text-gift-slate-bright text-xs"></i> Any preferred specialty lip color or sensitive skin items</li>
+                        </ul>
+                    </div>
+                    <div class="text-center md:text-right border-t md:border-t-0 md:border-l border-gift-slate/15 pt-6 md:pt-0 md:pl-8">
+                        <span class="badge text-[10px] font-sans mb-2">100% Package Credited</span>
+                        <div class="text-3xl font-serif font-bold text-gift-slate dark:text-gift-slate-bright mt-1 mb-1">$450 Combined</div>
+                        <p class="text-xs opacity-75 font-sans mb-5">Single Service Trial: $250 • Hair & Makeup: $450<br>Credited directly toward Tier 2 or 3 Packages.</p>
+                        <a href="contact.html?service=trial" class="btn-nested group justify-center w-full md:w-auto inline-flex">
+                            <span>Book In-Studio Trial</span>
+                            <span class="icon-circle"><i class="fas fa-calendar-check text-xs"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICE 4: COMPLETE WEDDING STYLING PACKAGES ========== -->
+    <section id="packages" class="py-16 sm:py-24 lg:py-28 bg-bg-warm dark:bg-dark-bg transition-colors duration-400 scroll-mt-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
+                <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">All-Inclusive</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-neutral-dark dark:text-white mt-3 leading-tight">
+                    Wedding <span class="gold-gradient-text italic font-serif">Packages</span>
+                </h2>
+                <div class="premium-line mx-auto !my-4"></div>
+                <p class="text-base sm:text-lg text-neutral-dark/85 dark:text-gray-300 font-sans font-light leading-relaxed">
+                    Complete hair, makeup, and trial packages designed for a seamless, stress-free wedding day.
+                </p>
+            </div>
+
+            <!-- 3 Package Tier Cards -->
+            <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+                <!-- Package 1: The Essential Radiant Bride -->
+                <div class="double-bezel-outer group h-full flex flex-col">
+                    <div class="double-bezel-inner p-7 sm:p-8 flex flex-col justify-between h-full bg-white dark:bg-dark-card">
+                        <div class="flex-1 flex flex-col">
+                            <div class="flex items-center justify-between gap-2 mb-2 min-h-[26px]">
+                                <span class="text-xs uppercase tracking-widest font-sans font-bold text-gift-slate dark:text-gift-slate-bright">Tier 01</span>
+                                <span class="text-[9px] uppercase tracking-widest font-sans font-semibold text-neutral-dark/60 dark:text-gray-400 px-2.5 py-0.5 rounded-full border border-neutral-light dark:border-gray-700">Essential</span>
                             </div>
+                            <h3 class="text-2xl font-serif font-bold text-neutral-dark dark:text-white mb-2">Essential Package</h3>
+                            <p class="text-xs text-neutral-dark/80 dark:text-gray-300 font-sans leading-relaxed mb-6 min-h-[2.75rem]">
+                                Perfect for intimate celebrations, cathedral ceremonies, and chic city hall nuptials requiring flawless day-of execution.
+                            </p>
+                            <div class="text-3xl font-serif font-bold text-gift-slate dark:text-gift-slate-bright mb-6 pb-6 border-b border-gift-slate/15 dark:border-gray-800">
+                                $650 <span class="text-xs font-sans font-normal opacity-70">/ complete bride</span>
+                            </div>
+
+                            <ul class="space-y-3.5 text-xs sm:text-sm font-sans mb-8 flex-1">
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-check text-gift-slate dark:text-gift-slate-bright text-xs mt-1 shrink-0"></i>
+                                    <span><strong>Wedding Day Bridal Makeup:</strong> 18-hr HD airbrush or luminous radiant finish.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-check text-gift-slate dark:text-gift-slate-bright text-xs mt-1 shrink-0"></i>
+                                    <span><strong>Wedding Day Bridal Hair:</strong> Sculpted chignon, textured updo, or romantic waves.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-check text-gift-slate dark:text-gift-slate-bright text-xs mt-1 shrink-0"></i>
+                                    <span><strong>1 In-Studio Trial Session:</strong> Hair & makeup consultation with lighting check.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-check text-gift-slate dark:text-gift-slate-bright text-xs mt-1 shrink-0"></i>
+                                    <span><strong>Lashes & Skin Prep:</strong> Custom-mapped faux mink lashes and barrier priming.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-check text-gift-slate dark:text-gift-slate-bright text-xs mt-1 shrink-0"></i>
+                                    <span><strong>Veil Placement:</strong> Secure veil & headpiece anchor pinning.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-check text-gift-slate dark:text-gift-slate-bright text-xs mt-1 shrink-0"></i>
+                                    <span><strong>Bridal Touch-Up Kit:</strong> Matched lip color sample & blotting sheets.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-auto pt-2">
+                            <a href="contact.html?package=essential" class="btn-frosted w-full justify-center text-center h-[52px]">
+                                <span>Book Essential Package</span>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Service 4: On-Location Concierge -->
-                <div id="addons" class="double-bezel-outer group">
-                    <div class="double-bezel-inner">
-                        <div class="relative h-64 overflow-hidden">
-                            <img src="Assets/s2.jpg" alt="On-Location Concierge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                            <span class="absolute top-3 left-3 badge text-[10px] font-sans">Service 04</span>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-serif font-bold text-neutral-dark dark:text-white mb-2">On-Location Concierge</h3>
-                            <p class="text-sm opacity-80 font-sans leading-relaxed mb-4">
-                                We travel to your bridal suite or venue with a full Hollywood illuminated station. Ceremony-to-reception look changes and touch-ups included.
-                            </p>
-                            <div class="flex items-center justify-between pt-4 border-t border-gift-slate/15 dark:border-gray-800">
-                                <span class="text-sm font-bold font-serif text-gift-slate dark:text-gift-slate-bright">Custom Quote</span>
-                                <a href="contact.html" class="text-xs font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright hover:underline">Inquire ↗</a>
+                <!-- Package 2: The Haute Couture Repertoire (Featured / Best Seller) -->
+                <div class="double-bezel-outer group h-full flex flex-col relative">
+                    <div class="double-bezel-inner p-7 sm:p-8 flex flex-col justify-between h-full bg-white dark:bg-[#1F1418] border-2 border-gift-slate/40 dark:border-gift-slate-bright/40 shadow-2xl">
+                        <div class="flex-1 flex flex-col">
+                            <div class="flex items-center justify-between gap-2 mb-2 min-h-[26px]">
+                                <span class="text-xs uppercase tracking-widest font-sans font-bold text-gift-slate dark:text-gift-slate-bright">Tier 02</span>
+                                <span class="bg-gift-slate text-white text-[9px] uppercase tracking-widest font-sans font-bold px-3 py-1 rounded-full shadow-md">Most Popular</span>
                             </div>
+                            <h3 class="text-2xl font-serif font-bold text-neutral-dark dark:text-white mb-2">Signature Package</h3>
+                            <p class="text-xs text-neutral-dark/80 dark:text-gray-300 font-sans leading-relaxed mb-6 min-h-[2.75rem]">
+                                Our definitive luxury experience covering both your pre-wedding celebration and complete wedding day on-location concierge.
+                            </p>
+                            <div class="text-3xl font-serif font-bold text-gift-slate dark:text-gift-slate-bright mb-6 pb-6 border-b border-gift-slate/15 dark:border-gray-800">
+                                $1,150 <span class="text-xs font-sans font-normal opacity-70">/ all-inclusive</span>
+                            </div>
+
+                            <ul class="space-y-3.5 text-xs sm:text-sm font-sans mb-8 flex-1">
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-star text-gift-accent text-xs mt-1 shrink-0"></i>
+                                    <span><strong>Everything in Essential Package:</strong> Complete wedding day hair, makeup & trial.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-star text-gift-accent text-xs mt-1 shrink-0"></i>
+                                    <span><strong>Extended 2.5-Hr Trial:</strong> Two complete looks explored with lighting check.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-star text-gift-accent text-xs mt-1 shrink-0"></i>
+                                    <span><strong>Pre-Event Glam:</strong> Rehearsal dinner OR engagement shoot styling included.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-star text-gift-accent text-xs mt-1 shrink-0"></i>
+                                    <span><strong>Clip-In Extension Styling:</strong> Seamless blending, installation & thermal waves.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-star text-gift-accent text-xs mt-1 shrink-0"></i>
+                                    <span><strong>Cryo-Sculpting Facial:</strong> Lymphatic ice roller & champagne body shimmer.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-star text-gift-accent text-xs mt-1 shrink-0"></i>
+                                    <span><strong>Suite Travel & VIP Kit:</strong> Travel within 30 miles & full-size luxury lipstick.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-auto pt-2">
+                            <a href="contact.html?package=haute-couture" class="btn-nested w-full justify-center text-center h-[52px]">
+                                <span>Book Signature Package</span>
+                                <span class="icon-circle"><i class="fas fa-arrow-right text-xs"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3: The Atelier Royal Immersion -->
+                <div class="double-bezel-outer group h-full flex flex-col">
+                    <div class="double-bezel-inner p-7 sm:p-8 flex flex-col justify-between h-full bg-white dark:bg-dark-card">
+                        <div class="flex-1 flex flex-col">
+                            <div class="flex items-center justify-between gap-2 mb-2 min-h-[26px]">
+                                <span class="text-xs uppercase tracking-widest font-sans font-bold text-gift-slate dark:text-gift-slate-bright">Tier 03</span>
+                                <span class="text-[9px] uppercase tracking-widest font-sans font-semibold text-neutral-dark/60 dark:text-gray-400 px-2.5 py-0.5 rounded-full border border-neutral-light dark:border-gray-700">Full Weekend</span>
+                            </div>
+                            <h3 class="text-2xl font-serif font-bold text-neutral-dark dark:text-white mb-2">VIP Weekend Package</h3>
+                            <p class="text-xs text-neutral-dark/80 dark:text-gray-300 font-sans leading-relaxed mb-6 min-h-[2.75rem]">
+                                An all-inclusive wedding weekend sanctuary with dedicated artist concierge from morning preparation through the reception.
+                            </p>
+                            <div class="text-3xl font-serif font-bold text-gift-slate dark:text-gift-slate-bright mb-6 pb-6 border-b border-gift-slate/15 dark:border-gray-800">
+                                $2,400 <span class="text-xs font-sans font-normal opacity-70">/ weekend sanctuary</span>
+                            </div>
+
+                            <ul class="space-y-3.5 text-xs sm:text-sm font-sans mb-8 flex-1">
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-crown text-gift-slate dark:text-gift-slate-bright text-xs mt-1 shrink-0"></i>
+                                    <span><strong>Multi-Event Glamour:</strong> Engagement shoot, rehearsal dinner & wedding day.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-crown text-gift-slate dark:text-gift-slate-bright text-xs mt-1 shrink-0"></i>
+                                    <span><strong>2 In-Studio Trials:</strong> Complete face chart documentation & seasonal trials.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-crown text-gift-slate dark:text-gift-slate-bright text-xs mt-1 shrink-0"></i>
+                                    <span><strong>Full-Day Artist Concierge:</strong> 8-hour dedicated ceremony-to-reception coverage.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-crown text-gift-slate dark:text-gift-slate-bright text-xs mt-1 shrink-0"></i>
+                                    <span><strong>Bride + Maid of Honor:</strong> Complete wedding day hair and makeup for both.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-crown text-gift-slate dark:text-gift-slate-bright text-xs mt-1 shrink-0"></i>
+                                    <span><strong>Full Body Polishing:</strong> Neckline, back, and arm camera-smoothing finish.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fas fa-crown text-gift-slate dark:text-gift-slate-bright text-xs mt-1 shrink-0"></i>
+                                    <span><strong>VIP Vanity Sanctuary:</strong> Bespoke emergency kit & luxury perfume decant.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-auto pt-2">
+                            <a href="contact.html?package=royal" class="btn-frosted w-full justify-center text-center h-[52px]">
+                                <span>Book VIP Weekend</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -444,51 +809,264 @@
         </div>
     </section>
 
-    <!-- ========== ADD-ONS LIST ========== -->
-    <section id="trials" class="py-16 sm:py-24 bg-bg-warm dark:bg-dark-bg transition-colors duration-400">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12">
-                    <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">Enhancements</span>
-                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-dark dark:text-white mt-3">Curated Add-Ons</h2>
-                    <div class="premium-line mx-auto !my-4"></div>
-                </div>
-
-                <div class="grid sm:grid-cols-2 gap-4">
-                    <div class="service-list-item flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-dark-card border border-gift-slate/15 dark:border-gift-slate-bright/20">
-                        <div class="w-12 h-12 rounded-full bg-gift-slate/15 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright flex-shrink-0"><i class="fas fa-eye"></i></div>
-                        <div><h4 class="font-serif font-bold text-base text-neutral-dark dark:text-white">Individual Lash Extensions</h4><p class="text-xs opacity-75 font-sans">Custom-mapped mink lashes — $60</p></div>
-                    </div>
-                    <div class="service-list-item flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-dark-card border border-gift-slate/15 dark:border-gift-slate-bright/20">
-                        <div class="w-12 h-12 rounded-full bg-gift-slate/15 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright flex-shrink-0"><i class="fas fa-spa"></i></div>
-                        <div><h4 class="font-serif font-bold text-base text-neutral-dark dark:text-white">Pre-Wedding Facial Ritual</h4><p class="text-xs opacity-75 font-sans">90-min luxury glow prep — $220</p></div>
-                    </div>
-                    <div class="service-list-item flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-dark-card border border-gift-slate/15 dark:border-gift-slate-bright/20">
-                        <div class="w-12 h-12 rounded-full bg-gift-slate/15 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright flex-shrink-0"><i class="fas fa-gem"></i></div>
-                        <div><h4 class="font-serif font-bold text-base text-neutral-dark dark:text-white">Mother of Bride Styling</h4><p class="text-xs opacity-75 font-sans">Complete makeup + hair — $280</p></div>
-                    </div>
-                    <div class="service-list-item flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-dark-card border border-gift-slate/15 dark:border-gift-slate-bright/20">
-                        <div class="w-12 h-12 rounded-full bg-gift-slate/15 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright flex-shrink-0"><i class="fas fa-camera"></i></div>
-                        <div><h4 class="font-serif font-bold text-base text-neutral-dark dark:text-white">Engagement Shoot Glam</h4><p class="text-xs opacity-75 font-sans">Location-ready HD look — $320</p></div>
-                    </div>
-                    <div class="service-list-item flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-dark-card border border-gift-slate/15 dark:border-gift-slate-bright/20">
-                        <div class="w-12 h-12 rounded-full bg-gift-slate/15 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright flex-shrink-0"><i class="fas fa-suitcase"></i></div>
-                        <div><h4 class="font-serif font-bold text-base text-neutral-dark dark:text-white">Touch-Up Kit</h4><p class="text-xs opacity-75 font-sans">Lip, powder & blotting set — $75</p></div>
-                    </div>
-                    <div class="service-list-item flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-dark-card border border-gift-slate/15 dark:border-gift-slate-bright/20">
-                        <div class="w-12 h-12 rounded-full bg-gift-slate/15 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright flex-shrink-0"><i class="fas fa-ring"></i></div>
-                        <div><h4 class="font-serif font-bold text-base text-neutral-dark dark:text-white">Rehearsal Dinner Look</h4><p class="text-xs opacity-75 font-sans">Soft glam for the night before — $240</p></div>
+    <!-- ========== SERVICE 5: BRIDAL PARTY & ENTOURAGE ========== -->
+    <section id="party" class="py-16 sm:py-24 bg-white dark:bg-dark-card transition-colors duration-400 border-y border-neutral-light/50 dark:border-gray-800/60 scroll-mt-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+                <!-- Visual Showcase (5 Cols) -->
+                <div class="lg:col-span-5">
+                    <div class="double-bezel-outer group">
+                        <div class="double-bezel-inner">
+                            <div class="relative h-96 sm:h-[450px] w-full overflow-hidden">
+                                <img src="Assets/party2.png" alt="Bridal Party and Entourage Styling" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                                <div class="absolute top-4 left-4">
+                                    <span class="badge text-[10px] font-sans">✦ Coordinated Bridal Party</span>
+                                </div>
+                                <div class="absolute bottom-5 left-5 right-5 text-white">
+                                    <span class="text-[10px] uppercase tracking-widest text-gift-slate-bright font-sans block mb-1">Harmonious Palette</span>
+                                    <h3 class="text-2xl font-serif font-bold">The Bridal Entourage Repertoire</h3>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="text-center mt-12">
-                    <a href="contact.html" class="btn-nested group"><span>Request Custom Quote</span><span class="icon-circle"><i class="fas fa-arrow-right text-xs"></i></span></a>
+                <!-- Entourage Inclusions & Rates (7 Cols) -->
+                <div class="lg:col-span-7">
+                    <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">Service 05 • Coordinated Elegance</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-neutral-dark dark:text-white mt-2 mb-4 leading-tight">
+                        Bridal Party & <span class="gold-gradient-text italic font-serif">Entourage Glam</span>
+                    </h2>
+                    <p class="text-base text-neutral-dark/85 dark:text-gray-300 font-sans leading-relaxed mb-6 font-light">
+                        Your bridesmaids, maid of honor, and mothers are integral to the aesthetic harmony of your wedding gallery. We curate a cohesive aesthetic that complements your bridal gown and wedding color palette without ever outshining you.
+                    </p>
+
+                    <!-- Pricing Table Cards -->
+                    <div class="grid sm:grid-cols-2 gap-4 mb-8">
+                        <div class="p-4 rounded-2xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-serif font-bold text-base text-neutral-dark dark:text-white">Bridesmaid Full Glam</h4>
+                                <span class="font-bold text-gift-slate dark:text-gift-slate-bright text-base">$220</span>
+                            </div>
+                            <p class="text-xs opacity-75 font-sans">Complete HD makeup with lashes + custom hairstyle tailored to their dress neckline.</p>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-serif font-bold text-base text-neutral-dark dark:text-white">Mother of Bride / Groom</h4>
+                                <span class="font-bold text-gift-slate dark:text-gift-slate-bright text-base">$240</span>
+                            </div>
+                            <p class="text-xs opacity-75 font-sans">Skin-smoothing anti-aging hydration prep, elegant soft glam, and secured volume blowdry/updo.</p>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-serif font-bold text-base text-neutral-dark dark:text-white">Junior Bridesmaid / Flower Girl</h4>
+                                <span class="font-bold text-gift-slate dark:text-gift-slate-bright text-base">$95</span>
+                            </div>
+                            <p class="text-xs opacity-75 font-sans">Age-appropriate braids/curls, subtle blush, and sheer organic berry lip gloss.</p>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-serif font-bold text-base text-neutral-dark dark:text-white">Groom Anti-Shine & Grooming</h4>
+                                <span class="font-bold text-gift-slate dark:text-gift-slate-bright text-base">$110</span>
+                            </div>
+                            <p class="text-xs opacity-75 font-sans">Camera-ready anti-shine skin treatment, precision beard edge-up, and hair refinement.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <a href="contact.html?service=party" class="btn-nested group">
+                            <span>Inquire for Bridal Party</span>
+                            <span class="icon-circle"><i class="fas fa-arrow-right text-xs"></i></span>
+                        </a>
+                        <span class="text-xs opacity-75 font-sans">Secondary senior artists provided for parties of 5+</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== FOOTER (COPIED FROM REFERENCE) ========== -->
+    <!-- ========== SERVICE 6: CURATED ADD-ONS ========== -->
+    <section id="addons" class="py-16 sm:py-24 bg-bg-warm dark:bg-dark-bg transition-colors duration-400 scroll-mt-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
+                <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">Enhancements & Customizations</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-dark dark:text-white mt-3">
+                    Curated <span class="gold-gradient-text italic font-serif">Add-Ons & Concierge Upgrades</span>
+                </h2>
+                <div class="premium-line mx-auto !my-4"></div>
+                <p class="text-xs sm:text-sm md:text-base opacity-80 font-sans font-light max-w-xl mx-auto leading-relaxed">
+                    Personalize your commission with specialized beauty rituals and on-location convenience upgrades.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div class="service-list-item flex items-start gap-4 p-6 rounded-3xl bg-white dark:bg-dark-card border border-gift-slate/15 hover:border-gift-slate/40 transition-all shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-gift-slate/15 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright flex-shrink-0 text-lg"><i class="fas fa-repeat"></i></div>
+                    <div>
+                        <div class="flex justify-between items-baseline mb-1">
+                            <h4 class="font-serif font-bold text-lg text-neutral-dark dark:text-white">Reception Look Transformation</h4>
+                            <span class="font-bold text-gift-slate dark:text-gift-slate-bright text-sm">$180</span>
+                        </div>
+                        <p class="text-xs opacity-80 font-sans leading-relaxed">Transition from romantic church updo with veil to cascading Hollywood waves and a bold evening lip before your grand entrance.</p>
+                    </div>
+                </div>
+
+                <div class="service-list-item flex items-start gap-4 p-6 rounded-3xl bg-white dark:bg-dark-card border border-gift-slate/15 hover:border-gift-slate/40 transition-all shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-gift-slate/15 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright flex-shrink-0 text-lg"><i class="fas fa-spa"></i></div>
+                    <div>
+                        <div class="flex justify-between items-baseline mb-1">
+                            <h4 class="font-serif font-bold text-lg text-neutral-dark dark:text-white">Pre-Wedding Cryo-Glow Facial</h4>
+                            <span class="font-bold text-gift-slate dark:text-gift-slate-bright text-sm">$220</span>
+                        </div>
+                        <p class="text-xs opacity-80 font-sans leading-relaxed">75-minute in-studio lymphatic facial with hyaluronic infusion and cryo-sculpting 24-48 hours before wedding day.</p>
+                    </div>
+                </div>
+
+                <div class="service-list-item flex items-start gap-4 p-6 rounded-3xl bg-white dark:bg-dark-card border border-gift-slate/15 hover:border-gift-slate/40 transition-all shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-gift-slate/15 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright flex-shrink-0 text-lg"><i class="fas fa-gem"></i></div>
+                    <div>
+                        <div class="flex justify-between items-baseline mb-1">
+                            <h4 class="font-serif font-bold text-lg text-neutral-dark dark:text-white">Extensions Rental & Match</h4>
+                            <span class="font-bold text-gift-slate dark:text-gift-slate-bright text-sm">$125</span>
+                        </div>
+                        <p class="text-xs opacity-80 font-sans leading-relaxed">100% Remy human hair clip-in extensions color-matched during trial, pre-styled, and loaned for your wedding weekend.</p>
+                    </div>
+                </div>
+
+                <div class="service-list-item flex items-start gap-4 p-6 rounded-3xl bg-white dark:bg-dark-card border border-gift-slate/15 hover:border-gift-slate/40 transition-all shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-gift-slate/15 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright flex-shrink-0 text-lg"><i class="fas fa-camera"></i></div>
+                    <div>
+                        <div class="flex justify-between items-baseline mb-1">
+                            <h4 class="font-serif font-bold text-lg text-neutral-dark dark:text-white">Engagement Shoot Hair & Makeup</h4>
+                            <span class="font-bold text-gift-slate dark:text-gift-slate-bright text-sm">$320</span>
+                        </div>
+                        <p class="text-xs opacity-80 font-sans leading-relaxed">Location-ready hair and HD makeup tailored to golden hour outdoor shoots, save-the-date cards, or bridal portraits.</p>
+                    </div>
+                </div>
+
+                <div class="service-list-item flex items-start gap-4 p-6 rounded-3xl bg-white dark:bg-dark-card border border-gift-slate/15 hover:border-gift-slate/40 transition-all shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-gift-slate/15 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright flex-shrink-0 text-lg"><i class="fas fa-clock"></i></div>
+                    <div>
+                        <div class="flex justify-between items-baseline mb-1">
+                            <h4 class="font-serif font-bold text-lg text-neutral-dark dark:text-white">On-Location Concierge Extension</h4>
+                            <span class="font-bold text-gift-slate dark:text-gift-slate-bright text-sm">$150 / hr</span>
+                        </div>
+                        <p class="text-xs opacity-80 font-sans leading-relaxed">Dedicated artist standby during bridal portraits, first-look moments, and ceremony to ensure veil and shine control.</p>
+                    </div>
+                </div>
+
+                <div class="service-list-item flex items-start gap-4 p-6 rounded-3xl bg-white dark:bg-dark-card border border-gift-slate/15 hover:border-gift-slate/40 transition-all shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-gift-slate/15 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright flex-shrink-0 text-lg"><i class="fas fa-sun"></i></div>
+                    <div>
+                        <div class="flex justify-between items-baseline mb-1">
+                            <h4 class="font-serif font-bold text-lg text-neutral-dark dark:text-white">Rehearsal Dinner Glam</h4>
+                            <span class="font-bold text-gift-slate dark:text-gift-slate-bright text-sm">$260</span>
+                        </div>
+                        <p class="text-xs opacity-80 font-sans leading-relaxed">Radiant evening hair & soft glam for the night before your wedding so you look radiant across all weekend events.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 7: FREQUENTLY ASKED QUESTIONS ========== -->
+    <section id="faq" class="py-16 sm:py-24 bg-white dark:bg-dark-card transition-colors duration-400 border-y border-neutral-light/50 dark:border-gray-800/60 scroll-mt-28">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
+                <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">Clarity & Details</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-dark dark:text-white mt-3">
+                    Frequently Asked <span class="gold-gradient-text italic font-serif">Questions</span>
+                </h2>
+                <div class="premium-line mx-auto !my-4"></div>
+            </div>
+
+            <!-- Accordion List -->
+            <div class="space-y-4">
+                <details class="group p-6 rounded-3xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15 transition-all" open>
+                    <summary class="flex justify-between items-center cursor-pointer font-serif font-bold text-lg sm:text-xl text-neutral-dark dark:text-white list-none">
+                        <span>When should I schedule my pre-wedding trial?</span>
+                        <span class="w-7 h-7 rounded-full bg-gift-slate/15 text-gift-slate dark:text-gift-slate-bright flex items-center justify-center text-xs group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-xs sm:text-sm text-neutral-dark/85 dark:text-gray-300 font-sans leading-relaxed font-light">
+                        We recommend scheduling your trial 8 to 12 weeks before your wedding date. At this point, your gown has been chosen, your veil is ordered, and you have finalized your jewelry and color palette. If you wish to align your trial with your bridal shower or engagement photoshoot, let us know when booking!
+                    </p>
+                </details>
+
+                <details class="group p-6 rounded-3xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15 transition-all">
+                    <summary class="flex justify-between items-center cursor-pointer font-serif font-bold text-lg sm:text-xl text-neutral-dark dark:text-white list-none">
+                        <span>How long does bridal hair and makeup take on the wedding morning?</span>
+                        <span class="w-7 h-7 rounded-full bg-gift-slate/15 text-gift-slate dark:text-gift-slate-bright flex items-center justify-center text-xs group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-xs sm:text-sm text-neutral-dark/85 dark:text-gray-300 font-sans leading-relaxed font-light">
+                        We allocate 2 to 2.5 hours exclusively for the bride to guarantee a relaxed, unhurried experience complete with cryo skin prep and champagne breaks. For bridesmaids and family members, we allocate approximately 45 minutes per service.
+                    </p>
+                </details>
+
+                <details class="group p-6 rounded-3xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15 transition-all">
+                    <summary class="flex justify-between items-center cursor-pointer font-serif font-bold text-lg sm:text-xl text-neutral-dark dark:text-white list-none">
+                        <span>Can you accommodate large bridal parties of 6 or more?</span>
+                        <span class="w-7 h-7 rounded-full bg-gift-slate/15 text-gift-slate dark:text-gift-slate-bright flex items-center justify-center text-xs group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-xs sm:text-sm text-neutral-dark/85 dark:text-gray-300 font-sans leading-relaxed font-light">
+                        Yes! For parties larger than 5, we assign secondary senior artists vetted and trained directly by our Lead Artist. This ensures everyone finishes on time without anyone having to wake up at 5:00 AM.
+                    </p>
+                </details>
+
+                <details class="group p-6 rounded-3xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15 transition-all">
+                    <summary class="flex justify-between items-center cursor-pointer font-serif font-bold text-lg sm:text-xl text-neutral-dark dark:text-white list-none">
+                        <span>Do you travel on-location to hotels, private estates, and destination venues?</span>
+                        <span class="w-7 h-7 rounded-full bg-gift-slate/15 text-gift-slate dark:text-gift-slate-bright flex items-center justify-center text-xs group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-xs sm:text-sm text-neutral-dark/85 dark:text-gray-300 font-sans leading-relaxed font-light">
+                        Absolutely. We are fully mobile and arrive with professional illuminated vanity setups, high-temperature styling irons, extension cords, and directors' chairs. Travel within the NYC metropolitan area (up to 30 miles) is included in our signature packages.
+                    </p>
+                </details>
+
+                <details class="group p-6 rounded-3xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15 transition-all">
+                    <summary class="flex justify-between items-center cursor-pointer font-serif font-bold text-lg sm:text-xl text-neutral-dark dark:text-white list-none">
+                        <span>How do I secure my wedding date on your calendar?</span>
+                        <span class="w-7 h-7 rounded-full bg-gift-slate/15 text-gift-slate dark:text-gift-slate-bright flex items-center justify-center text-xs group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-xs sm:text-sm text-neutral-dark/85 dark:text-gray-300 font-sans leading-relaxed font-light">
+                        Due to the intimate nature of our atelier, we take a limited number of bridal commissions per season. Dates are reserved on a first-come basis upon receipt of a signed contract and a 30% retainer deposit.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 8: BOOKING CTA BANNER ========== -->
+    <section class="py-20 sm:py-24 bg-bg-warm dark:bg-dark-bg transition-colors duration-400 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="max-w-4xl mx-auto double-bezel-outer text-center p-8 sm:p-14">
+                <div class="double-bezel-inner !p-8 sm:!p-12 items-center text-center">
+                    <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">Begin Your Journey</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-neutral-dark dark:text-white mt-3 mb-4 leading-tight">
+                        Reserve Your Date & <span class="gold-gradient-text italic font-serif">Private Trial</span>
+                    </h2>
+                    <p class="text-base sm:text-lg opacity-85 font-sans leading-relaxed max-w-2xl mx-auto mb-8 font-light">
+                        Our 2026 and 2027 calendar is currently open for commissions. Inquire today to check artist availability for your celebration.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center gap-4">
+                        <a href="contact.html" class="btn-nested group">
+                            <span>Request Date & Inquire</span>
+                            <span class="icon-circle"><i class="fas fa-arrow-right text-xs"></i></span>
+                        </a>
+                        <a href="portfolio.html" class="btn-frosted group">
+                            <i class="fas fa-images text-gift-slate dark:text-gift-slate-bright"></i>
+                            <span>View Lookbook Gallery</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- ========== FOOTER (COPIED FROM REFERENCE) ========== -->
     <footer class="py-20 bg-white dark:bg-[#140C0E] transition-colors duration-400">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
