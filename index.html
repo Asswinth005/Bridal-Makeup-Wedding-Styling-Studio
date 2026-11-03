@@ -172,7 +172,16 @@
         .gold-gradient-text,
         .rose-gradient-text,
         .atelier-gradient-text {
-            background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 50%, var(--color-primary-dark) 100%);
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 55%, var(--color-primary-dark) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .dark .gold-gradient-text,
+        .dark .rose-gradient-text,
+        .dark .atelier-gradient-text {
+            background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 50%, var(--color-accent) 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -214,6 +223,10 @@
         * {
             scrollbar-width: thin;
             scrollbar-color: rgba(var(--color-rgb-primary), 0.4) transparent;
+        }
+
+        .text-gift-slate {
+            color: var(--color-primary-dark) !important;
         }
 
         /* Dark mode overrides */
@@ -1477,16 +1490,12 @@
                     </div>
                 </div>
             </div>
-
-           
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- ========== SECTION 3: ASYMMETRICAL BENTO LOOKBOOK ========== -->
     <section class="py-16 sm:py-24 lg:py-28 bg-bg-warm dark:bg-dark-bg transition-colors duration-400">
-        <div class="container mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-wrap justify-between items-end mb-12 sm:mb-16">
                 <div>
                     <span
@@ -1504,7 +1513,7 @@
             </div>
 
             <!-- Asymmetrical Bento Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 max-w-7xl mx-auto items-stretch">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 items-stretch">
                 <!-- Bento Item 1: Large Featured Card (lg:col-span-7) -->
                 <a href="portfolio.html"
                     class="lg:col-span-7 double-bezel-outer group block overflow-hidden">
@@ -1823,7 +1832,7 @@
 
     <!-- ========== FOOTER ========== -->
     <footer class="py-20 bg-white dark:bg-[#140C0E] transition-colors duration-400">
-        <div class="container mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                 <div class="text-center md:text-start">
                     <!-- Brand Lockup in Footer -->
