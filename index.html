@@ -1341,6 +1341,66 @@
         </div>
     </section>
 
+    <!-- ========== PRESS & EDITORIAL RECOGNITION ========== -->
+    <section class="py-12 sm:py-16 bg-white dark:bg-dark-card border-y border-gift-slate/15 transition-colors duration-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-xl mx-auto mb-8 sm:mb-10">
+                <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-[10px] sm:text-xs tracking-[0.25em] font-sans uppercase">
+                    Press & Editorial Features
+                </span>
+                <h3 class="text-2xl sm:text-3xl font-serif font-bold text-neutral-dark dark:text-white mt-1">
+                    Celebrated in <span class="gold-gradient-text italic font-serif">Vogue, Bazaar & Beyond</span>
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
+                <!-- Publication 1: Vogue Weddings -->
+                <div class="p-5 sm:p-6 rounded-2xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15 hover:border-gift-slate/40 shadow-sm transition-all text-center flex flex-col justify-between group">
+                    <div class="h-10 flex items-center justify-center">
+                        <span class="font-serif font-bold text-xl sm:text-2xl tracking-[0.25em] text-neutral-dark dark:text-white group-hover:text-gift-slate dark:group-hover:text-gift-slate-bright transition-colors">VOGUE</span>
+                    </div>
+                    <div class="pt-3 border-t border-gift-slate/10 dark:border-gray-800">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright block">Key Bridal Artist</span>
+                        <span class="text-[10px] opacity-70 font-sans">2026 Feature</span>
+                    </div>
+                </div>
+
+                <!-- Publication 2: Harper's Bazaar -->
+                <div class="p-5 sm:p-6 rounded-2xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15 hover:border-gift-slate/40 shadow-sm transition-all text-center flex flex-col justify-between group">
+                    <div class="h-10 flex items-center justify-center">
+                        <span class="font-serif italic font-bold text-lg sm:text-xl tracking-wider text-neutral-dark dark:text-white group-hover:text-gift-slate dark:group-hover:text-gift-slate-bright transition-colors">Harper's BAZAAR</span>
+                    </div>
+                    <div class="pt-3 border-t border-gift-slate/10 dark:border-gray-800">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright block">Top Bridal Beauty</span>
+                        <span class="text-[10px] opacity-70 font-sans">Runway & Bridal</span>
+                    </div>
+                </div>
+
+                <!-- Publication 3: Martha Stewart -->
+                <div class="p-5 sm:p-6 rounded-2xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15 hover:border-gift-slate/40 shadow-sm transition-all text-center flex flex-col justify-between group">
+                    <div class="h-10 flex items-center justify-center">
+                        <span class="font-serif font-bold text-sm sm:text-base tracking-widest text-neutral-dark dark:text-white group-hover:text-gift-slate dark:group-hover:text-gift-slate-bright transition-colors">MARTHA STEWART</span>
+                    </div>
+                    <div class="pt-3 border-t border-gift-slate/10 dark:border-gray-800">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright block">Weddings Best Pick</span>
+                        <span class="text-[10px] opacity-70 font-sans">Couture Artistry</span>
+                    </div>
+                </div>
+
+                <!-- Publication 4: The Knot -->
+                <div class="p-5 sm:p-6 rounded-2xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15 hover:border-gift-slate/40 shadow-sm transition-all text-center flex flex-col justify-between group">
+                    <div class="h-10 flex items-center justify-center">
+                        <span class="font-serif font-bold text-lg sm:text-xl tracking-wider text-neutral-dark dark:text-white group-hover:text-gift-slate dark:group-hover:text-gift-slate-bright transition-colors">THE KNOT</span>
+                    </div>
+                    <div class="pt-3 border-t border-gift-slate/10 dark:border-gray-800">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gift-slate dark:text-gift-slate-bright block">Hall of Fame 2026</span>
+                        <span class="text-[10px] opacity-70 font-sans">5.0 ★ Rated</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ========== SECTION 2: SIGNATURE SERVICES – DOUBLE-BEZEL ARCHITECTURE ========== -->
     <section
         class="py-16 sm:py-24 lg:py-28 bg-white dark:bg-dark-card transition-colors duration-400 border-y border-neutral-light/50 dark:border-gray-800/60 relative">
@@ -1551,11 +1611,19 @@
                 </a>
             </div>
 
+            <!-- Interactive Lookbook Category Pills -->
+            <div class="flex items-center gap-2.5 sm:gap-3 overflow-x-auto pb-4 mb-8 sm:mb-10 text-xs font-sans font-bold no-scrollbar">
+                <button onclick="filterBrides('all', this)" class="bride-filter-btn px-4 py-2 rounded-full bg-gift-slate text-white dark:bg-gift-slate-bright dark:text-dark-bg shadow-sm transition">All Real Brides</button>
+                <button onclick="filterBrides('ballroom', this)" class="bride-filter-btn px-4 py-2 rounded-full bg-white dark:bg-dark-card border border-gift-slate/20 text-neutral-dark dark:text-gray-300 hover:border-gift-slate transition">Ballroom Classic</button>
+                <button onclick="filterBrides('boho', this)" class="bride-filter-btn px-4 py-2 rounded-full bg-white dark:bg-dark-card border border-gift-slate/20 text-neutral-dark dark:text-gray-300 hover:border-gift-slate transition">Sunlit Boho</button>
+                <button onclick="filterBrides('minimal', this)" class="bride-filter-btn px-4 py-2 rounded-full bg-white dark:bg-dark-card border border-gift-slate/20 text-neutral-dark dark:text-gray-300 hover:border-gift-slate transition">Modern Minimalist</button>
+                <button onclick="filterBrides('royal', this)" class="bride-filter-btn px-4 py-2 rounded-full bg-white dark:bg-dark-card border border-gift-slate/20 text-neutral-dark dark:text-gray-300 hover:border-gift-slate transition">Cathedral Royal</button>
+            </div>
+
             <!-- Asymmetrical Bento Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 items-stretch">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 items-stretch" id="real-brides-grid">
                 <!-- Bento Item 1: Large Featured Card (lg:col-span-7) -->
-                <a href="portfolio.html"
-                    class="lg:col-span-7 double-bezel-outer group block overflow-hidden">
+                <div class="lg:col-span-7 double-bezel-outer group block overflow-hidden bride-card" data-category="ballroom">
                     <div class="double-bezel-inner h-full flex flex-col">
                         <div class="relative h-80 sm:h-[420px] lg:h-[480px] xl:h-[500px] overflow-hidden">
                             <img src="Assets/h6.jpg" alt="Grand Plaza Ballroom Bride"
@@ -1566,8 +1634,8 @@
                                 <span class="bg-white/20 backdrop-blur-md text-white text-[10px] font-sans px-3 py-1 rounded-full uppercase tracking-widest font-semibold border border-white/20">Featured Look</span>
                             </div>
                             <div class="absolute bottom-6 left-6 right-6 text-white">
-                                <span class="text-xs uppercase tracking-widest text-gift-slate-bright font-sans block mb-1">Couture Wedding Lookbook</span>
-                                <h3 class="text-2xl sm:text-3xl font-serif font-bold leading-tight">The Plaza Ballroom Bride</h3>
+                                <span class="text-xs uppercase tracking-widest text-gift-slate-bright font-sans block mb-1">The Plaza Ballroom • Fifth Ave, NYC</span>
+                                <h3 class="text-2xl sm:text-3xl font-serif font-bold leading-tight">Victoria & Alexander</h3>
                             </div>
                         </div>
                         <div class="p-6 bg-white dark:bg-[#1F1418] flex-1 flex flex-col justify-between">
@@ -1575,7 +1643,6 @@
                                 <p class="text-sm opacity-85 leading-relaxed font-sans mb-4">
                                     Airbrushed porcelain skin with champagne micro-shimmer, sculptural low bridal bun, and antique cathedral lace veil placement.
                                 </p>
-                                <!-- Editorial Spec Grid to eliminate unwanted empty void -->
                                 <div class="grid grid-cols-3 gap-2.5 pt-1 pb-4 text-[11px] font-sans border-t border-gift-slate/10 dark:border-gray-800">
                                     <div class="bg-bg-warm/80 dark:bg-dark-bg/60 p-2.5 rounded-xl text-center border border-gift-slate/15">
                                         <span class="block text-gift-slate dark:text-gift-slate-bright font-bold">18-Hr Airbrush</span>
@@ -1592,17 +1659,21 @@
                                 </div>
                             </div>
                             <div class="flex items-center justify-between text-xs font-bold text-gift-slate dark:text-gift-slate-bright border-t border-gift-slate/15 dark:border-gray-800 pt-4 mt-auto">
-                                <span class="flex items-center gap-1.5"><i class="fas fa-map-marker-alt"></i> Fifth Avenue, NYC</span>
-                                <span class="uppercase tracking-wider flex items-center gap-1 group-hover:translate-x-1 transition-transform">Explore ↗</span>
+                                <a href="contact.html?service=makeup-trial" class="hover:underline flex items-center gap-1.5">
+                                    <i class="fas fa-calendar-check"></i> Book a Makeup Trial
+                                </a>
+                                <a href="portfolio.html#classic" class="uppercase tracking-wider flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                                    Explore Gallery ↗
+                                </a>
                             </div>
                         </div>
                     </div>
-                </a>
+                </div>
 
                 <!-- Bento Item 2 & 3: Stacked Cards (lg:col-span-5) -->
                 <div class="lg:col-span-5 flex flex-col gap-8">
                     <!-- Bento Item 2: Coastal Boho -->
-                    <a href="portfolio.html" class="double-bezel-outer group block flex-1">
+                    <div class="double-bezel-outer group block flex-1 bride-card" data-category="boho">
                         <div class="double-bezel-inner h-full flex flex-col justify-between">
                             <div class="relative h-60 sm:h-64 overflow-hidden">
                                 <img src="Assets/bride2.png" alt="Malibu Coastal Boho Bride"
@@ -1613,23 +1684,24 @@
                                     <span class="badge text-[10px] font-sans">Sunlit Romance</span>
                                 </div>
                                 <div class="absolute bottom-4 left-4 text-white">
-                                    <h3 class="text-xl font-serif font-bold">Beach Boho Bride</h3>
+                                    <span class="text-[10px] uppercase tracking-wider text-gift-slate-bright block">Private Estate • Malibu, CA</span>
+                                    <h3 class="text-xl font-serif font-bold">Camilla & Julian</h3>
                                 </div>
                             </div>
                             <div class="p-5 bg-white dark:bg-[#1F1418] flex flex-col justify-between flex-1">
                                 <p class="text-xs opacity-80 font-sans leading-relaxed mb-3">
-                                    Luminous sun-kissed finish with textured mermaid waves and live eucalyptus crown.
+                                    Luminous sun-kissed finish with textured mermaid waves and live eucalyptus floral crown.
                                 </p>
                                 <div class="flex items-center justify-between text-xs font-bold text-gift-slate dark:text-gift-slate-bright border-t border-gift-slate/15 dark:border-gray-800 pt-3 mt-auto">
-                                    <span class="flex items-center gap-1.5"><i class="fas fa-map-marker-alt"></i> Malibu, CA</span>
-                                    <span>Explore ↗</span>
+                                    <a href="contact.html?service=makeup-trial" class="hover:underline">Book Trial</a>
+                                    <a href="portfolio.html#minimal" class="hover:underline">Explore Look ↗</a>
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
                     <!-- Bento Item 3: Contemporary Minimal -->
-                    <a href="portfolio.html" class="double-bezel-outer group block flex-1">
+                    <div class="double-bezel-outer group block flex-1 bride-card" data-category="minimal">
                         <div class="double-bezel-inner h-full flex flex-col justify-between">
                             <div class="relative h-60 sm:h-64 overflow-hidden">
                                 <img src="Assets/bride3.png" alt="Modern Minimal Chic Bride"
@@ -1640,7 +1712,8 @@
                                     <span class="badge text-[10px] font-sans">Architectural Chic</span>
                                 </div>
                                 <div class="absolute bottom-4 left-4 text-white">
-                                    <h3 class="text-xl font-serif font-bold">City Hall Minimalist</h3>
+                                    <span class="text-[10px] uppercase tracking-wider text-gift-slate-bright block">Art Institute • Chicago, IL</span>
+                                    <h3 class="text-xl font-serif font-bold">Genevieve & Marcus</h3>
                                 </div>
                             </div>
                             <div class="p-5 bg-white dark:bg-[#1F1418] flex flex-col justify-between flex-1">
@@ -1648,12 +1721,12 @@
                                     Sculpted velvet lip, glass skin texture, and architectural high-gloss chignon with ivory silk gown.
                                 </p>
                                 <div class="flex items-center justify-between text-xs font-bold text-gift-slate dark:text-gift-slate-bright border-t border-gift-slate/15 dark:border-gray-800 pt-3 mt-auto">
-                                    <span class="flex items-center gap-1.5"><i class="fas fa-map-marker-alt"></i> Chicago, IL</span>
-                                    <span>Explore ↗</span>
+                                    <a href="contact.html?service=makeup-trial" class="hover:underline">Book Trial</a>
+                                    <a href="portfolio.html#minimal" class="hover:underline">Explore Look ↗</a>
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
 
@@ -1662,6 +1735,139 @@
                     <span>View Complete Gallery</span>
                     <span class="icon-circle"><i class="fas fa-arrow-right text-xs"></i></span>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INTERACTIVE BRIDAL STYLING & PACKAGE ESTIMATOR ========== -->
+    <section class="py-16 sm:py-24 bg-bg-warm dark:bg-dark-bg transition-colors duration-400 border-t border-gift-slate/15">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="max-w-5xl mx-auto double-bezel-outer">
+                <div class="double-bezel-inner p-8 sm:p-12">
+                    <div class="text-center max-w-2xl mx-auto mb-10">
+                        <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">
+                            Transparent Haute Pricing
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-dark dark:text-white mt-2 leading-tight">
+                            Interactive Bridal <span class="gold-gradient-text italic font-serif">Package Estimator</span>
+                        </h2>
+                        <div class="premium-line mx-auto !my-3"></div>
+                        <p class="text-xs sm:text-sm text-neutral-dark/80 dark:text-gray-300 font-sans font-light">
+                            Customize your wedding morning beauty itinerary for yourself and your bridal party to preview transparent pricing in real-time.
+                        </p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-12 gap-8 items-start">
+                        <!-- Controls Column (7 cols) -->
+                        <div class="lg:col-span-7 space-y-6">
+                            <!-- 1: Bride Package -->
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider font-bold font-sans text-neutral-dark dark:text-white mb-2">
+                                    1. Choose Bride Package
+                                </label>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                    <label class="p-3.5 rounded-2xl border-2 border-gift-slate/40 dark:border-gift-slate-bright/40 bg-gift-slate/5 dark:bg-gift-slate-bright/5 cursor-pointer block text-center package-radio-label transition">
+                                        <input type="radio" name="calc_package" value="650" checked class="sr-only" onchange="calculateEstimate()">
+                                        <span class="text-xs font-bold block font-serif">Essential</span>
+                                        <span class="text-sm font-bold text-gift-slate dark:text-gift-slate-bright block mt-0.5">$650</span>
+                                        <span class="text-[9px] opacity-70 font-sans block">Hair, Makeup & Trial</span>
+                                    </label>
+                                    <label class="p-3.5 rounded-2xl border-2 border-gray-200 dark:border-gray-800 bg-transparent cursor-pointer block text-center package-radio-label transition">
+                                        <input type="radio" name="calc_package" value="1150" class="sr-only" onchange="calculateEstimate()">
+                                        <span class="text-xs font-bold block font-serif">Signature</span>
+                                        <span class="text-sm font-bold text-gift-slate dark:text-gift-slate-bright block mt-0.5">$1,150</span>
+                                        <span class="text-[9px] opacity-70 font-sans block">Pre-Event + Suite VIP</span>
+                                    </label>
+                                    <label class="p-3.5 rounded-2xl border-2 border-gray-200 dark:border-gray-800 bg-transparent cursor-pointer block text-center package-radio-label transition">
+                                        <input type="radio" name="calc_package" value="2400" class="sr-only" onchange="calculateEstimate()">
+                                        <span class="text-xs font-bold block font-serif">VIP Weekend</span>
+                                        <span class="text-sm font-bold text-gift-slate dark:text-gift-slate-bright block mt-0.5">$2,400</span>
+                                        <span class="text-[9px] opacity-70 font-sans block">8-Hr Concierge + MOH</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- 2: Bridal Party Count -->
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <label class="text-xs uppercase tracking-wider font-bold font-sans text-neutral-dark dark:text-white">
+                                        2. Bridesmaids & Mothers Count ($160/person)
+                                    </label>
+                                    <span id="party-count-display" class="font-bold text-gift-slate dark:text-gift-slate-bright text-sm">3 members</span>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <input type="range" id="party-slider" min="0" max="10" value="3" class="w-full accent-gift-slate cursor-pointer" oninput="calculateEstimate()">
+                                </div>
+                            </div>
+
+                            <!-- 3: Optional Add-Ons -->
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider font-bold font-sans text-neutral-dark dark:text-white mb-2">
+                                    3. Optional Add-On Enhancements
+                                </label>
+                                <div class="space-y-2.5">
+                                    <label class="flex items-center justify-between p-3 rounded-xl border border-gift-slate/15 bg-white dark:bg-dark-card cursor-pointer hover:border-gift-slate transition">
+                                        <div class="flex items-center gap-3">
+                                            <input type="checkbox" id="addon-reception" value="180" class="accent-gift-slate" onchange="calculateEstimate()">
+                                            <div>
+                                                <span class="text-xs font-bold block font-sans">Reception Look Transformation</span>
+                                                <span class="text-[10px] opacity-75 font-sans">Ceremony to reception evening hair & lip change</span>
+                                            </div>
+                                        </div>
+                                        <span class="text-xs font-bold font-sans text-gift-slate dark:text-gift-slate-bright">+$180</span>
+                                    </label>
+                                    <label class="flex items-center justify-between p-3 rounded-xl border border-gift-slate/15 bg-white dark:bg-dark-card cursor-pointer hover:border-gift-slate transition">
+                                        <div class="flex items-center gap-3">
+                                            <input type="checkbox" id="addon-extensions" value="95" class="accent-gift-slate" onchange="calculateEstimate()">
+                                            <div>
+                                                <span class="text-xs font-bold block font-sans">Clip-In Hair Extension Installation</span>
+                                                <span class="text-[10px] opacity-75 font-sans">Thermal shaping, color blending & secure anchoring</span>
+                                            </div>
+                                        </div>
+                                        <span class="text-xs font-bold font-sans text-gift-slate dark:text-gift-slate-bright">+$95</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Live Estimate Receipt Column (5 cols) -->
+                        <div class="lg:col-span-5 p-6 rounded-2xl bg-bg-warm dark:bg-[#180F12] border border-gift-slate/25 shadow-lg">
+                            <span class="text-[10px] uppercase tracking-widest font-sans font-bold text-gift-slate dark:text-gift-slate-bright block mb-1">
+                                Real-Time Estimate
+                            </span>
+                            <div class="text-3xl sm:text-4xl font-serif font-bold text-neutral-dark dark:text-white mb-4" id="estimate-total">
+                                $1,130
+                            </div>
+                            
+                            <ul class="space-y-2 text-xs font-sans border-t border-gift-slate/15 pt-3 mb-6 opacity-85">
+                                <li class="flex justify-between" id="receipt-bride">
+                                    <span>Bride Package:</span>
+                                    <span class="font-bold">$650</span>
+                                </li>
+                                <li class="flex justify-between" id="receipt-party">
+                                    <span>Bridal Party (3):</span>
+                                    <span class="font-bold">$480</span>
+                                </li>
+                                <li class="flex justify-between text-gift-slate dark:text-gift-slate-bright font-medium" id="receipt-addons" style="display: none;">
+                                    <span>Selected Add-ons:</span>
+                                    <span class="font-bold">$0</span>
+                                </li>
+                                <li class="flex justify-between border-t border-gift-slate/15 pt-2 text-neutral-dark dark:text-white font-bold">
+                                    <span>Estimated Investment:</span>
+                                    <span id="receipt-final">$1,130</span>
+                                </li>
+                            </ul>
+
+                            <a id="estimator-booking-btn" href="contact.html?service=wedding-date&package=650&party=3&total=1130" class="btn-nested w-full justify-center text-center !py-3">
+                                <span>Book This Styling Package</span>
+                                <span class="icon-circle !w-7 !h-7"><i class="fas fa-arrow-right text-xs"></i></span>
+                            </a>
+                            <p class="text-[10px] opacity-70 text-center font-sans mt-3">
+                                No charge today. Locks in artist availability and generates your detailed proposal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -2064,6 +2270,85 @@
                 });
             });
         });
+        // Interactive Real Brides Lookbook Filter
+        window.filterBrides = function(cat, btn) {
+            document.querySelectorAll('.bride-filter-btn').forEach(b => {
+                b.className = 'bride-filter-btn px-4 py-2 rounded-full bg-white dark:bg-dark-card border border-gift-slate/20 text-neutral-dark dark:text-gray-300 hover:border-gift-slate transition';
+            });
+            btn.className = 'bride-filter-btn px-4 py-2 rounded-full bg-gift-slate text-white dark:bg-gift-slate-bright dark:text-dark-bg shadow-sm transition';
+
+            const cards = document.querySelectorAll('.bride-card');
+            cards.forEach(c => {
+                if (cat === 'all' || c.getAttribute('data-category') === cat) {
+                    c.style.display = '';
+                    c.style.opacity = '1';
+                } else {
+                    c.style.display = 'none';
+                }
+            });
+        };
+
+        // Interactive Bridal Styling & Package Estimator
+        window.calculateEstimate = function() {
+            const packageRadios = document.querySelectorAll('input[name="calc_package"]');
+            let packagePrice = 650;
+            packageRadios.forEach(r => {
+                const label = r.closest('label');
+                if (r.checked) {
+                    packagePrice = parseInt(r.value);
+                    if (label) label.className = 'p-3.5 rounded-2xl border-2 border-gift-slate/40 dark:border-gift-slate-bright/40 bg-gift-slate/5 dark:bg-gift-slate-bright/5 cursor-pointer block text-center package-radio-label transition';
+                } else {
+                    if (label) label.className = 'p-3.5 rounded-2xl border-2 border-gray-200 dark:border-gray-800 bg-transparent cursor-pointer block text-center package-radio-label transition';
+                }
+            });
+
+            const partySlider = document.getElementById('party-slider');
+            const partyCount = partySlider ? parseInt(partySlider.value) : 0;
+            const partyPrice = partyCount * 160;
+            const partyDisplay = document.getElementById('party-count-display');
+            if (partyDisplay) partyDisplay.textContent = partyCount === 0 ? 'Bride only' : `${partyCount} member${partyCount > 1 ? 's' : ''}`;
+
+            let addonsPrice = 0;
+            const receptionAddon = document.getElementById('addon-reception');
+            if (receptionAddon && receptionAddon.checked) addonsPrice += 180;
+            const extensionsAddon = document.getElementById('addon-extensions');
+            if (extensionsAddon && extensionsAddon.checked) addonsPrice += 95;
+
+            const total = packagePrice + partyPrice + addonsPrice;
+
+            const totalDisplay = document.getElementById('estimate-total');
+            if (totalDisplay) totalDisplay.textContent = `$${total.toLocaleString()}`;
+
+            const receiptBride = document.getElementById('receipt-bride');
+            if (receiptBride) receiptBride.querySelector('span:last-child').textContent = `$${packagePrice.toLocaleString()}`;
+
+            const receiptParty = document.getElementById('receipt-party');
+            if (receiptParty) {
+                receiptParty.querySelector('span:first-child').textContent = `Bridal Party (${partyCount}):`;
+                receiptParty.querySelector('span:last-child').textContent = `$${partyPrice.toLocaleString()}`;
+            }
+
+            const receiptAddons = document.getElementById('receipt-addons');
+            if (receiptAddons) {
+                if (addonsPrice > 0) {
+                    receiptAddons.style.display = 'flex';
+                    receiptAddons.querySelector('span:last-child').textContent = `+$${addonsPrice}`;
+                } else {
+                    receiptAddons.style.display = 'none';
+                }
+            }
+
+            const receiptFinal = document.getElementById('receipt-final');
+            if (receiptFinal) receiptFinal.textContent = `$${total.toLocaleString()}`;
+
+            const bookingBtn = document.getElementById('estimator-booking-btn');
+            if (bookingBtn) {
+                bookingBtn.href = `contact.html?service=wedding-date&package=${packagePrice}&party=${partyCount}&total=${total}`;
+            }
+        };
+
+        // Initialize calculator on page load
+        calculateEstimate();
     </script>
 </body>
 
