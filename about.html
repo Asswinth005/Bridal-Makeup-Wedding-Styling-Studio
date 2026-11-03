@@ -75,7 +75,10 @@
         body { font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; background-color:var(--color-bg-warm); color:var(--color-text-dark); transition:background-color .4s ease, color .4s ease; }
         .dark body { background-color:#140C0E; color:#EDE7E3; }
         h1,h2,h3,h4,h5,h6 { font-family:'Outfit','Plus Jakarta Sans',sans-serif; font-weight:700; letter-spacing:-.025em; }
-        .gold-gradient-text,.rose-gradient-text { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 50%, var(--color-primary-dark) 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+        .gold-gradient-text,.rose-gradient-text { background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 55%, var(--color-primary-dark) 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+        .dark .gold-gradient-text,.dark .rose-gradient-text { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 50%, var(--color-accent) 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+        .text-gift-slate { color: var(--color-primary-dark) !important; }
+        .dark .text-gift-slate { color: var(--color-primary-bright) !important; }
 
         ::-webkit-scrollbar{width:8px;height:8px}
         ::-webkit-scrollbar-track{background:var(--color-bg-warm)}
@@ -86,7 +89,6 @@
         .dark ::-webkit-scrollbar-thumb:hover{background:var(--color-primary-bright)}
         *{scrollbar-width:thin;scrollbar-color:rgba(var(--color-rgb-primary),.4) transparent}
 
-        .dark .text-gift-slate{color:var(--color-primary-bright)!important}
         .dark .bg-gift-slate{background-color:var(--color-primary-bright)!important}
         .dark .border-gift-slate{border-color:var(--color-primary-bright)!important}
         .dark .from-gift-slate{--tw-gradient-from:var(--color-primary-bright)!important}
@@ -252,7 +254,12 @@
                         </div>
                     </div>
                     <div class="flex items-center gap-3 ml-2">
-                        <a href="login.html" class="btn-nested !py-2 !px-4 !text-xs group"><span>Sign In</span><span class="icon-circle !w-6 !h-6"><i class="fas fa-arrow-right text-[10px]"></i></span></a>
+                        <a href="login.html" class="btn-nested !py-2 !px-4 !text-xs group">
+                            <span>Sign In</span>
+                            <span class="icon-circle !w-6 !h-6">
+                                <i class="fas fa-arrow-right text-[10px]"></i>
+                            </span>
+                        </a>
                     </div>
                 </div>
                 <div class="flex items-center gap-2 ml-4 desktop-toggle-group">
@@ -283,8 +290,22 @@
                     <a href="client.html" class="mobile-dropdown-item">Bride Portal</a>
                 </div>
             </div>
-            <div class="p-5 flex flex-col gap-3">
-                <a href="login.html" class="btn-nested justify-center !py-3 w-full text-center"><span>Client Portal Login</span><span class="icon-circle !w-7 !h-7"><i class="fas fa-arrow-right text-xs"></i></span></a>
+            <div class="p-5 flex flex-col gap-2.5">
+                <a href="contact.html?service=makeup-trial" class="btn-nested justify-center !py-3 w-full text-center">
+                    <span>Book a Makeup Trial</span>
+                    <span class="icon-circle !w-7 !h-7"><i class="fas fa-arrow-right text-xs"></i></span>
+                </a>
+                <a href="contact.html?service=wedding-date" class="btn-frosted justify-center !py-2.5 w-full text-center text-xs font-bold">
+                    <i class="fas fa-calendar-alt text-gift-slate dark:text-gift-slate-bright"></i>
+                    <span>Book Your Wedding Date</span>
+                </a>
+                <a href="services.html" class="btn-frosted justify-center !py-2.5 w-full text-center text-xs font-bold">
+                    <i class="fas fa-wand-magic-sparkles text-gift-slate dark:text-gift-slate-bright"></i>
+                    <span>Explore Services</span>
+                </a>
+                <a href="login.html" class="text-center text-xs opacity-75 hover:opacity-100 font-sans py-1 mt-1">
+                    Client Portal Login →
+                </a>
             </div>
             <div class="flex justify-center gap-3 p-4 border-t border-gray-100 dark:border-gray-800">
                 <button id="theme-toggle-mobile" class="toggle-toggle-btn"><i class="fas fa-moon"></i><i class="fas fa-sun hidden"></i></button>
@@ -296,7 +317,7 @@
     <!-- ========== PAGE HERO ========== -->
     <section class="min-h-[58vh] lg:min-h-[64vh] flex items-center justify-center pt-36 sm:pt-40 lg:pt-48 pb-20 sm:pb-24 lg:pb-28 bg-bg-warm dark:bg-dark-bg transition-colors duration-400 relative overflow-hidden">
         <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-gift-slate/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
             <div class="max-w-3xl mx-auto text-center">
                 <div class="eyebrow-pill inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/10 border border-gift-slate/25 dark:border-gift-slate-bright/25 mb-6 backdrop-blur-md">
                     <i class="fas fa-heart text-gift-slate dark:text-gift-slate-bright text-xs"></i>
@@ -312,15 +333,19 @@
 
                 <!-- Hero Action Buttons -->
                 <div class="flex flex-wrap gap-4 mt-8 justify-center items-center">
-                    <a href="contact.html" class="btn-nested group">
-                        <span>Work With Our Artists</span>
+                    <a href="contact.html?service=makeup-trial" class="btn-nested group">
+                        <span>Book a Makeup Trial</span>
                         <span class="icon-circle">
                             <i class="fas fa-arrow-right text-xs"></i>
                         </span>
                     </a>
+                    <a href="contact.html?service=wedding-date" class="btn-frosted group">
+                        <i class="fas fa-calendar-check text-gift-slate dark:text-gift-slate-bright"></i>
+                        <span>Book Your Wedding Date</span>
+                    </a>
                     <a href="services.html" class="btn-frosted group">
-                        <i class="fas fa-sparkles text-gift-slate dark:text-gift-slate-bright group-hover:scale-110 transition-transform"></i>
-                        <span>Explore Couture Services</span>
+                        <i class="fas fa-wand-magic-sparkles text-gift-slate dark:text-gift-slate-bright group-hover:scale-110 transition-transform"></i>
+                        <span>Explore Services</span>
                     </a>
                 </div>
             </div>
@@ -329,7 +354,7 @@
 
     <!-- ========== FOUNDER STORY ========== -->
     <section class="py-16 sm:py-24 bg-white dark:bg-dark-card transition-colors duration-400 border-y border-neutral-light/50 dark:border-gray-800/60">
-        <div class="container mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div class="double-bezel-outer group">
                     <div class="double-bezel-inner">
@@ -374,7 +399,7 @@
 
     <!-- ========== STUDIO VALUES ========== -->
     <section class="py-16 sm:py-24 bg-bg-warm dark:bg-dark-bg transition-colors duration-400">
-        <div class="container mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="text-center max-w-3xl mx-auto mb-14">
                 <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">Our Promise</span>
                 <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-dark dark:text-white mt-3">The Atelier <span class="gold-gradient-text italic font-serif">Standard</span></h2>
@@ -416,7 +441,7 @@
 
     <!-- ========== TIMELINE ========== -->
     <section class="py-16 sm:py-24 bg-white dark:bg-dark-card transition-colors duration-400 border-y border-neutral-light/50 dark:border-gray-800/60">
-        <div class="container mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="max-w-3xl mx-auto">
                 <div class="text-center mb-14">
                     <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">A Decade of Artistry</span>
@@ -459,7 +484,7 @@
     <!-- ========== FINISHING SECTION: LUXURY CALL TO ACTION ========== -->
     <section class="cta-luxury-banner py-20 sm:py-24 text-white transition-colors duration-400 relative overflow-hidden border-b border-gift-slate/20">
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none"></div>
-        <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
             <div class="max-w-4xl mx-auto text-center">
                 <span class="inline-block px-4 py-1.5 rounded-full bg-white/15 border border-white/25 text-white font-bold text-xs tracking-[0.25em] font-sans uppercase mb-4 backdrop-blur-md">
                     Begin Your Atelier Journey
@@ -473,12 +498,15 @@
 
                
 
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="contact.html" class="bg-white text-neutral-dark hover:bg-neutral-100 dark:bg-gift-slate-bright dark:text-dark-bg px-8 py-4 rounded-full font-bold text-xs font-sans uppercase tracking-widest hover:shadow-2xl hover:-translate-y-0.5 transition duration-300 flex items-center justify-center gap-2">
-                        <i class="fas fa-calendar-check"></i> Schedule Your Consultation
+                <div class="flex flex-wrap justify-center items-center gap-4">
+                    <a href="contact.html?service=wedding-date" class="bg-white text-neutral-dark hover:bg-neutral-100 dark:bg-gift-slate-bright dark:text-dark-bg px-8 py-4 rounded-full font-bold text-xs font-sans uppercase tracking-widest hover:shadow-2xl hover:-translate-y-0.5 transition duration-300 flex items-center justify-center gap-2">
+                        <i class="fas fa-calendar-check"></i> Book Your Wedding Date
                     </a>
-                    <a href="portfolio.html" class="border-2 border-white/80 hover:border-white hover:bg-white/15 text-white dark:border-gift-slate-bright/70 dark:text-gift-slate-bright dark:hover:bg-gift-slate-bright/15 px-8 py-4 rounded-full font-bold text-xs font-sans uppercase tracking-widest hover:-translate-y-0.5 transition duration-300 flex items-center justify-center gap-2 backdrop-blur-sm">
-                        <i class="fas fa-eye"></i> View Bridal Lookbook
+                    <a href="contact.html?service=makeup-trial" class="border-2 border-white/80 hover:border-white hover:bg-white/15 text-white dark:border-gift-slate-bright/70 dark:text-gift-slate-bright dark:hover:bg-gift-slate-bright/15 px-8 py-4 rounded-full font-bold text-xs font-sans uppercase tracking-widest hover:-translate-y-0.5 transition duration-300 flex items-center justify-center gap-2 backdrop-blur-sm">
+                        <i class="fas fa-wand-magic-sparkles"></i> Book a Makeup Trial
+                    </a>
+                    <a href="services.html" class="border-2 border-white/80 hover:border-white hover:bg-white/15 text-white dark:border-gift-slate-bright/70 dark:text-gift-slate-bright dark:hover:bg-gift-slate-bright/15 px-8 py-4 rounded-full font-bold text-xs font-sans uppercase tracking-widest hover:-translate-y-0.5 transition duration-300 flex items-center justify-center gap-2 backdrop-blur-sm">
+                        <span>Explore Services</span>
                     </a>
                 </div>
             </div>

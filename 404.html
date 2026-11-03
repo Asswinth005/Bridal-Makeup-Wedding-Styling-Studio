@@ -98,11 +98,19 @@
         .dark input, .dark select, .dark textarea { color: #FFFFFF !important; }
 
         .gold-gradient-text {
-            background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 50%, var(--color-primary-dark) 100%);
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 55%, var(--color-primary-dark) 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .dark .gold-gradient-text {
+            background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 50%, var(--color-accent) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text-gift-slate { color: var(--color-primary-dark) !important; }
+        .dark .text-gift-slate { color: var(--color-primary-bright) !important; }
 
         /* Toggle Buttons */
         .toggle-btn {

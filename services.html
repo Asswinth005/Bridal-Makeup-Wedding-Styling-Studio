@@ -256,7 +256,12 @@
                         </div>
                     </div>
                     <div class="flex items-center gap-3 ml-2">
-                        <a href="login.html" class="btn-nested !py-2 !px-4 !text-xs group"><span>Sign In</span><span class="icon-circle !w-6 !h-6"><i class="fas fa-arrow-right text-[10px]"></i></span></a>
+                        <a href="login.html" class="btn-nested !py-2 !px-4 !text-xs group">
+                            <span>Sign In</span>
+                            <span class="icon-circle !w-6 !h-6">
+                                <i class="fas fa-arrow-right text-[10px]"></i>
+                            </span>
+                        </a>
                     </div>
                 </div>
                 <div class="flex items-center gap-2 ml-4 desktop-toggle-group">
@@ -287,8 +292,22 @@
                     <a href="client.html" class="mobile-dropdown-item">Bride Portal</a>
                 </div>
             </div>
-            <div class="p-5 flex flex-col gap-3">
-                <a href="login.html" class="btn-nested justify-center !py-3 w-full text-center"><span>Client Portal Login</span><span class="icon-circle !w-7 !h-7"><i class="fas fa-arrow-right text-xs"></i></span></a>
+            <div class="p-5 flex flex-col gap-2.5">
+                <a href="contact.html?service=makeup-trial" class="btn-nested justify-center !py-3 w-full text-center">
+                    <span>Book a Makeup Trial</span>
+                    <span class="icon-circle !w-7 !h-7"><i class="fas fa-arrow-right text-xs"></i></span>
+                </a>
+                <a href="contact.html?service=wedding-date" class="btn-frosted justify-center !py-2.5 w-full text-center text-xs font-bold">
+                    <i class="fas fa-calendar-alt text-gift-slate dark:text-gift-slate-bright"></i>
+                    <span>Book Your Wedding Date</span>
+                </a>
+                <a href="#packages" class="btn-frosted justify-center !py-2.5 w-full text-center text-xs font-bold">
+                    <i class="fas fa-gem text-gift-slate dark:text-gift-slate-bright"></i>
+                    <span>Explore Wedding Packages</span>
+                </a>
+                <a href="login.html" class="text-center text-xs opacity-75 hover:opacity-100 font-sans py-1 mt-1">
+                    Client Portal Login →
+                </a>
             </div>
             <div class="flex justify-center gap-3 p-4 border-t border-gray-100 dark:border-gray-800">
                 <button id="theme-toggle-mobile" class="toggle-btn"><i class="fas fa-moon"></i><i class="fas fa-sun hidden"></i></button>
@@ -317,12 +336,16 @@
                 </p>
 
                 <!-- Hero Action Buttons -->
-                <div class="flex flex-wrap gap-4 justify-center items-center">
-                    <a href="contact.html" class="btn-nested group">
-                        <span>Reserve Private Trial</span>
+                <div class="flex flex-wrap gap-4 justify-center items-center mb-3">
+                    <a href="contact.html?service=makeup-trial" class="btn-nested group">
+                        <span>Book a Makeup Trial</span>
                         <span class="icon-circle">
                             <i class="fas fa-arrow-right text-xs"></i>
                         </span>
+                    </a>
+                    <a href="contact.html?service=wedding-date" class="btn-frosted group">
+                        <i class="fas fa-calendar-check text-gift-slate dark:text-gift-slate-bright"></i>
+                        <span>Book Your Wedding Date</span>
                     </a>
                     <a href="#packages" class="btn-frosted group">
                         <i class="fas fa-gem text-gift-slate dark:text-gift-slate-bright group-hover:scale-110 transition-transform"></i>
@@ -623,8 +646,8 @@
                         <span class="badge text-[10px] font-sans mb-2">100% Package Credited</span>
                         <div class="text-3xl font-serif font-bold text-gift-slate dark:text-gift-slate-bright mt-1 mb-1">$450 Combined</div>
                         <p class="text-xs opacity-75 font-sans mb-5">Single Service Trial: $250 • Hair & Makeup: $450<br>Credited directly toward Tier 2 or 3 Packages.</p>
-                        <a href="contact.html?service=trial" class="btn-nested group justify-center w-full md:w-auto inline-flex">
-                            <span>Book In-Studio Trial</span>
+                        <a href="contact.html?service=makeup-trial" class="btn-nested group justify-center w-full md:w-auto inline-flex">
+                            <span>Book a Makeup Trial</span>
                             <span class="icon-circle"><i class="fas fa-calendar-check text-xs"></i></span>
                         </a>
                     </div>
@@ -1052,9 +1075,13 @@
                         Our 2026 and 2027 calendar is currently open for commissions. Inquire today to check artist availability for your celebration.
                     </p>
                     <div class="flex flex-wrap items-center justify-center gap-4">
-                        <a href="contact.html" class="btn-nested group">
-                            <span>Request Date & Inquire</span>
+                        <a href="contact.html?service=wedding-date" class="btn-nested group">
+                            <span>Book Your Wedding Date</span>
                             <span class="icon-circle"><i class="fas fa-arrow-right text-xs"></i></span>
+                        </a>
+                        <a href="contact.html?service=makeup-trial" class="btn-frosted group">
+                            <i class="fas fa-wand-magic-sparkles text-gift-slate dark:text-gift-slate-bright"></i>
+                            <span>Book a Makeup Trial</span>
                         </a>
                         <a href="portfolio.html" class="btn-frosted group">
                             <i class="fas fa-images text-gift-slate dark:text-gift-slate-bright"></i>

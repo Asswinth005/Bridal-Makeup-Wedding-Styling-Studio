@@ -75,7 +75,10 @@
         body { font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; background-color:var(--color-bg-warm); color:var(--color-text-dark); transition:background-color .4s ease, color .4s ease; }
         .dark body { background-color:#140C0E; color:#EDE7E3; }
         h1,h2,h3,h4,h5,h6 { font-family:'Outfit','Plus Jakarta Sans',sans-serif; font-weight:700; letter-spacing:-.025em; }
-        .gold-gradient-text,.rose-gradient-text { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 50%, var(--color-primary-dark) 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+        .gold-gradient-text,.rose-gradient-text { background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 55%, var(--color-primary-dark) 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+        .dark .gold-gradient-text,.dark .rose-gradient-text { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 50%, var(--color-accent) 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+        .text-gift-slate { color: var(--color-primary-dark) !important; }
+        .dark .text-gift-slate { color: var(--color-primary-bright) !important; }
 
         ::-webkit-scrollbar{width:8px;height:8px}
         ::-webkit-scrollbar-track{background:var(--color-bg-warm)}
@@ -86,7 +89,6 @@
         .dark ::-webkit-scrollbar-thumb:hover{background:var(--color-primary-bright)}
         *{scrollbar-width:thin;scrollbar-color:rgba(var(--color-rgb-primary),.4) transparent}
 
-        .dark .text-gift-slate{color:var(--color-primary-bright)!important}
         .dark .bg-gift-slate{background-color:var(--color-primary-bright)!important}
         .dark .border-gift-slate{border-color:var(--color-primary-bright)!important}
         .dark .from-gift-slate{--tw-gradient-from:var(--color-primary-bright)!important}
@@ -275,7 +277,12 @@
                         </div>
                     </div>
                     <div class="flex items-center gap-3 ml-2">
-                        <a href="login.html" class="btn-nested !py-2 !px-4 !text-xs group"><span>Sign In</span><span class="icon-circle !w-6 !h-6"><i class="fas fa-arrow-right text-[10px]"></i></span></a>
+                        <a href="login.html" class="btn-nested !py-2 !px-4 !text-xs group">
+                            <span>Sign In</span>
+                            <span class="icon-circle !w-6 !h-6">
+                                <i class="fas fa-arrow-right text-[10px]"></i>
+                            </span>
+                        </a>
                     </div>
                 </div>
                 <div class="flex items-center gap-2 ml-4 desktop-toggle-group">
@@ -306,8 +313,22 @@
                     <a href="client.html" class="mobile-dropdown-item">Bride Portal</a>
                 </div>
             </div>
-            <div class="p-5 flex flex-col gap-3">
-                <a href="login.html" class="btn-nested justify-center !py-3 w-full text-center"><span>Client Portal Login</span><span class="icon-circle !w-7 !h-7"><i class="fas fa-arrow-right text-xs"></i></span></a>
+            <div class="p-5 flex flex-col gap-2.5">
+                <a href="contact.html?service=makeup-trial" class="btn-nested justify-center !py-3 w-full text-center">
+                    <span>Book a Makeup Trial</span>
+                    <span class="icon-circle !w-7 !h-7"><i class="fas fa-arrow-right text-xs"></i></span>
+                </a>
+                <a href="contact.html?service=wedding-date" class="btn-frosted justify-center !py-2.5 w-full text-center text-xs font-bold">
+                    <i class="fas fa-calendar-alt text-gift-slate dark:text-gift-slate-bright"></i>
+                    <span>Book Your Wedding Date</span>
+                </a>
+                <a href="services.html" class="btn-frosted justify-center !py-2.5 w-full text-center text-xs font-bold">
+                    <i class="fas fa-wand-magic-sparkles text-gift-slate dark:text-gift-slate-bright"></i>
+                    <span>Explore Services</span>
+                </a>
+                <a href="login.html" class="text-center text-xs opacity-75 hover:opacity-100 font-sans py-1 mt-1">
+                    Client Portal Login →
+                </a>
             </div>
             <div class="flex justify-center gap-3 p-4 border-t border-gray-100 dark:border-gray-800">
                 <button id="theme-toggle-mobile" class="toggle-btn"><i class="fas fa-moon"></i><i class="fas fa-sun hidden"></i></button>
@@ -319,7 +340,7 @@
     <!-- ========== PAGE HERO ========== -->
     <section class="min-h-[58vh] lg:min-h-[64vh] flex items-center justify-center pt-36 sm:pt-40 lg:pt-48 pb-20 sm:pb-24 lg:pb-28 bg-bg-warm dark:bg-dark-bg transition-colors duration-400 relative overflow-hidden">
         <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gift-slate/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
             <div class="max-w-3xl mx-auto text-center">
                 <div class="eyebrow-pill inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/10 border border-gift-slate/25 dark:border-gift-slate-bright/25 mb-6 backdrop-blur-md">
                     <i class="fas fa-envelope-open-text text-gift-slate dark:text-gift-slate-bright text-xs"></i>
@@ -352,7 +373,7 @@
 
     <!-- ========== CONTACT FORM + INFO ========== -->
     <section id="inquiry-form" class="scroll-mt-32 py-12 sm:py-16 bg-white dark:bg-dark-card transition-colors duration-400 border-y border-neutral-light/50 dark:border-gray-800/60">
-        <div class="container mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="max-w-6xl mx-auto grid lg:grid-cols-5 gap-10 lg:gap-14">
                 <!-- Form (3 cols) -->
                 <div class="lg:col-span-3">
@@ -361,7 +382,27 @@
                             <h2 class="text-2xl sm:text-3xl font-serif font-bold text-neutral-dark dark:text-white mb-2">Request a Consultation</h2>
                             <p class="text-sm opacity-75 font-sans mb-7">Tell us about your day. We'll craft a personalized proposal within 24 hours.</p>
 
-                            <form onsubmit="event.preventDefault(); alert('Thank you — we will be in touch within 2 hours.');" class="space-y-5">
+                            <form onsubmit="event.preventDefault(); alert('Thank you — your booking request has been received. Our concierge team will reach out within 2 hours.');" class="space-y-5">
+                                <div>
+                                    <label class="form-label">Booking Purpose</label>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-1.5">
+                                        <label id="label-trial" class="flex items-center gap-3 p-3.5 rounded-2xl border-2 border-gift-slate/40 dark:border-gift-slate-bright/40 bg-gift-slate/5 dark:bg-gift-slate-bright/5 cursor-pointer hover:border-gift-slate transition">
+                                            <input type="radio" name="intent" id="intent-trial" value="trial" class="accent-gift-slate" checked onchange="updateFormIntent()">
+                                            <div>
+                                                <span class="text-xs font-bold font-sans block text-neutral-dark dark:text-white">Book a Makeup Trial</span>
+                                                <span class="text-[10px] opacity-75 font-sans">2-hour in-studio look preview & test</span>
+                                            </div>
+                                        </label>
+                                        <label id="label-wedding" class="flex items-center gap-3 p-3.5 rounded-2xl border-2 border-gray-200 dark:border-gray-800 bg-transparent cursor-pointer hover:border-gift-slate transition">
+                                            <input type="radio" name="intent" id="intent-wedding" value="wedding" class="accent-gift-slate" onchange="updateFormIntent()">
+                                            <div>
+                                                <span class="text-xs font-bold font-sans block text-neutral-dark dark:text-white">Book Your Wedding Date</span>
+                                                <span class="text-[10px] opacity-75 font-sans">Lock in date & suite concierge</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
                                 <div class="grid sm:grid-cols-2 gap-5">
                                     <div>
                                         <label class="form-label">Full Name</label>
@@ -412,9 +453,14 @@
                                 </div>
 
                                 <button type="submit" class="btn-nested group w-full justify-center">
-                                    <span>Send Inquiry</span>
-                                    <span class="icon-circle"><i class="fas fa-paper-plane text-xs"></i></span>
+                                    <span id="submit-btn-text">Book a Makeup Trial</span>
+                                    <span class="icon-circle"><i class="fas fa-calendar-check text-xs"></i></span>
                                 </button>
+                                <div class="text-center pt-2">
+                                    <p class="text-xs font-sans text-neutral-dark/80 dark:text-gray-400">
+                                        Want to review all packages and inclusions first? <a href="services.html" class="text-gift-slate dark:text-gift-slate-bright font-bold hover:underline">Explore Services Menu →</a>
+                                    </p>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -455,7 +501,7 @@
 
     <!-- ========== STUDIO VISIT ========== -->
     <section class="py-16 sm:py-24 bg-bg-warm dark:bg-dark-bg transition-colors duration-400">
-        <div class="container mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
                 <div>
                     <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.25em] font-sans uppercase">Visit The Studio</span>
@@ -507,7 +553,7 @@
     <!-- ========== FINISHING SECTION: LUXURY CALL TO ACTION ========== -->
     <section class="cta-luxury-banner py-20 sm:py-24 text-white transition-colors duration-400 relative overflow-hidden border-b border-gift-slate/20">
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none"></div>
-        <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
             <div class="max-w-4xl mx-auto text-center">
                 <span class="inline-block px-4 py-1.5 rounded-full bg-white/15 border border-white/25 text-white font-bold text-xs tracking-[0.25em] font-sans uppercase mb-4 backdrop-blur-md">
                     2026 Season Commissions
@@ -646,6 +692,44 @@
                 document.body.style.overflow = opening ? 'hidden' : '';
                 if (!opening) document.querySelectorAll('.mobile-dropdown-content').forEach(c => c.classList.remove('show'));
             });
+            // Dynamic booking intent handler
+            window.updateFormIntent = function() {
+                const isWedding = document.getElementById('intent-wedding')?.checked;
+                const btnText = document.getElementById('submit-btn-text');
+                const labelTrial = document.getElementById('label-trial');
+                const labelWedding = document.getElementById('label-wedding');
+                
+                if (btnText) {
+                    btnText.textContent = isWedding ? 'Book Your Wedding Date' : 'Book a Makeup Trial';
+                }
+                if (labelTrial && labelWedding) {
+                    if (isWedding) {
+                        labelWedding.className = 'flex items-center gap-3 p-3.5 rounded-2xl border-2 border-gift-slate/40 dark:border-gift-slate-bright/40 bg-gift-slate/5 dark:bg-gift-slate-bright/5 cursor-pointer transition';
+                        labelTrial.className = 'flex items-center gap-3 p-3.5 rounded-2xl border-2 border-gray-200 dark:border-gray-800 bg-transparent cursor-pointer transition';
+                    } else {
+                        labelTrial.className = 'flex items-center gap-3 p-3.5 rounded-2xl border-2 border-gift-slate/40 dark:border-gift-slate-bright/40 bg-gift-slate/5 dark:bg-gift-slate-bright/5 cursor-pointer transition';
+                        labelWedding.className = 'flex items-center gap-3 p-3.5 rounded-2xl border-2 border-gray-200 dark:border-gray-800 bg-transparent cursor-pointer transition';
+                    }
+                }
+            };
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const serviceParam = urlParams.get('service');
+            const packageParam = urlParams.get('package');
+            if (serviceParam === 'wedding-date' || packageParam) {
+                const weddingRadio = document.getElementById('intent-wedding');
+                if (weddingRadio) {
+                    weddingRadio.checked = true;
+                    updateFormIntent();
+                }
+            } else if (serviceParam === 'makeup-trial') {
+                const trialRadio = document.getElementById('intent-trial');
+                if (trialRadio) {
+                    trialRadio.checked = true;
+                    updateFormIntent();
+                }
+            }
+
             document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     e.stopPropagation();
